@@ -225,11 +225,14 @@
     }
   ];
 
+  function optimizedProjectImagePath(image) {
+    const relative = image.slice(PHOTO_ROOT.length).replace(/\.[^./]+$/, ".webp");
+    return PHOTO_ROOT + relative.replace(/\//g, "--");
+  }
+
   defaultProjects.forEach(function (project) {
-    project.cover = project.cover.replace(/\.[^./]+$/, ".webp");
-    project.gallery = project.gallery.map(function (image) {
-      return image.replace(/\.[^./]+$/, ".webp");
-    });
+    project.cover = optimizedProjectImagePath(project.cover);
+    project.gallery = project.gallery.map(optimizedProjectImagePath);
   });
 
   const defaultProducts = [
