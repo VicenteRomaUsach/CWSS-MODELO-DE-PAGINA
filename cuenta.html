@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Administración de obras CWSS.">
+  <title>Cuenta | CWSS</title>
+  <link rel="icon" href="imagenes/Logoico.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
+</head>
+<body data-page="cuenta">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="CWSS, ir al inicio"><img src="imagenes/LOGO-abajo.png" alt="CWSS Soluciones Vidriadas"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      <a href="soluciones.html">Soluciones</a>
+      <a href="proyectos.html">Obras</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="account-main">
+    <section class="login-panel section-rule" data-login-panel>
+      <div class="login-intro">
+        <p class="eyebrow">Acceso</p>
+        <h1>Administración</h1>
+      </div>
+      <form class="login-form" data-login-form>
+        <label>Usuario<input type="text" name="username" autocomplete="username" required></label>
+        <label>Contraseña<input type="password" name="password" autocomplete="current-password" required></label>
+        <p class="form-message" data-login-message role="alert"></p>
+        <button class="button button--dark" type="submit">Ingresar</button>
+      </form>
+    </section>
+
+    <section class="admin-panel section-rule" data-admin-panel hidden>
+      <div class="admin-heading">
+        <div><p class="eyebrow">Panel CWSS</p><h2>Gestión de obras</h2></div>
+        <button class="text-button" type="button" data-logout>Cerrar sesión</button>
+      </div>
+      <div class="admin-layout">
+        <form class="project-form" data-project-form>
+          <h2>Agregar obra</h2>
+          <label>Nombre<input type="text" name="name" maxlength="80" placeholder="Ej: Angamos" required></label>
+          <label>Cliente<input type="text" name="contractor" maxlength="100" placeholder="Ej: BMI o No indica" required></label>
+          <label>Año<input type="number" name="year" min="1900" max="2100" inputmode="numeric" placeholder="Ej: 2018" required></label>
+          <label>Estado<select name="status" required><option value="Completado">Completado</option><option value="Obra en curso">Obra en curso</option></select></label>
+          <label class="image-file-field">Imagen de portada<input type="file" name="cover" accept="image/*" required><small>Obligatoria. Será la imagen principal de la obra.</small></label>
+          <label class="image-file-field">Imágenes adicionales<input type="file" name="gallery" accept="image/*" multiple><small>Opcional. Máximo 3 imágenes adicionales (4 imágenes en total).</small></label>
+          <p class="form-message" data-project-message role="status"></p>
+          <button class="button button--dark" type="submit">Publicar obra</button>
+        </form>
+        <div class="admin-projects">
+          <div class="admin-list-heading"><h2>Obras publicadas</h2><span data-project-count></span></div>
+          <div data-admin-project-list></div>
+        </div>
+      </div>
+
+      <section class="admin-products-section" aria-labelledby="admin-products-title">
+        <div class="admin-products-heading">
+          <div><p class="eyebrow">Servicios CWSS</p><h2 id="admin-products-title">Gestión de soluciones</h2></div>
+          <span data-product-count></span>
+        </div>
+        <div class="admin-products-layout">
+          <form class="product-form" data-product-form>
+            <h2>Agregar solución</h2>
+            <label>Nombre de la solución<input type="text" name="productName" maxlength="100" required></label>
+            <p class="form-message" data-product-message role="status"></p>
+            <button class="button button--dark" type="submit">Publicar solución</button>
+          </form>
+          <div class="admin-products">
+            <div class="admin-list-heading"><h2>Soluciones publicadas</h2></div>
+            <div data-admin-product-list></div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer section-rule" id="contacto">
+    <div class="footer-brand"><img class="footer-logo" src="imagenes/LogoAbajoRecortado.png" alt="CWSS Soluciones Vidriadas" loading="lazy" decoding="async"><p class="footer-address"><span class="footer-icon" aria-hidden="true"><img src="imagenes/icono-ubicacion.png" alt=""></span><span>Roman Díaz 205, Oficina 404 · Providencia, Santiago.</span></p></div>
+    <div class="footer-contact"><p class="eyebrow">Contacto</p><a href="tel:+56232517411"><span class="footer-icon" aria-hidden="true"><img src="imagenes/icono-oficina.png" alt=""></span><span>Oficina</span><strong>+56 2 3251 7411</strong></a><a href="tel:+56982330605"><span class="footer-icon" aria-hidden="true"><img src="imagenes/icono-celular.png" alt=""></span><span>Celular 1</span><strong>+56 9 8233 0605</strong></a><a href="tel:+56979729017"><span class="footer-icon" aria-hidden="true"><img src="imagenes/icono-celular.png" alt=""></span><span>Celular 2</span><strong>+56 9 7972 9017</strong></a><a href="mailto:proyectos@cwss.cl"><span class="footer-icon" aria-hidden="true"><img src="imagenes/icono-email.png" alt=""></span><span>Email</span><strong>Proyectos@cwss.cl</strong></a></div>
+    <div class="footer-bottom"><p class="copyright">© <span data-year>2026</span> CWSS Ltda. Todos los derechos reservados.</p><a class="footer-access is-active" href="cuenta.html" aria-label="Acceso a administración"><img src="imagenes/account.ico" alt=""></a></div>
+  </footer>
+</body>
+</html>
