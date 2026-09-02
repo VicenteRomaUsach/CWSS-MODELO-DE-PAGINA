@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const PROJECTS_KEY = "cwss_projects_v9";
+  const PROJECTS_KEY = "cwss_projects_v10";
   const PRODUCTS_KEY = "cwss_products_v2";
   const ADMIN_KEY = "cwss_admin_session";
   const PHOTO_ROOT = "imagenes-optimizadas/";
@@ -257,7 +257,9 @@
     });
     project.cover = images[0];
     project.gallery = images.slice(1);
-    project.product = project.product || "Soluciones vidriadas";
+    project.products = Array.isArray(project.products) && project.products.length
+      ? project.products
+      : ["PLACEHOLDER #1", "PLACEHOLDER #2"];
     delete project.imageFolder;
     delete project.imageBase;
     delete project.imageCount;
@@ -313,13 +315,17 @@
               project.gallery = expectedGallery.slice();
               changed = true;
             }
-            ["name", "contractor", "year", "status", "subtitle", "product"].forEach(function (field) {
+            ["name", "contractor", "year", "status", "subtitle"].forEach(function (field) {
               const expected = bundledDefault[field] || "";
               if ((project[field] || "") !== expected) {
                 project[field] = expected;
                 changed = true;
               }
             });
+            if (JSON.stringify(project.products || []) !== JSON.stringify(bundledDefault.products || [])) {
+              project.products = (bundledDefault.products || []).slice();
+              changed = true;
+            }
           }
           const isElSauce = project.id === "el-sause" || project.name === "El Sause" || project.id === "el-sauce";
           const hasCurrentSauceGallery = Array.isArray(project.gallery)
@@ -339,7 +345,12 @@
           }
           if (!project.year) { project.year = "Por confirmar"; changed = true; }
           if (project.contractor === undefined) { project.contractor = project.client || ""; changed = true; }
-          if (!project.product) { project.product = "Soluciones vidriadas"; changed = true; }
+          if (!Array.isArray(project.products) || !project.products.length) {
+            project.products = project.product
+              ? [String(project.product)]
+              : ["PLACEHOLDER #1", "PLACEHOLDER #2"];
+            changed = true;
+          }
           if (/^Proyecto\s+\d+$/i.test(String(project.name || ""))) { project.name = String(project.name).replace(/^Proyecto/i, "Obra"); changed = true; }
           if (!Array.isArray(project.gallery)) { project.gallery = []; changed = true; }
           const uniqueGallery = project.gallery.filter(function (image, index, gallery) {
@@ -429,32 +440,50 @@
     return Array.from(new Set([project.cover].concat(project.gallery || []).filter(Boolean)));
   }
 
+  function projectProducts(project) {
+    if (Array.isArray(project.products) && project.products.length) return project.products;
+    if (project.product) return [String(project.product)];
+    return ["PLACEHOLDER #1", "PLACEHOLDER #2"];
+  }
+
+  function projectProductsMarkup(project) {
+    return projectProducts(project).map(function (product) {
+      return `<span>${escapeHtml(product)}</span>`;
+    }).join("");
+  }
+
   function projectCard(project, autoplay) {
     const client = project.contractor || "No indica";
     const subtitle = project.subtitle ? `<p class="project-card__subtitle">${escapeHtml(project.subtitle)}</p>` : "";
-    const statusFact = project.status
-      ? `<p><span>Estado</span><strong class="project-status is-in-progress">${escapeHtml(project.status)}</strong></p>`
-      : "";
     const images = projectImages(project);
     const media = autoplay
       ? `<div class="project-card__media" data-card-slideshow>${images.map(function (image, index) {
           return `<img class="project-card__slide${index === 0 ? " is-active" : ""}" src="${escapeHtml(image)}" alt="${index === 0 ? escapeHtml(project.name) : ""}" ${index === 0 ? "" : 'loading="lazy" '}decoding="async">`;
         }).join("")}</div>`
       : `<img src="${escapeHtml(project.cover)}" alt="${escapeHtml(project.name)}" loading="lazy" decoding="async">`;
+    const controls = autoplay && images.length > 1
+      ? `<div class="project-card__slider-controls" aria-label="Controles de imágenes">
+          <button type="button" data-card-previous aria-label="Imagen anterior">←</button>
+          <span><b data-card-current>1</b> / ${images.length}</span>
+          <button type="button" data-card-next aria-label="Imagen siguiente">→</button>
+        </div>`
+      : "";
     return `
-      <a class="project-card" href="${projectUrl(project.id)}" aria-label="Ver obra ${escapeHtml(project.name)}">
-        ${media}
-        <div class="project-card__content">
-          <div><h3>${escapeHtml(project.name)}</h3>${subtitle}</div>
-          <div class="project-card__facts">
-            <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
-            <p><span>Año</span><strong>${escapeHtml(project.year || "Por confirmar")}</strong></p>
-            <p><span>Producto</span><strong>${escapeHtml(project.product || "Soluciones vidriadas")}</strong></p>
-            ${statusFact}
+      <article class="project-card">
+        <a class="project-card__link" href="${projectUrl(project.id)}" aria-label="Ver obra ${escapeHtml(project.name)}">
+          ${media}
+          <div class="project-card__content">
+            <div><h3>${escapeHtml(project.name)}</h3>${subtitle}</div>
+            <div class="project-card__facts">
+              <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
+              <p><span>Año</span><strong>${escapeHtml(project.year || "Por confirmar")}</strong></p>
+              <p><span>Productos</span><strong class="project-products">${projectProductsMarkup(project)}</strong></p>
+            </div>
           </div>
-        </div>
-        <span class="project-card__arrow" aria-hidden="true">↗</span>
-      </a>`;
+          <span class="project-card__arrow" aria-hidden="true">↗</span>
+        </a>
+        ${controls}
+      </article>`;
   }
 
   function compareProjectsByYearAndName(a, b) {
@@ -500,9 +529,6 @@
     }).join("");
     const client = project.contractor || "No indica";
     const subtitle = project.subtitle ? `<p class="project-detail__subtitle">${escapeHtml(project.subtitle)}</p>` : "";
-    const statusFact = project.status
-      ? `<p><span>Estado</span><strong class="project-status is-in-progress">${escapeHtml(project.status)}</strong></p>`
-      : "";
     container.innerHTML = `
       <section class="project-detail__hero" style="background-image:url('${escapeHtml(project.cover)}')">
         <div class="project-detail__title">
@@ -511,8 +537,7 @@
           <div class="project-detail__facts">
             <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
             <p><span>Año</span><strong>${escapeHtml(project.year || "Por confirmar")}</strong></p>
-            <p><span>Producto</span><strong>${escapeHtml(project.product || "Soluciones vidriadas")}</strong></p>
-            ${statusFact}
+            <p><span>Productos</span><strong class="project-products">${projectProductsMarkup(project)}</strong></p>
           </div>
         </div>
       </section>
@@ -613,18 +638,25 @@
 
   function setupProjectCardSlides() {
     const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reducedMotion) return;
     document.querySelectorAll("[data-card-slideshow]").forEach(function (media, cardIndex) {
       const slides = Array.from(media.querySelectorAll(".project-card__slide"));
       const card = media.closest(".project-card");
+      const previous = card && card.querySelector("[data-card-previous]");
+      const next = card && card.querySelector("[data-card-next]");
+      const currentLabel = card && card.querySelector("[data-card-current]");
       if (!card || slides.length <= 1) return;
       let current = 0;
       let timer = null;
 
-      function showNext() {
+      function show(index) {
         slides[current].classList.remove("is-active");
-        current = (current + 1) % slides.length;
+        current = (index + slides.length) % slides.length;
         slides[current].classList.add("is-active");
+        if (currentLabel) currentLabel.textContent = String(current + 1);
+      }
+
+      function showNext() {
+        show(current + 1);
       }
 
       function stop() {
@@ -634,19 +666,73 @@
 
       function start() {
         stop();
-        if (document.hidden) return;
+        if (reducedMotion || document.hidden) return;
         timer = window.setInterval(showNext, 3900 + (cardIndex * 450));
       }
 
+      if (previous) previous.addEventListener("click", function () { show(current - 1); start(); });
+      if (next) next.addEventListener("click", function () { show(current + 1); start(); });
       card.addEventListener("mouseenter", stop);
       card.addEventListener("mouseleave", start);
-      card.addEventListener("focus", stop);
-      card.addEventListener("blur", start);
+      card.addEventListener("focusin", stop);
+      card.addEventListener("focusout", function (event) {
+        if (!card.contains(event.relatedTarget)) start();
+      });
       document.addEventListener("visibilitychange", function () {
         if (document.hidden) stop(); else start();
       });
       start();
     });
+  }
+
+  function setupSolutionsSlideshow() {
+    const slideshow = document.querySelector("[data-solutions-slideshow]");
+    if (!slideshow) return;
+    const slides = Array.from(slideshow.querySelectorAll(".solutions-showcase__slide"));
+    const dots = Array.from(slideshow.querySelectorAll("[data-solutions-slide]"));
+    const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let current = 0;
+    let timer = null;
+
+    function show(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach(function (slide, slideIndex) {
+        slide.classList.toggle("is-active", slideIndex === current);
+      });
+      dots.forEach(function (dot, dotIndex) {
+        const active = dotIndex === current;
+        dot.classList.toggle("is-active", active);
+        dot.setAttribute("aria-current", String(active));
+      });
+    }
+
+    function stop() {
+      if (timer !== null) window.clearInterval(timer);
+      timer = null;
+    }
+
+    function start() {
+      stop();
+      if (reducedMotion || slides.length <= 1 || document.hidden) return;
+      timer = window.setInterval(function () { show(current + 1); }, 5200);
+    }
+
+    dots.forEach(function (dot) {
+      dot.addEventListener("click", function () {
+        show(Number(dot.dataset.solutionsSlide));
+        start();
+      });
+    });
+    slideshow.addEventListener("mouseenter", stop);
+    slideshow.addEventListener("mouseleave", start);
+    slideshow.addEventListener("focusin", stop);
+    slideshow.addEventListener("focusout", function (event) {
+      if (!slideshow.contains(event.relatedTarget)) start();
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stop(); else start();
+    });
+    start();
   }
 
   function setupImageDialog() {
@@ -684,6 +770,17 @@
           event.preventDefault();
           link.parentElement.classList.add("is-open");
         }
+      });
+    });
+    document.querySelectorAll('a[href="#contacto"]').forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        const contact = document.getElementById("contacto");
+        if (!contact) return;
+        event.preventDefault();
+        contact.scrollIntoView({ behavior: "smooth", block: "start" });
+        if (nav) nav.classList.remove("is-open");
+        if (button) button.setAttribute("aria-expanded", "false");
+        window.history.replaceState(null, "", "#contacto");
       });
     });
   }
@@ -734,6 +831,7 @@
       ".projects-page .project-card",
       ".products-page > h1",
       ".products-page .product-card",
+      ".products-page .solutions-showcase",
       ".project-detail__title > *",
       ".project-gallery__viewport",
       ".project-gallery__selector",
@@ -821,7 +919,7 @@
       return `
         <article class="admin-project-row">
           <img src="${escapeHtml(project.cover)}" alt="">
-          <div><h3>${escapeHtml(project.name)}</h3><p class="admin-project-row__meta">Cliente: ${escapeHtml(project.contractor || "No indica")} · Año: ${escapeHtml(project.year || "Por confirmar")} · Producto: ${escapeHtml(project.product || "Soluciones vidriadas")}${project.status ? ` · Estado: ${escapeHtml(project.status)}` : ""}</p></div>
+          <div><h3>${escapeHtml(project.name)}</h3><p class="admin-project-row__meta">Cliente: ${escapeHtml(project.contractor || "No indica")} · Año: ${escapeHtml(project.year || "Por confirmar")} · Productos: ${escapeHtml(projectProducts(project).join(", "))}</p></div>
           <button class="delete-button" type="button" data-delete-project="${escapeHtml(project.id)}">Eliminar</button>
         </article>`;
     }).join("");
@@ -915,8 +1013,8 @@
         message.textContent = "Selecciona una imagen de portada.";
         return;
       }
-      if (galleryFiles.length > 3) {
-        message.textContent = "Selecciona un máximo de 3 imágenes adicionales.";
+      if (galleryFiles.length > 9) {
+        message.textContent = "Selecciona un máximo de 9 imágenes adicionales.";
         return;
       }
       submit.disabled = true;
@@ -931,7 +1029,10 @@
           name: String(formData.get("name") || "").trim(),
           year: String(formData.get("year") || "").trim(),
           contractor: String(formData.get("contractor") || "No indica").trim(),
-          product: String(formData.get("projectProduct") || "Soluciones vidriadas").trim(),
+          products: String(formData.get("projectProducts") || "")
+            .split(/[,;\n]+/)
+            .map(function (product) { return product.trim(); })
+            .filter(Boolean),
           status: String(formData.get("status") || ""),
           cover: cover,
           gallery: gallery,
@@ -992,6 +1093,7 @@
   renderAllProjects(projects);
   renderProjectDetail(projects);
   setupProjectCardSlides();
+  setupSolutionsSlideshow();
   setupProjectGallery();
   setupImageDialog();
   setupNavigation();

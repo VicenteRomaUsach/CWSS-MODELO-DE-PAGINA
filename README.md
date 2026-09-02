@@ -15,7 +15,7 @@ Las obras iniciales y sus galerías usan únicamente archivos WebP publicados en
 
 El catálogo se ordena por año, del más reciente al más antiguo; las obras del mismo año se ordenan alfabéticamente. Las obras sin año confirmado aparecen al final. Las versiones anteriores, fotografías originales, capturas y recursos sin uso se movieron fuera del sitio a `../COSAS A BORRAR (R)/CWSS.CL2`, desde donde se pueden recuperar antes de su eliminación definitiva.
 
-La portada usa dos imágenes. La sección `Obras en instalación` muestra dos obras y sus fotografías cambian automáticamente. Las galerías de las fichas también avanzan automáticamente y conservan sus controles manuales.
+La portada usa dos imágenes. La sección `Obras en instalación` muestra dos obras, sus fotografías cambian automáticamente y también se pueden recorrer con sus controles. Las galerías de las fichas avanzan automáticamente y conservan sus controles manuales. Cada obra admite varios productos y un máximo de 10 imágenes totales.
 
 El historial detallado de correcciones y actualizaciones está disponible en [`CHANGELOG.md`](CHANGELOG.md).
 

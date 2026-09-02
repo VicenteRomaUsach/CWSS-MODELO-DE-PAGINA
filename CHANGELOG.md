@@ -15,6 +15,20 @@
 - Se bajó la posición del texto de `Quiénes somos` y del encabezado de `Soluciones`.
 - Se redujo el espacio vertical del listado de soluciones, se redujo el título principal y se aumentó la tipografía de los productos.
 
+### Tercera actualización visual y funcional
+
+- Se redujo en 5 px el título `Quiénes somos` y el título `Soluciones`.
+- Se redujo en 20 px el espacio entre el título de Soluciones y su listado.
+- Se añadió al final de Soluciones un slider grande que alterna automáticamente entre `PORTADA 01` y `PORTADA 02`.
+- Se eliminó la separación blanca antes del pie de página de Soluciones.
+- Se corrigió el enlace `Contacto` para desplazar la página al pie y cerrar el menú móvil.
+- Se ocultó el estado `En instalación` en las tarjetas y fichas; se conserva únicamente como criterio interno para el bloque del inicio.
+- Los productos de cada obra ahora aceptan varios valores y comienzan con `PLACEHOLDER #1` y `PLACEHOLDER #2`.
+- El formulario de obras admite hasta 10 imágenes totales: una portada y nueve imágenes adicionales.
+- Se agregaron controles anterior/siguiente y contador al mini slider de las obras en instalación.
+- Se redujo en 4 px la tipografía principal de Obras y de los títulos de las fichas.
+- La segunda fotografía activa de portada fue normalizada como `CWSS--PORTADA--02.webp`.
+
 ### Catálogo de obras
 
 - Se ordenaron las obras desde el año más reciente al más antiguo y alfabéticamente dentro de cada año.
