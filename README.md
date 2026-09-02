@@ -15,6 +15,8 @@ Las obras iniciales y sus galerías usan únicamente archivos WebP publicados en
 
 El catálogo se ordena por año, del más reciente al más antiguo; las obras del mismo año se ordenan alfabéticamente. Las obras sin año confirmado aparecen al final. Las versiones anteriores, fotografías originales, capturas y recursos sin uso se movieron fuera del sitio a `../COSAS A BORRAR (R)/CWSS.CL2`, desde donde se pueden recuperar antes de su eliminación definitiva.
 
+La portada usa dos imágenes. La sección `Obras en instalación` muestra dos obras y sus fotografías cambian automáticamente. Las galerías de las fichas también avanzan automáticamente y conservan sus controles manuales.
+
 El historial detallado de correcciones y actualizaciones está disponible en [`CHANGELOG.md`](CHANGELOG.md).
 
 Cada ficha muestra nombre, cliente y año. La etiqueta de estado se muestra solamente en las obras que están en instalación. Las galerías se pueden recorrer con los controles visibles o con las flechas izquierda y derecha del teclado. Cuando el cliente no está informado se muestra `No indica`.

@@ -2,6 +2,19 @@
 
 ## 2026-09-02
 
+### Segunda actualización visual y de contenido
+
+- Se eliminó definitivamente `PORTADA 02` y se unieron `PORTADA 01` y `PORTADA 03` en una portada de dos columnas.
+- La sección `Últimas obras` pasó a llamarse `Obras en instalación` y muestra únicamente El Sauce y Apoquindo Los Militares.
+- Las dos tarjetas de obras en instalación recorren automáticamente las fotografías de cada obra.
+- Las galerías inferiores de todas las fichas avanzan automáticamente y se pausan durante la interacción.
+- Se unificaron las obras exterior e interior de Club de Campo en `Club de Campo Vitacura`, con nueve imágenes y el subtítulo `Boldo, Peumo y Quillai`.
+- `DATACENTER SCALA` se actualizó a `Datacenter Scala Santa Teresa`, cliente `Scala`, año 2025.
+- La antigua ficha interior de Scala se separó como `Data Center Chile 3`, cliente `Puerto Octay`, año 2024.
+- Se agregó el dato `Producto` a cada obra y al formulario de administración. Las obras existentes usan inicialmente `Soluciones vidriadas`.
+- Se bajó la posición del texto de `Quiénes somos` y del encabezado de `Soluciones`.
+- Se redujo el espacio vertical del listado de soluciones, se redujo el título principal y se aumentó la tipografía de los productos.
+
 ### Catálogo de obras
 
 - Se ordenaron las obras desde el año más reciente al más antiguo y alfabéticamente dentro de cada año.

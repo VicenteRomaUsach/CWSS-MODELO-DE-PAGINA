@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const PROJECTS_KEY = "cwss_projects_v8";
+  const PROJECTS_KEY = "cwss_projects_v9";
   const PRODUCTS_KEY = "cwss_products_v2";
   const ADMIN_KEY = "cwss_admin_session";
   const PHOTO_ROOT = "imagenes-optimizadas/";
@@ -98,24 +98,15 @@
       imageCount: 4
     },
     {
-      id: "club-de-campo-exterior",
-      name: "Club de Campo - Exterior",
+      id: "club-de-campo-vitacura",
+      name: "Club de Campo Vitacura",
+      subtitle: "Boldo, Peumo y Quillai",
       contractor: "Nahmias",
       year: "2020",
       status: "",
-      imageFolder: "2020 - CLUB DE CAMPO EXTERIOR",
-      imageBase: "CLUB DE CAMPO EXTERIOR NAHMIAS 2020--CLUB-DE-CAMPO-EXTERIOR",
-      imageCount: 5
-    },
-    {
-      id: "club-de-campo-interior",
-      name: "Club de Campo - Interior",
-      contractor: "Nahmias",
-      year: "2020",
-      status: "",
-      imageFolder: "2020 - CLUB DE CAMPO INTERIOR",
-      imageBase: "CLUB DE CAMPO INTERIOR NAHMIAS 2020--CLUB-DE-CAMPO-INTERIOR",
-      imageCount: 4
+      imageFolder: "2020 - CLUB DE CAMPO VITACURA",
+      imageBase: "CLUB DE CAMPO VITACURA NAHMIAS 2020--CLUB-DE-CAMPO",
+      imageCount: 9
     },
     {
       id: "comapa-punta-arenas",
@@ -128,23 +119,23 @@
       imageCount: 4
     },
     {
-      id: "datacenter-scala-exterior",
-      name: "DATACENTER SCALA",
-      contractor: "Puerto Octay",
+      id: "datacenter-scala-santa-teresa",
+      name: "Datacenter Scala Santa Teresa",
+      contractor: "Scala",
       year: "2025",
       status: "",
-      imageFolder: "2025 - DATACENTER SCALA EXTERIOR",
-      imageBase: "DATACENTER SCALA PUERTO OCTAY 2025--DATACENTER-SCALA-EXTERIOR",
+      imageFolder: "2025 - DATACENTER SCALA SANTA TERESA",
+      imageBase: "DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA",
       imageCount: 4
     },
     {
-      id: "datacenter-scala-interior",
-      name: "DATACENTER SCALA - Interior",
+      id: "data-center-chile-3",
+      name: "Data Center Chile 3",
       contractor: "Puerto Octay",
-      year: "2025",
+      year: "2024",
       status: "",
-      imageFolder: "2025 - DATACENTER SCALA INTERIOR",
-      imageBase: "DATACENTER SCALA PUERTO OCTAY 2025--DATACENTER-SCALA-INTERIOR",
+      imageFolder: "2024 - DATA CENTER CHILE 3",
+      imageBase: "DATA CENTER CHILE 3 PUERTO OCTAY 2024--DATA-CENTER-CHILE-3",
       imageCount: 4
     },
     {
@@ -266,6 +257,7 @@
     });
     project.cover = images[0];
     project.gallery = images.slice(1);
+    project.product = project.product || "Soluciones vidriadas";
     delete project.imageFolder;
     delete project.imageBase;
     delete project.imageCount;
@@ -283,10 +275,6 @@
 
   const puertaDelSolDefaults = defaultProjects.find(function (project) {
     return project.id === "puerta-del-sol";
-  });
-
-  const datacenterDefaults = defaultProjects.filter(function (project) {
-    return project.id === "datacenter-scala-exterior" || project.id === "datacenter-scala-interior";
   });
 
   const defaultProducts = [
@@ -325,6 +313,13 @@
               project.gallery = expectedGallery.slice();
               changed = true;
             }
+            ["name", "contractor", "year", "status", "subtitle", "product"].forEach(function (field) {
+              const expected = bundledDefault[field] || "";
+              if ((project[field] || "") !== expected) {
+                project[field] = expected;
+                changed = true;
+              }
+            });
           }
           const isElSauce = project.id === "el-sause" || project.name === "El Sause" || project.id === "el-sauce";
           const hasCurrentSauceGallery = Array.isArray(project.gallery)
@@ -342,18 +337,9 @@
             project.gallery = elSauceDefaults.gallery.slice();
             changed = true;
           }
-          const datacenterDefault = datacenterDefaults.find(function (item) { return item.id === project.id; });
-          if (datacenterDefault && (project.name !== datacenterDefault.name || project.contractor !== datacenterDefault.contractor)) {
-            project.name = datacenterDefault.name;
-            project.contractor = datacenterDefault.contractor;
-            changed = true;
-          }
-          const expectedStatus = project.id === "apoquindo-los-militares" || project.id === "el-sauce"
-            ? "En instalación"
-            : "";
-          if (project.status !== expectedStatus) { project.status = expectedStatus; changed = true; }
           if (!project.year) { project.year = "Por confirmar"; changed = true; }
           if (project.contractor === undefined) { project.contractor = project.client || ""; changed = true; }
+          if (!project.product) { project.product = "Soluciones vidriadas"; changed = true; }
           if (/^Proyecto\s+\d+$/i.test(String(project.name || ""))) { project.name = String(project.name).replace(/^Proyecto/i, "Obra"); changed = true; }
           if (!Array.isArray(project.gallery)) { project.gallery = []; changed = true; }
           const uniqueGallery = project.gallery.filter(function (image, index, gallery) {
@@ -439,19 +425,31 @@
     if (!products.length) container.innerHTML = '<div class="empty-state">No hay soluciones publicadas por el momento.</div>';
   }
 
-  function projectCard(project) {
+  function projectImages(project) {
+    return Array.from(new Set([project.cover].concat(project.gallery || []).filter(Boolean)));
+  }
+
+  function projectCard(project, autoplay) {
     const client = project.contractor || "No indica";
+    const subtitle = project.subtitle ? `<p class="project-card__subtitle">${escapeHtml(project.subtitle)}</p>` : "";
     const statusFact = project.status
       ? `<p><span>Estado</span><strong class="project-status is-in-progress">${escapeHtml(project.status)}</strong></p>`
       : "";
+    const images = projectImages(project);
+    const media = autoplay
+      ? `<div class="project-card__media" data-card-slideshow>${images.map(function (image, index) {
+          return `<img class="project-card__slide${index === 0 ? " is-active" : ""}" src="${escapeHtml(image)}" alt="${index === 0 ? escapeHtml(project.name) : ""}" ${index === 0 ? "" : 'loading="lazy" '}decoding="async">`;
+        }).join("")}</div>`
+      : `<img src="${escapeHtml(project.cover)}" alt="${escapeHtml(project.name)}" loading="lazy" decoding="async">`;
     return `
       <a class="project-card" href="${projectUrl(project.id)}" aria-label="Ver obra ${escapeHtml(project.name)}">
-        <img src="${escapeHtml(project.cover)}" alt="${escapeHtml(project.name)}" loading="lazy" decoding="async">
+        ${media}
         <div class="project-card__content">
-          <h3>${escapeHtml(project.name)}</h3>
+          <div><h3>${escapeHtml(project.name)}</h3>${subtitle}</div>
           <div class="project-card__facts">
             <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
             <p><span>Año</span><strong>${escapeHtml(project.year || "Por confirmar")}</strong></p>
+            <p><span>Producto</span><strong>${escapeHtml(project.product || "Soluciones vidriadas")}</strong></p>
             ${statusFact}
           </div>
         </div>
@@ -469,15 +467,15 @@
   function renderLatest(projects) {
     const container = document.querySelector("[data-latest-projects]");
     if (!container) return;
-    const recent = projects.slice().sort(compareProjectsByYearAndName);
-    container.innerHTML = recent.slice(0, 3).map(projectCard).join("");
+    const inProgress = projects.filter(function (project) { return project.status === "En instalación"; }).sort(compareProjectsByYearAndName);
+    container.innerHTML = inProgress.slice(0, 2).map(function (project) { return projectCard(project, true); }).join("");
   }
 
   function renderAllProjects(projects) {
     const container = document.querySelector("[data-all-projects]");
     if (!container) return;
     const ordered = projects.slice().sort(compareProjectsByYearAndName);
-    container.innerHTML = ordered.map(projectCard).join("");
+    container.innerHTML = ordered.map(function (project) { return projectCard(project, false); }).join("");
     const empty = document.querySelector("[data-empty-projects]");
     if (empty) empty.hidden = projects.length > 0;
   }
@@ -493,7 +491,7 @@
       return;
     }
     document.title = project.name + " | CWSS";
-    const galleryImages = Array.from(new Set([project.cover].concat(project.gallery || []).filter(Boolean)));
+    const galleryImages = projectImages(project);
     const gallery = galleryImages.map(function (image, index) {
       return `<figure class="project-gallery__slide" aria-hidden="${index === 0 ? "false" : "true"}"><img src="${escapeHtml(image)}" alt="${escapeHtml(project.name)} - imagen ${index + 1}" loading="lazy" decoding="async"><button class="project-gallery__full" type="button" data-full-image${index === 0 ? "" : ' tabindex="-1"'}>Ver imagen completa</button></figure>`;
     }).join("");
@@ -501,6 +499,7 @@
       return `<button class="project-gallery__thumb${index === 0 ? " is-active" : ""}" type="button" data-gallery-select="${index}" aria-label="Ver imagen ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"><img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async"></button>`;
     }).join("");
     const client = project.contractor || "No indica";
+    const subtitle = project.subtitle ? `<p class="project-detail__subtitle">${escapeHtml(project.subtitle)}</p>` : "";
     const statusFact = project.status
       ? `<p><span>Estado</span><strong class="project-status is-in-progress">${escapeHtml(project.status)}</strong></p>`
       : "";
@@ -508,9 +507,11 @@
       <section class="project-detail__hero" style="background-image:url('${escapeHtml(project.cover)}')">
         <div class="project-detail__title">
           <p class="project-detail__project">${escapeHtml(project.name)}</p>
+          ${subtitle}
           <div class="project-detail__facts">
             <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
             <p><span>Año</span><strong>${escapeHtml(project.year || "Por confirmar")}</strong></p>
+            <p><span>Producto</span><strong>${escapeHtml(project.product || "Soluciones vidriadas")}</strong></p>
             ${statusFact}
           </div>
         </div>
@@ -542,7 +543,9 @@
     const currentLabel = gallery.querySelector("[data-gallery-current]");
     const previous = gallery.querySelector("[data-gallery-previous]");
     const next = gallery.querySelector("[data-gallery-next]");
+    const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let current = 0;
+    let autoplayTimer = null;
 
     function showSlide(index) {
       if (!slides.length) return;
@@ -561,11 +564,36 @@
       if (currentLabel) currentLabel.textContent = String(current + 1);
     }
 
+    function stopAutoplay() {
+      if (autoplayTimer !== null) window.clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      if (reducedMotion || slides.length <= 1 || document.hidden) return;
+      autoplayTimer = window.setInterval(function () { showSlide(current + 1); }, 4800);
+    }
+
+    function selectSlide(index) {
+      showSlide(index);
+      startAutoplay();
+    }
+
     thumbnails.forEach(function (thumb) {
-      thumb.addEventListener("click", function () { showSlide(Number(thumb.dataset.gallerySelect)); });
+      thumb.addEventListener("click", function () { selectSlide(Number(thumb.dataset.gallerySelect)); });
     });
-    if (previous) previous.addEventListener("click", function () { showSlide(current - 1); });
-    if (next) next.addEventListener("click", function () { showSlide(current + 1); });
+    if (previous) previous.addEventListener("click", function () { selectSlide(current - 1); });
+    if (next) next.addEventListener("click", function () { selectSlide(current + 1); });
+    gallery.addEventListener("mouseenter", stopAutoplay);
+    gallery.addEventListener("mouseleave", startAutoplay);
+    gallery.addEventListener("focusin", stopAutoplay);
+    gallery.addEventListener("focusout", function (event) {
+      if (!gallery.contains(event.relatedTarget)) startAutoplay();
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stopAutoplay(); else startAutoplay();
+    });
     document.addEventListener("keydown", function (event) {
       const target = event.target;
       const isEditing = target instanceof HTMLElement
@@ -573,12 +601,51 @@
       if (isEditing || event.altKey || event.ctrlKey || event.metaKey) return;
       if (event.key === "ArrowLeft") {
         event.preventDefault();
-        showSlide(current - 1);
+        selectSlide(current - 1);
       }
       if (event.key === "ArrowRight") {
         event.preventDefault();
-        showSlide(current + 1);
+        selectSlide(current + 1);
       }
+    });
+    startAutoplay();
+  }
+
+  function setupProjectCardSlides() {
+    const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reducedMotion) return;
+    document.querySelectorAll("[data-card-slideshow]").forEach(function (media, cardIndex) {
+      const slides = Array.from(media.querySelectorAll(".project-card__slide"));
+      const card = media.closest(".project-card");
+      if (!card || slides.length <= 1) return;
+      let current = 0;
+      let timer = null;
+
+      function showNext() {
+        slides[current].classList.remove("is-active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("is-active");
+      }
+
+      function stop() {
+        if (timer !== null) window.clearInterval(timer);
+        timer = null;
+      }
+
+      function start() {
+        stop();
+        if (document.hidden) return;
+        timer = window.setInterval(showNext, 3900 + (cardIndex * 450));
+      }
+
+      card.addEventListener("mouseenter", stop);
+      card.addEventListener("mouseleave", start);
+      card.addEventListener("focus", stop);
+      card.addEventListener("blur", start);
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) stop(); else start();
+      });
+      start();
     });
   }
 
@@ -754,7 +821,7 @@
       return `
         <article class="admin-project-row">
           <img src="${escapeHtml(project.cover)}" alt="">
-          <div><h3>${escapeHtml(project.name)}</h3><p class="admin-project-row__meta">Cliente: ${escapeHtml(project.contractor || "No indica")} · Año: ${escapeHtml(project.year || "Por confirmar")}${project.status ? ` · Estado: ${escapeHtml(project.status)}` : ""}</p></div>
+          <div><h3>${escapeHtml(project.name)}</h3><p class="admin-project-row__meta">Cliente: ${escapeHtml(project.contractor || "No indica")} · Año: ${escapeHtml(project.year || "Por confirmar")} · Producto: ${escapeHtml(project.product || "Soluciones vidriadas")}${project.status ? ` · Estado: ${escapeHtml(project.status)}` : ""}</p></div>
           <button class="delete-button" type="button" data-delete-project="${escapeHtml(project.id)}">Eliminar</button>
         </article>`;
     }).join("");
@@ -864,6 +931,7 @@
           name: String(formData.get("name") || "").trim(),
           year: String(formData.get("year") || "").trim(),
           contractor: String(formData.get("contractor") || "No indica").trim(),
+          product: String(formData.get("projectProduct") || "Soluciones vidriadas").trim(),
           status: String(formData.get("status") || ""),
           cover: cover,
           gallery: gallery,
@@ -923,6 +991,7 @@
   renderLatest(projects);
   renderAllProjects(projects);
   renderProjectDetail(projects);
+  setupProjectCardSlides();
   setupProjectGallery();
   setupImageDialog();
   setupNavigation();
