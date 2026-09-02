@@ -11,23 +11,23 @@ Sitio HTML editable y sin dependencias. Los archivos principales son:
 - `site.js`: navegación, obras, login y carga de imágenes.
 - `imagenes/`: recursos gráficos del sitio.
 
-Las obras iniciales y sus galerías se cargan desde `FOTOS PARA PAGINA FINAL-20260826T032356Z-1-001`. Cada ficha muestra nombre, cliente, año y estado. Cuando el cliente no está informado se muestra `No indica`.
+Las obras iniciales y sus galerías usan únicamente archivos WebP publicados en `imagenes-optimizadas/`. Cada obra tiene una carpeta propia con el formato `AÑO - NOMBRE DE OBRA`. Dentro de ella, las imágenes siguen el formato `NOMBRE DE OBRA CONSTRUCTORA AÑO--NOMBRE-IMAGEN--0X.webp`.
 
-La versión anterior de los archivos principales está respaldada en `OLD INDEX AND HTML`.
+El catálogo se ordena por año, del más reciente al más antiguo; las obras del mismo año se ordenan alfabéticamente. Las obras sin año confirmado aparecen al final. Las versiones anteriores, fotografías originales, capturas y recursos sin uso se movieron fuera del sitio a `../COSAS A BORRAR (R)/CWSS.CL2`, desde donde se pueden recuperar antes de su eliminación definitiva.
 
-Las imágenes publicadas se sirven desde `imagenes-optimizadas/` en formato WebP. Las fotografías originales permanecen intactas. Para regenerar las copias optimizadas se puede ejecutar `scripts/optimize-images.cjs` con Node.js y Sharp disponibles.
+El historial detallado de correcciones y actualizaciones está disponible en [`CHANGELOG.md`](CHANGELOG.md).
+
+Cada ficha muestra nombre, cliente y año. La etiqueta de estado se muestra solamente en las obras que están en instalación. Las galerías se pueden recorrer con los controles visibles o con las flechas izquierda y derecha del teclado. Cuando el cliente no está informado se muestra `No indica`.
 
 ## Abrir el sitio
 
-En Windows, haz doble clic en `ABRIR-SITIO.bat`. Se abrirá el sitio en el navegador y una ventana quedará activa mientras lo usas.
+1. Extrae la carpeta completa del ZIP.
+2. Abre `index.html` directamente con doble clic.
+3. No necesitas Python, servidor local ni archivo `.bat` para visualizar las páginas e imágenes incluidas.
 
-También puedes servir esta carpeta manualmente. Por ejemplo, dentro de `CWSS.CL`:
+Si ya habías abierto una versión anterior, cierra esa pestaña y vuelve a abrir `index.html`. Esta edición usa una nueva versión del catálogo para evitar que el navegador recupere rutas antiguas o galerías duplicadas guardadas por `localhost`.
 
-```powershell
-python -m http.server 8080
-```
-
-Luego abre `http://localhost:8080`.
+Importante: no abras `index.html` desde dentro del ZIP sin extraerlo, porque Windows puede abrir únicamente una copia temporal del HTML y las rutas relativas a imágenes/CSS/JS dejarán de existir.
 
 ## Administración
 

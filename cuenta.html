@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="es">
 <head>
+  <base href="./">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Administración de obras CWSS.">
   <title>Cuenta | CWSS</title>
   <link rel="icon" href="imagenes/Logoico.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
-  <script src="site.js" defer></script>
+  <script src="site.js?v=20260902b" defer></script>
 </head>
 <body data-page="cuenta">
   <header class="site-header">
@@ -45,7 +46,7 @@
           <label>Nombre<input type="text" name="name" maxlength="80" placeholder="Ej: Angamos" required></label>
           <label>Cliente<input type="text" name="contractor" maxlength="100" placeholder="Ej: BMI o No indica" required></label>
           <label>Año<input type="number" name="year" min="1900" max="2100" inputmode="numeric" placeholder="Ej: 2018" required></label>
-          <label>Estado<select name="status" required><option value="Completado">Completado</option><option value="Obra en curso">Obra en curso</option></select></label>
+          <label>Estado<select name="status"><option value="">Sin etiqueta</option><option value="En instalación">En instalación</option></select></label>
           <label class="image-file-field">Imagen de portada<input type="file" name="cover" accept="image/*" required><small>Obligatoria. Será la imagen principal de la obra.</small></label>
           <label class="image-file-field">Imágenes adicionales<input type="file" name="gallery" accept="image/*" multiple><small>Opcional. Máximo 3 imágenes adicionales (4 imágenes en total).</small></label>
           <p class="form-message" data-project-message role="status"></p>

@@ -99,6 +99,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .visual-strip img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform .7s ease; }
 .visual-strip figure:first-child img { object-position: 58% center; }
 .visual-strip figure:hover img { transform: scale(1.025); }
+.visual-strip__placeholder { display: grid; place-content: center; gap: 10px; padding: 28px; background: linear-gradient(135deg, #151b24 0%, #273748 55%, #162230 100%); color: #fff; text-align: center; }
+.visual-strip__placeholder::before { content: ""; width: 58px; height: 3px; margin: 0 auto 12px; background: var(--blue); }
+.visual-strip__placeholder span { font-size: clamp(1.35rem, 2.8vw, 2.7rem); font-weight: 700; letter-spacing: .12em; }
+.visual-strip__placeholder small { color: rgba(255,255,255,.68); font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 
 .about { display: grid; grid-template-columns: minmax(280px, .76fr) minmax(480px, 1.24fr); min-height: 360px; border-top-color: var(--blue); }
 .about-visual { padding: clamp(18px, 3vw, 38px); display: grid; place-items: center; border-right: 0; }

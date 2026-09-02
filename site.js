@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  const PROJECTS_KEY = "cwss_projects_v6";
+  const PROJECTS_KEY = "cwss_projects_v8";
   const PRODUCTS_KEY = "cwss_products_v2";
   const ADMIN_KEY = "cwss_admin_session";
   const PHOTO_ROOT = "imagenes-optimizadas/";
@@ -12,227 +12,281 @@
       name: "Angamos",
       contractor: "BMI",
       year: "2018",
-      status: "Completado",
-      cover: PHOTO_ROOT + "ANGAMOS CONSTRUCTORA BMI 2018/ANGAMOS-01.png",
-      gallery: [PHOTO_ROOT + "ANGAMOS CONSTRUCTORA BMI 2018/ANGAMOS-02.png", PHOTO_ROOT + "ANGAMOS CONSTRUCTORA BMI 2018/ANGAMOS-03.png"]
+      status: "",
+      imageFolder: "2018 - ANGAMOS",
+      imageBase: "ANGAMOS BMI 2018--ANGAMOS",
+      imageCount: 3
     },
     {
       id: "angamos-nahmias",
       name: "Angamos",
       contractor: "Nahmias",
       year: "2025",
-      status: "Completado",
-      cover: PHOTO_ROOT + "ANGAMOS NAHMIAS 2025/ANGAMOSNAMIAS-1.jpg",
-      gallery: [PHOTO_ROOT + "ANGAMOS NAHMIAS 2025/ANGAMOSNAMIAS-2.jpg", PHOTO_ROOT + "ANGAMOS NAHMIAS 2025/ANGAMOSNAMIAS-3.png", PHOTO_ROOT + "ANGAMOS NAHMIAS 2025/ANGAMOSNAMIAS-4.jpg"]
+      status: "",
+      imageFolder: "2025 - ANGAMOS",
+      imageBase: "ANGAMOS NAHMIAS 2025--ANGAMOS",
+      imageCount: 4
     },
     {
       id: "apoquindo-los-militares",
       name: "Apoquindo Los Militares",
       contractor: "Echeverría Izquierdo",
       year: "2026",
-      status: "Obra en curso",
-      cover: PHOTO_ROOT + "APOQUINDO LOS MILITARES CONTRUCTORA ECHEVERRIA IZQUIERDO 2026 (EN PROCESO)/LOSMILITARES-01.jpg",
-      gallery: [PHOTO_ROOT + "APOQUINDO LOS MILITARES CONTRUCTORA ECHEVERRIA IZQUIERDO 2026 (EN PROCESO)/LOSMILITARES-2.jpg", PHOTO_ROOT + "APOQUINDO LOS MILITARES CONTRUCTORA ECHEVERRIA IZQUIERDO 2026 (EN PROCESO)/LOSMILITARES-03.jpg", PHOTO_ROOT + "APOQUINDO LOS MILITARES CONTRUCTORA ECHEVERRIA IZQUIERDO 2026 (EN PROCESO)/LOSMILITARES-4.jpg"]
+      status: "En instalación",
+      imageFolder: "2026 - APOQUINDO LOS MILITARES",
+      imageBase: "APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO",
+      imageCount: 4
     },
     {
-      id: "el-sause",
-      name: "El Sause",
-      contractor: "No indica",
+      id: "el-sauce",
+      name: "El Sauce",
+      contractor: "POCURO",
       year: "2026",
-      status: "Obra en curso",
-      cover: PHOTO_ROOT + "EL SAUSE 2026 (EN PROCESO)/EL-SAUSE-01.jpeg",
-      gallery: [PHOTO_ROOT + "EL SAUSE 2026 (EN PROCESO)/EL-SAUSE-02.jpeg", PHOTO_ROOT + "EL SAUSE 2026 (EN PROCESO)/EL-SAUSE-03.jpeg", PHOTO_ROOT + "EL SAUSE 2026 (EN PROCESO)/EL-SAUSE-04.jpeg"]
+      status: "En instalación",
+      imageFolder: "2026 - EL SAUCE",
+      imageBase: "EL SAUCE POCURO 2026--EL-SAUCE",
+      imageCount: 4
+    },
+    {
+      id: "puerta-del-sol",
+      name: "Puerta del Sol",
+      contractor: "Mena y Ovalle",
+      year: "2018",
+      status: "",
+      imageFolder: "2018 - PUERTA DEL SOL",
+      imageBase: "PUERTA DEL SOL MENA Y OVALLE 2018--PUERTA-DEL-SOL",
+      imageCount: 1
     },
     {
       id: "burgos",
       name: "Burgos",
       contractor: "Tecton",
       year: "2025",
-      status: "Completado",
-      cover: PHOTO_ROOT + "BURGOS TECTON 2025/BURGOS-1.jpg",
-      gallery: [PHOTO_ROOT + "BURGOS TECTON 2025/BURGOS-2.jpg", PHOTO_ROOT + "BURGOS TECTON 2025/BURGOS-3.jpg", PHOTO_ROOT + "BURGOS TECTON 2025/BURGOS-4.jpg"]
+      status: "",
+      imageFolder: "2025 - BURGOS",
+      imageBase: "BURGOS TECTON 2025--BURGOS",
+      imageCount: 4
     },
     {
       id: "bustamante-exterior",
       name: "Bustamante - Exterior",
       contractor: "Nahmias",
       year: "2024",
-      status: "Completado",
-      cover: PHOTO_ROOT + "BUSTAMANTE NAHMIAS 2024 (EXTERIOR)/Bustamante-01.png",
-      gallery: [PHOTO_ROOT + "BUSTAMANTE NAHMIAS 2024 (EXTERIOR)/Bustamante-02.png", PHOTO_ROOT + "BUSTAMANTE NAHMIAS 2024 (EXTERIOR)/Bustamante-03.png", PHOTO_ROOT + "BUSTAMANTE NAHMIAS 2024 (EXTERIOR)/Bustamante-04 .jpg"]
+      status: "",
+      imageFolder: "2024 - BUSTAMANTE EXTERIOR",
+      imageBase: "BUSTAMANTE EXTERIOR NAHMIAS 2024--BUSTAMANTE-EXTERIOR",
+      imageCount: 4
     },
     {
       id: "bustamante-interior",
       name: "Bustamante - Interior",
       contractor: "Nahmias",
       year: "2024",
-      status: "Completado",
-      cover: PHOTO_ROOT + "BUSTAMANTE NAHMIAS 2024 (INTERIOR)/BUSTAMANTEIN-1.jpg",
-      gallery: [PHOTO_ROOT + "BUSTAMANTE NAHMIAS 2024 (INTERIOR)/BUSTAMANTEIN-2.png", PHOTO_ROOT + "BUSTAMANTE NAHMIAS 2024 (INTERIOR)/BUSTAMANTEIN-3.jpg", PHOTO_ROOT + "BUSTAMANTE NAHMIAS 2024 (INTERIOR)/BUSTAMANTEIN-4.png"]
+      status: "",
+      imageFolder: "2024 - BUSTAMANTE INTERIOR",
+      imageBase: "BUSTAMANTE INTERIOR NAHMIAS 2024--BUSTAMANTE-INTERIOR",
+      imageCount: 4
     },
     {
       id: "casa-italia",
       name: "Casa Italia",
       contractor: "Tecton",
       year: "2022",
-      status: "Completado",
-      cover: PHOTO_ROOT + "CASA ITALIA TECTON 2022/CasaItalia-01.png",
-      gallery: [PHOTO_ROOT + "CASA ITALIA TECTON 2022/CasaItalia-02.png", PHOTO_ROOT + "CASA ITALIA TECTON 2022/CasaItalia-03.png", PHOTO_ROOT + "CASA ITALIA TECTON 2022/CasaItalia-04.png"]
+      status: "",
+      imageFolder: "2022 - CASA ITALIA",
+      imageBase: "CASA ITALIA TECTON 2022--CASA-ITALIA",
+      imageCount: 4
     },
     {
       id: "club-de-campo-exterior",
       name: "Club de Campo - Exterior",
       contractor: "Nahmias",
       year: "2020",
-      status: "Completado",
-      cover: PHOTO_ROOT + "CLUB DE CAMPO NAHMIAS 2020 (EXTERIOR)/CLUB-1.jpg",
-      gallery: [PHOTO_ROOT + "CLUB DE CAMPO NAHMIAS 2020 (EXTERIOR)/Club-02.jpg", PHOTO_ROOT + "CLUB DE CAMPO NAHMIAS 2020 (EXTERIOR)/Club-03.png", PHOTO_ROOT + "CLUB DE CAMPO NAHMIAS 2020 (EXTERIOR)/Club-04.png"]
+      status: "",
+      imageFolder: "2020 - CLUB DE CAMPO EXTERIOR",
+      imageBase: "CLUB DE CAMPO EXTERIOR NAHMIAS 2020--CLUB-DE-CAMPO-EXTERIOR",
+      imageCount: 5
     },
     {
       id: "club-de-campo-interior",
       name: "Club de Campo - Interior",
       contractor: "Nahmias",
       year: "2020",
-      status: "Completado",
-      cover: PHOTO_ROOT + "CLUB DE CAMPO NAHMIAS 2020 (INTERIOR)/CLUBIN-01.jpg",
-      gallery: [PHOTO_ROOT + "CLUB DE CAMPO NAHMIAS 2020 (INTERIOR)/CLUBIN-02.jpg", PHOTO_ROOT + "CLUB DE CAMPO NAHMIAS 2020 (INTERIOR)/CLUBIN-03.jpg", PHOTO_ROOT + "CLUB DE CAMPO NAHMIAS 2020 (INTERIOR)/CLUBIN-04.jpg"]
+      status: "",
+      imageFolder: "2020 - CLUB DE CAMPO INTERIOR",
+      imageBase: "CLUB DE CAMPO INTERIOR NAHMIAS 2020--CLUB-DE-CAMPO-INTERIOR",
+      imageCount: 4
     },
     {
       id: "comapa-punta-arenas",
       name: "Comapa - Punta Arenas",
       contractor: "Bravo Izquierdo",
       year: "2018",
-      status: "Completado",
-      cover: PHOTO_ROOT + "COMAPA BRAVO IZQUIERDO PUNTA ARENAS 2018/COMAPA-1.jpg",
-      gallery: [PHOTO_ROOT + "COMAPA BRAVO IZQUIERDO PUNTA ARENAS 2018/COMAPA-2.jpg", PHOTO_ROOT + "COMAPA BRAVO IZQUIERDO PUNTA ARENAS 2018/COMAPA-3.jpg", PHOTO_ROOT + "COMAPA BRAVO IZQUIERDO PUNTA ARENAS 2018/COMAPA-4.jpeg"]
+      status: "",
+      imageFolder: "2018 - COMAPA PUNTA ARENAS",
+      imageBase: "COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA",
+      imageCount: 4
     },
     {
       id: "datacenter-scala-exterior",
-      name: "Datacenter Scala - Exterior",
-      contractor: "No indica",
+      name: "DATACENTER SCALA",
+      contractor: "Puerto Octay",
       year: "2025",
-      status: "Completado",
-      cover: PHOTO_ROOT + "DATACENTER SCALA PUERTO OCTAY 2025/SCALA-1.png",
-      gallery: [PHOTO_ROOT + "DATACENTER SCALA PUERTO OCTAY 2025/SCALA-2.png", PHOTO_ROOT + "DATACENTER SCALA PUERTO OCTAY 2025/SCALA-3.jpg", PHOTO_ROOT + "DATACENTER SCALA PUERTO OCTAY 2025/DATA-4.jpg"]
+      status: "",
+      imageFolder: "2025 - DATACENTER SCALA EXTERIOR",
+      imageBase: "DATACENTER SCALA PUERTO OCTAY 2025--DATACENTER-SCALA-EXTERIOR",
+      imageCount: 4
     },
     {
       id: "datacenter-scala-interior",
-      name: "Datacenter Scala - Interior",
-      contractor: "No indica",
+      name: "DATACENTER SCALA - Interior",
+      contractor: "Puerto Octay",
       year: "2025",
-      status: "Completado",
-      cover: PHOTO_ROOT + "DATACENTER SCALA PUERTO OCTAY 2025 (INTERIOR)/DATA-1.jpg",
-      gallery: [PHOTO_ROOT + "DATACENTER SCALA PUERTO OCTAY 2025 (INTERIOR)/DATA-2.jpg", PHOTO_ROOT + "DATACENTER SCALA PUERTO OCTAY 2025 (INTERIOR)/DATA-3.jpg", PHOTO_ROOT + "DATACENTER SCALA PUERTO OCTAY 2025 (INTERIOR)/DATA-4.jpg"]
+      status: "",
+      imageFolder: "2025 - DATACENTER SCALA INTERIOR",
+      imageBase: "DATACENTER SCALA PUERTO OCTAY 2025--DATACENTER-SCALA-INTERIOR",
+      imageCount: 4
     },
     {
       id: "edificio-el-roble",
       name: "Edificio El Roble",
       contractor: "Nahmias",
       year: "2022",
-      status: "Completado",
-      cover: PHOTO_ROOT + "EDIFICIO EL ROBLE NAHMIAS 2022/ROBLE-01.png",
-      gallery: [PHOTO_ROOT + "EDIFICIO EL ROBLE NAHMIAS 2022/ROBLE-02.png", PHOTO_ROOT + "EDIFICIO EL ROBLE NAHMIAS 2022/ROBLE-03.png", PHOTO_ROOT + "EDIFICIO EL ROBLE NAHMIAS 2022/ROBLE-04.png"]
+      status: "",
+      imageFolder: "2022 - EDIFICIO EL ROBLE",
+      imageBase: "EDIFICIO EL ROBLE NAHMIAS 2022--EL-ROBLE",
+      imageCount: 4
     },
     {
       id: "jofre",
       name: "Jofre",
       contractor: "Nahmias",
       year: "2024",
-      status: "Completado",
-      cover: PHOTO_ROOT + "JOFRE NAHAMIAS 2024/JOFRE-1.jpg",
-      gallery: [PHOTO_ROOT + "JOFRE NAHAMIAS 2024/JOFRE-2.jpg", PHOTO_ROOT + "JOFRE NAHAMIAS 2024/JOFRE-3.jpg", PHOTO_ROOT + "JOFRE NAHAMIAS 2024/JOFRE-4.jpg"]
+      status: "",
+      imageFolder: "2024 - JOFRE",
+      imageBase: "JOFRE NAHMIAS 2024--JOFRE",
+      imageCount: 4
     },
     {
       id: "jose-domingo-canas",
       name: "José Domingo Cañas",
       contractor: "Nahmias",
       year: "2024",
-      status: "Completado",
-      cover: PHOTO_ROOT + "JOSE DOMINGO CAÑAS NAHMIAS 2024/JOSE-01.png",
-      gallery: [PHOTO_ROOT + "JOSE DOMINGO CAÑAS NAHMIAS 2024/JOSE-2.jpg", PHOTO_ROOT + "JOSE DOMINGO CAÑAS NAHMIAS 2024/JOSE-3.jpg", PHOTO_ROOT + "JOSE DOMINGO CAÑAS NAHMIAS 2024/JOSE-4.jpg"]
+      status: "",
+      imageFolder: "2024 - JOSE DOMINGO CANAS",
+      imageBase: "JOSE DOMINGO CANAS NAHMIAS 2024--JOSE-DOMINGO-CANAS",
+      imageCount: 4
     },
     {
       id: "la-capitania",
       name: "La Capitanía",
       contractor: "Nahmias",
       year: "2022",
-      status: "Completado",
-      cover: PHOTO_ROOT + "LA CAPITANIA NAHMIAS 2022/LACAPITANIA.jpg",
-      gallery: [PHOTO_ROOT + "LA CAPITANIA NAHMIAS 2022/LACAPITANIA (2).jpg"]
+      status: "",
+      imageFolder: "2022 - LA CAPITANIA",
+      imageBase: "LA CAPITANIA NAHMIAS 2022--LA-CAPITANIA",
+      imageCount: 2
     },
     {
       id: "lote-19",
       name: "Lote 19",
       contractor: "Ignacio Hurtado",
       year: "2024",
-      status: "Completado",
-      cover: PHOTO_ROOT + "LOTE 19 IGNACIO HURTADO 2024/LOTE19-1.jpg",
-      gallery: [PHOTO_ROOT + "LOTE 19 IGNACIO HURTADO 2024/LOTE19-2.jpg", PHOTO_ROOT + "LOTE 19 IGNACIO HURTADO 2024/LOTE-3.jpg"]
+      status: "",
+      imageFolder: "2024 - LOTE 19",
+      imageBase: "LOTE 19 IGNACIO HURTADO 2024--LOTE-19",
+      imageCount: 3
     },
     {
       id: "onofre-jarpa",
       name: "Onofre Jarpa",
       contractor: "Sur G",
       year: "2021",
-      status: "Completado",
-      cover: PHOTO_ROOT + "ONOFRE JARPA SUR G 2021/ONOFRE-01.png",
-      gallery: [PHOTO_ROOT + "ONOFRE JARPA SUR G 2021/ONOFRE-02.png", PHOTO_ROOT + "ONOFRE JARPA SUR G 2021/ONOFRE-3.jpeg"]
+      status: "",
+      imageFolder: "2021 - ONOFRE JARPA",
+      imageBase: "ONOFRE JARPA SUR G 2021--ONOFRE-JARPA",
+      imageCount: 3
     },
     {
       id: "pedro-navia",
       name: "Pedro Navia",
       contractor: "Tecton",
       year: "2022",
-      status: "Completado",
-      cover: PHOTO_ROOT + "PEDRO NAVIA TECTON 2022/PEDRO-01.png",
-      gallery: [PHOTO_ROOT + "PEDRO NAVIA TECTON 2022/PEDRO-02.png", PHOTO_ROOT + "PEDRO NAVIA TECTON 2022/PEDRO-03.png"]
+      status: "",
+      imageFolder: "2022 - PEDRO NAVIA",
+      imageBase: "PEDRO NAVIA TECTON 2022--PEDRO-NAVIA",
+      imageCount: 3
     },
     {
       id: "principe-de-gales",
       name: "Príncipe de Gales",
       contractor: "Echeverría Izquierdo",
       year: "2024",
-      status: "Completado",
-      cover: PHOTO_ROOT + "PRINCIPE DE GALES ECHEVERRIA IZQUIERDO 2024/GALES-01.jpg",
-      gallery: [PHOTO_ROOT + "PRINCIPE DE GALES ECHEVERRIA IZQUIERDO 2024/GALES-02.jpg", PHOTO_ROOT + "PRINCIPE DE GALES ECHEVERRIA IZQUIERDO 2024/GALES-03.jpg", PHOTO_ROOT + "PRINCIPE DE GALES ECHEVERRIA IZQUIERDO 2024/GALES-04.jpg"]
+      status: "",
+      imageFolder: "2024 - PRINCIPE DE GALES",
+      imageBase: "PRINCIPE DE GALES ECHEVERRIA IZQUIERDO 2024--PRINCIPE-DE-GALES",
+      imageCount: 4
     },
     {
       id: "puerto-nuevo-antofagasta",
       name: "Puerto Nuevo - Antofagasta",
       contractor: "Echeverría Izquierdo",
       year: "2021",
-      status: "Completado",
-      cover: PHOTO_ROOT + "PUERTO NUEVO (ANTOFAGASTA) ECHEVERRIA IZQUIERDO 2021/PUERTO NUEVO 1.jpg",
-      gallery: [PHOTO_ROOT + "PUERTO NUEVO (ANTOFAGASTA) ECHEVERRIA IZQUIERDO 2021/PUERTO NUEVO 2.jpg", PHOTO_ROOT + "PUERTO NUEVO (ANTOFAGASTA) ECHEVERRIA IZQUIERDO 2021/PUERTO NUEVO 3.jpg", PHOTO_ROOT + "PUERTO NUEVO (ANTOFAGASTA) ECHEVERRIA IZQUIERDO 2021/PUERTO NUEVO 4.jpg"]
+      status: "",
+      imageFolder: "2021 - PUERTO NUEVO ANTOFAGASTA",
+      imageBase: "PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO",
+      imageCount: 4
     },
     {
       id: "tavelli",
       name: "Tavelli",
       contractor: "Nahmias",
       year: "2025",
-      status: "Completado",
-      cover: PHOTO_ROOT + "TAVELLI NAMIAS 2025/Tavelli-01.png",
-      gallery: [PHOTO_ROOT + "TAVELLI NAMIAS 2025/Tavelly-02.png"]
+      status: "",
+      imageFolder: "2025 - TAVELLI",
+      imageBase: "TAVELLI NAHMIAS 2025--TAVELLI",
+      imageCount: 2
     },
     {
       id: "torres-centenario-antofagasta",
       name: "Torres Centenario - Antofagasta",
       contractor: "Mar Abierto",
       year: "2018",
-      status: "Completado",
-      cover: PHOTO_ROOT + "TORRES CENTENARIO (ANTOFAGASTA) CONSTRUCTORA MAR ABIERTO 2018/CENTENARIO-01.jpg",
-      gallery: [PHOTO_ROOT + "TORRES CENTENARIO (ANTOFAGASTA) CONSTRUCTORA MAR ABIERTO 2018/CENTENARIO-02.png", PHOTO_ROOT + "TORRES CENTENARIO (ANTOFAGASTA) CONSTRUCTORA MAR ABIERTO 2018/CENTENARIO-03.png", PHOTO_ROOT + "TORRES CENTENARIO (ANTOFAGASTA) CONSTRUCTORA MAR ABIERTO 2018/CENTENARIO-04.png"]
+      status: "",
+      imageFolder: "2018 - TORRES CENTENARIO ANTOFAGASTA",
+      imageBase: "TORRES CENTENARIO ANTOFAGASTA MAR ABIERTO 2018--TORRES-CENTENARIO",
+      imageCount: 4
     }
   ];
 
-  function optimizedProjectImagePath(image) {
-    const relative = image.slice(PHOTO_ROOT.length).replace(/\.[^./]+$/, ".webp");
-    return PHOTO_ROOT + relative.replace(/\//g, "--");
-  }
-
   defaultProjects.forEach(function (project) {
-    project.cover = optimizedProjectImagePath(project.cover);
-    project.gallery = project.gallery.map(optimizedProjectImagePath);
+    const images = Array.from({ length: project.imageCount }, function (_, index) {
+      const number = String(index + 1).padStart(2, "0");
+      return PHOTO_ROOT + project.imageFolder + "/" + project.imageBase + "--" + number + ".webp";
+    });
+    project.cover = images[0];
+    project.gallery = images.slice(1);
+    delete project.imageFolder;
+    delete project.imageBase;
+    delete project.imageCount;
+  });
+
+  // Canonical bundled assets. This repairs stale paths stored by older versions
+  // (especially when the site is opened directly with file:// instead of localhost).
+  const defaultProjectById = new Map(defaultProjects.map(function (project) {
+    return [project.id, project];
+  }));
+
+  const elSauceDefaults = defaultProjects.find(function (project) {
+    return project.id === "el-sauce";
+  });
+
+  const puertaDelSolDefaults = defaultProjects.find(function (project) {
+    return project.id === "puerta-del-sol";
+  });
+
+  const datacenterDefaults = defaultProjects.filter(function (project) {
+    return project.id === "datacenter-scala-exterior" || project.id === "datacenter-scala-interior";
   });
 
   const defaultProducts = [
@@ -260,13 +314,58 @@
         if (!Array.isArray(parsed)) return cloneDefaults();
         let changed = false;
         parsed.forEach(function (project) {
+          const bundledDefault = defaultProjectById.get(project.id);
+          if (bundledDefault) {
+            const expectedGallery = bundledDefault.gallery || [];
+            const sameGallery = Array.isArray(project.gallery)
+              && project.gallery.length === expectedGallery.length
+              && project.gallery.every(function (image, index) { return image === expectedGallery[index]; });
+            if (project.cover !== bundledDefault.cover || !sameGallery) {
+              project.cover = bundledDefault.cover;
+              project.gallery = expectedGallery.slice();
+              changed = true;
+            }
+          }
+          const isElSauce = project.id === "el-sause" || project.name === "El Sause" || project.id === "el-sauce";
+          const hasCurrentSauceGallery = Array.isArray(project.gallery)
+            && project.gallery.length === elSauceDefaults.gallery.length
+            && project.gallery.every(function (image, index) { return image === elSauceDefaults.gallery[index]; });
+          if (isElSauce && (project.id !== elSauceDefaults.id
+            || project.name !== elSauceDefaults.name
+            || project.contractor !== elSauceDefaults.contractor
+            || project.cover !== elSauceDefaults.cover
+            || !hasCurrentSauceGallery)) {
+            project.id = elSauceDefaults.id;
+            project.name = elSauceDefaults.name;
+            project.contractor = elSauceDefaults.contractor;
+            project.cover = elSauceDefaults.cover;
+            project.gallery = elSauceDefaults.gallery.slice();
+            changed = true;
+          }
+          const datacenterDefault = datacenterDefaults.find(function (item) { return item.id === project.id; });
+          if (datacenterDefault && (project.name !== datacenterDefault.name || project.contractor !== datacenterDefault.contractor)) {
+            project.name = datacenterDefault.name;
+            project.contractor = datacenterDefault.contractor;
+            changed = true;
+          }
+          const expectedStatus = project.id === "apoquindo-los-militares" || project.id === "el-sauce"
+            ? "En instalación"
+            : "";
+          if (project.status !== expectedStatus) { project.status = expectedStatus; changed = true; }
           if (!project.year) { project.year = "Por confirmar"; changed = true; }
           if (project.contractor === undefined) { project.contractor = project.client || ""; changed = true; }
-          if (!project.status) { project.status = "Completado"; changed = true; }
           if (/^Proyecto\s+\d+$/i.test(String(project.name || ""))) { project.name = String(project.name).replace(/^Proyecto/i, "Obra"); changed = true; }
           if (!Array.isArray(project.gallery)) { project.gallery = []; changed = true; }
-          if (project.gallery.length > 3) { project.gallery = project.gallery.slice(0, 3); changed = true; }
+          const uniqueGallery = project.gallery.filter(function (image, index, gallery) {
+            return image && image !== project.cover && gallery.indexOf(image) === index;
+          });
+          if (uniqueGallery.length !== project.gallery.length) { project.gallery = uniqueGallery; changed = true; }
         });
+        if (!parsed.some(function (project) { return project.id === puertaDelSolDefaults.id; })) {
+          const sauceIndex = parsed.findIndex(function (project) { return project.id === elSauceDefaults.id; });
+          parsed.splice(sauceIndex >= 0 ? sauceIndex + 1 : 0, 0, JSON.parse(JSON.stringify(puertaDelSolDefaults)));
+          changed = true;
+        }
         if (changed) localStorage.setItem(PROJECTS_KEY, JSON.stringify(parsed));
         return parsed;
       }
@@ -279,7 +378,12 @@
   }
 
   function saveProjects(projects) {
-    localStorage.setItem(PROJECTS_KEY, JSON.stringify(projects));
+    try {
+      localStorage.setItem(PROJECTS_KEY, JSON.stringify(projects));
+      return true;
+    } catch (error) {
+      return false;
+    }
   }
 
   function cloneProductDefaults() {
@@ -302,7 +406,12 @@
   }
 
   function saveProducts(products) {
-    localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
+    try {
+      localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
+      return true;
+    } catch (error) {
+      return false;
+    }
   }
 
   function escapeHtml(value) {
@@ -332,7 +441,9 @@
 
   function projectCard(project) {
     const client = project.contractor || "No indica";
-    const statusClass = String(project.status || "").toLowerCase().includes("curso") ? " is-in-progress" : "";
+    const statusFact = project.status
+      ? `<p><span>Estado</span><strong class="project-status is-in-progress">${escapeHtml(project.status)}</strong></p>`
+      : "";
     return `
       <a class="project-card" href="${projectUrl(project.id)}" aria-label="Ver obra ${escapeHtml(project.name)}">
         <img src="${escapeHtml(project.cover)}" alt="${escapeHtml(project.name)}" loading="lazy" decoding="async">
@@ -341,24 +452,31 @@
           <div class="project-card__facts">
             <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
             <p><span>Año</span><strong>${escapeHtml(project.year || "Por confirmar")}</strong></p>
-            <p><span>Estado</span><strong class="project-status${statusClass}">${escapeHtml(project.status || "Completado")}</strong></p>
+            ${statusFact}
           </div>
         </div>
         <span class="project-card__arrow" aria-hidden="true">↗</span>
       </a>`;
   }
 
+  function compareProjectsByYearAndName(a, b) {
+    const yearA = /^\d{4}$/.test(String(a.year)) ? Number(a.year) : -1;
+    const yearB = /^\d{4}$/.test(String(b.year)) ? Number(b.year) : -1;
+    if (yearA !== yearB) return yearB - yearA;
+    return String(a.name || "").localeCompare(String(b.name || ""), "es", { sensitivity: "base" });
+  }
+
   function renderLatest(projects) {
     const container = document.querySelector("[data-latest-projects]");
     if (!container) return;
-    const recent = projects.slice().sort(function (a, b) { return Number(b.year) - Number(a.year); });
+    const recent = projects.slice().sort(compareProjectsByYearAndName);
     container.innerHTML = recent.slice(0, 3).map(projectCard).join("");
   }
 
   function renderAllProjects(projects) {
     const container = document.querySelector("[data-all-projects]");
     if (!container) return;
-    const ordered = projects.slice().sort(function (a, b) { return Number(b.year) - Number(a.year); });
+    const ordered = projects.slice().sort(compareProjectsByYearAndName);
     container.innerHTML = ordered.map(projectCard).join("");
     const empty = document.querySelector("[data-empty-projects]");
     if (empty) empty.hidden = projects.length > 0;
@@ -375,7 +493,7 @@
       return;
     }
     document.title = project.name + " | CWSS";
-    const galleryImages = [project.cover].concat(project.gallery || []).filter(Boolean).slice(0, 4);
+    const galleryImages = Array.from(new Set([project.cover].concat(project.gallery || []).filter(Boolean)));
     const gallery = galleryImages.map(function (image, index) {
       return `<figure class="project-gallery__slide" aria-hidden="${index === 0 ? "false" : "true"}"><img src="${escapeHtml(image)}" alt="${escapeHtml(project.name)} - imagen ${index + 1}" loading="lazy" decoding="async"><button class="project-gallery__full" type="button" data-full-image${index === 0 ? "" : ' tabindex="-1"'}>Ver imagen completa</button></figure>`;
     }).join("");
@@ -383,7 +501,9 @@
       return `<button class="project-gallery__thumb${index === 0 ? " is-active" : ""}" type="button" data-gallery-select="${index}" aria-label="Ver imagen ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"><img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async"></button>`;
     }).join("");
     const client = project.contractor || "No indica";
-    const statusClass = String(project.status || "").toLowerCase().includes("curso") ? " is-in-progress" : "";
+    const statusFact = project.status
+      ? `<p><span>Estado</span><strong class="project-status is-in-progress">${escapeHtml(project.status)}</strong></p>`
+      : "";
     container.innerHTML = `
       <section class="project-detail__hero" style="background-image:url('${escapeHtml(project.cover)}')">
         <div class="project-detail__title">
@@ -391,7 +511,7 @@
           <div class="project-detail__facts">
             <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
             <p><span>Año</span><strong>${escapeHtml(project.year || "Por confirmar")}</strong></p>
-            <p><span>Estado</span><strong class="project-status${statusClass}">${escapeHtml(project.status || "Completado")}</strong></p>
+            ${statusFact}
           </div>
         </div>
       </section>
@@ -446,9 +566,19 @@
     });
     if (previous) previous.addEventListener("click", function () { showSlide(current - 1); });
     if (next) next.addEventListener("click", function () { showSlide(current + 1); });
-    gallery.addEventListener("keydown", function (event) {
-      if (event.key === "ArrowLeft") showSlide(current - 1);
-      if (event.key === "ArrowRight") showSlide(current + 1);
+    document.addEventListener("keydown", function (event) {
+      const target = event.target;
+      const isEditing = target instanceof HTMLElement
+        && (target.matches("input, textarea, select") || target.isContentEditable);
+      if (isEditing || event.altKey || event.ctrlKey || event.metaKey) return;
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        showSlide(current - 1);
+      }
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        showSlide(current + 1);
+      }
     });
   }
 
@@ -624,7 +754,7 @@
       return `
         <article class="admin-project-row">
           <img src="${escapeHtml(project.cover)}" alt="">
-          <div><h3>${escapeHtml(project.name)}</h3><p class="admin-project-row__meta">Cliente: ${escapeHtml(project.contractor || "No indica")} · Año: ${escapeHtml(project.year || "Por confirmar")} · Estado: ${escapeHtml(project.status || "Completado")}</p></div>
+          <div><h3>${escapeHtml(project.name)}</h3><p class="admin-project-row__meta">Cliente: ${escapeHtml(project.contractor || "No indica")} · Año: ${escapeHtml(project.year || "Por confirmar")}${project.status ? ` · Estado: ${escapeHtml(project.status)}` : ""}</p></div>
           <button class="delete-button" type="button" data-delete-project="${escapeHtml(project.id)}">Eliminar</button>
         </article>`;
     }).join("");
@@ -734,7 +864,7 @@
           name: String(formData.get("name") || "").trim(),
           year: String(formData.get("year") || "").trim(),
           contractor: String(formData.get("contractor") || "No indica").trim(),
-          status: String(formData.get("status") || "Completado"),
+          status: String(formData.get("status") || ""),
           cover: cover,
           gallery: gallery,
           createdAt: new Date().toISOString()
