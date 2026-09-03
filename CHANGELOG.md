@@ -2,6 +2,12 @@
 
 ## Cambios locales posteriores a CWSS.CL3.1 — 2026-09-03
 
+- La obra `El Sauce` pasó a llamarse `El Sauce 3` sin modificar su identificador ni las rutas de sus fotografías.
+- El título `Obras en instalación` usa exactamente el mismo tamaño que `Quiénes somos`.
+- Cada solución se convirtió en un botón desplegable que empuja el contenido siguiente hacia abajo y cierra cualquier otro producto abierto.
+- Cada producto muestra tres espacios visuales. Se asignaron fotografías verificadas de obras a Mamparas, Barandas, Shower Door, Espejos, Pasamanos, Panel compuesto y Lucarnas.
+- Puertas Protex, Revestimiento y chambranas de acero inoxidable y Ventanas de PVC conservan tres placeholders identificados porque el catálogo actual no contiene tres fotografías verificadas para esas categorías.
+- Las fotografías se cargan y aparecen secuencialmente de izquierda a derecha con una animación de entrada lateral.
 - Se retiró la administración local, su página de acceso, el código de edición y sus recursos asociados. El catálogo público permanece estático.
 - En `Obras en instalación` se retiró la línea negra del enlace y se alineó el encabezado con la primera miniatura.
 - En `proyectos.html` se eliminó el título `Obras` y la línea negra anterior al catálogo.

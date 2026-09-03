@@ -22,6 +22,8 @@ La administración local fue retirada. El catálogo se actualiza editando los ar
 
 La portada usa dos imágenes. La sección `Obras en instalación` muestra dos obras, sus fotografías cambian automáticamente y también se pueden recorrer con sus controles. Las galerías de las fichas avanzan automáticamente y conservan sus controles manuales. Cada obra admite varios productos y un máximo de 10 imágenes totales.
 
+En `soluciones.html`, cada producto funciona como un botón desplegable. Solo puede permanecer uno abierto y sus tres imágenes se cargan y aparecen de izquierda a derecha; cuando no existe una fotografía verificada se muestra un placeholder identificado.
+
 El historial detallado de correcciones y actualizaciones está disponible en [`CHANGELOG.md`](CHANGELOG.md).
 
 Cada ficha muestra nombre, cliente y año. La etiqueta de estado se muestra solamente en las obras que están en instalación. Las galerías se pueden recorrer con los controles visibles o con las flechas izquierda y derecha del teclado. Cuando el cliente no está informado se muestra `No indica`.

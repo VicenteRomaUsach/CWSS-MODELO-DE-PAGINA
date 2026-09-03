@@ -49,16 +49,74 @@
   });
 
   const defaultProducts = [
-    { id: "mamparas-cristal", name: "Mamparas de cristal", anchor: "vidriadas" },
-    { id: "puertas-protex", name: "Puertas Protex" },
-    { id: "barandas-cristal", name: "Barandas de cristal", anchor: "barandas" },
-    { id: "shower-door", name: "Shower Door" },
-    { id: "espejos", name: "Espejos" },
-    { id: "pasamanos-acero", name: "Pasamanos de acero inoxidable" },
-    { id: "revestimiento-chambranas", name: "Revestimiento y chambranas de acero inoxidable", anchor: "revestimientos" },
-    { id: "panel-compuesto-aluminio", name: "Revestimientos en panel compuesto de aluminio" },
-    { id: "ventanas-pvc", name: "Ventanas de PVC" },
-    { id: "lucarnas-cristal", name: "Lucarnas de cristal" }
+    {
+      id: "mamparas-cristal",
+      name: "Mamparas de cristal",
+      anchor: "vidriadas",
+      images: [
+        "imagenes-optimizadas/2022 - EDIFICIO EL ROBLE/EDIFICIO EL ROBLE NAHMIAS 2022--EL-ROBLE--03.webp",
+        "imagenes-optimizadas/2022 - EDIFICIO EL ROBLE/EDIFICIO EL ROBLE NAHMIAS 2022--EL-ROBLE--04.webp",
+        "imagenes-optimizadas/2018 - COMAPA PUNTA ARENAS/COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA--04.webp"
+      ]
+    },
+    { id: "puertas-protex", name: "Puertas Protex", images: [null, null, null] },
+    {
+      id: "barandas-cristal",
+      name: "Barandas de cristal",
+      anchor: "barandas",
+      images: [
+        "imagenes-optimizadas/2026 - APOQUINDO LOS MILITARES/APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO--01.webp",
+        "imagenes-optimizadas/2021 - PUERTO NUEVO ANTOFAGASTA/PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO--02.webp",
+        "imagenes-optimizadas/2021 - PUERTO NUEVO ANTOFAGASTA/PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO--03.webp"
+      ]
+    },
+    {
+      id: "shower-door",
+      name: "Shower Door",
+      images: [
+        "imagenes-optimizadas/2025 - TAVELLI/TAVELLI NAHMIAS 2025--TAVELLI--01.webp",
+        "imagenes-optimizadas/2025 - TAVELLI/TAVELLI NAHMIAS 2025--TAVELLI--02.webp",
+        "imagenes-optimizadas/2024 - PRINCIPE DE GALES/PRINCIPE DE GALES ECHEVERRIA IZQUIERDO 2024--PRINCIPE-DE-GALES--04.webp"
+      ]
+    },
+    {
+      id: "espejos",
+      name: "Espejos",
+      images: [
+        "imagenes-optimizadas/2025 - BURGOS/BURGOS TECTON 2025--BURGOS--01.webp",
+        "imagenes-optimizadas/2022 - CASA ITALIA/CASA ITALIA TECTON 2022--CASA-ITALIA--02.webp",
+        "imagenes-optimizadas/2024 - JOFRE/JOFRE NAHMIAS 2024--JOFRE--03.webp"
+      ]
+    },
+    {
+      id: "pasamanos-acero",
+      name: "Pasamanos de acero inoxidable",
+      images: [
+        "imagenes-optimizadas/2021 - PUERTO NUEVO ANTOFAGASTA/PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO--02.webp",
+        "imagenes-optimizadas/2021 - PUERTO NUEVO ANTOFAGASTA/PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO--03.webp",
+        "imagenes-optimizadas/2021 - PUERTO NUEVO ANTOFAGASTA/PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO--04.webp"
+      ]
+    },
+    { id: "revestimiento-chambranas", name: "Revestimiento y chambranas de acero inoxidable", anchor: "revestimientos", images: [null, null, null] },
+    {
+      id: "panel-compuesto-aluminio",
+      name: "Revestimientos en panel compuesto de aluminio",
+      images: [
+        "imagenes-optimizadas/2025 - DATACENTER SCALA SANTA TERESA/DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA--01.webp",
+        "imagenes-optimizadas/2025 - DATACENTER SCALA SANTA TERESA/DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA--02.webp",
+        "imagenes-optimizadas/2025 - DATACENTER SCALA SANTA TERESA/DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA--03.webp"
+      ]
+    },
+    { id: "ventanas-pvc", name: "Ventanas de PVC", images: [null, null, null] },
+    {
+      id: "lucarnas-cristal",
+      name: "Lucarnas de cristal",
+      images: [
+        "imagenes-optimizadas/2018 - COMAPA PUNTA ARENAS/COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA--01.webp",
+        "imagenes-optimizadas/2018 - COMAPA PUNTA ARENAS/COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA--02.webp",
+        "imagenes-optimizadas/2018 - COMAPA PUNTA ARENAS/COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA--03.webp"
+      ]
+    }
   ];
 
   function cloneDefaults() {
@@ -90,9 +148,37 @@
     return "proyecto.html?id=" + encodeURIComponent(id);
   }
 
+  function productMedia(product) {
+    const images = Array.isArray(product.images) ? product.images.slice(0, 3) : [];
+    while (images.length < 3) images.push(null);
+    return images.map(function (source, index) {
+      const number = index + 1;
+      if (!source) {
+        return `<figure class="product-card__media product-card__placeholder" data-product-media data-image-number="${number}" data-product-name="${escapeHtml(product.name)}">
+          <figcaption><span>Imagen ${number} del producto</span><strong>${escapeHtml(product.name)}</strong></figcaption>
+        </figure>`;
+      }
+      return `<figure class="product-card__media" data-product-media data-image-number="${number}" data-product-name="${escapeHtml(product.name)}">
+        <img data-product-image="${escapeHtml(source)}" alt="Imagen ${number} de ${escapeHtml(product.name)}" decoding="async">
+        <figcaption>${escapeHtml(product.name)}</figcaption>
+      </figure>`;
+    }).join("");
+  }
+
   function productCard(product) {
-    const anchor = product.anchor ? ` id="${escapeHtml(product.anchor)}"` : "";
-    return `<article class="product-card"${anchor}><h2>${escapeHtml(product.name)}</h2></article>`;
+    const articleId = product.anchor || product.id;
+    const buttonId = "producto-boton-" + product.id;
+    const panelId = "producto-panel-" + product.id;
+    return `<article class="product-card" id="${escapeHtml(articleId)}" data-product-card>
+      <h2 class="product-card__heading">
+        <button class="product-card__toggle" id="${escapeHtml(buttonId)}" type="button" aria-expanded="false" aria-controls="${escapeHtml(panelId)}" data-product-toggle>
+          <span>${escapeHtml(product.name)}</span><span class="product-card__indicator" aria-hidden="true">+</span>
+        </button>
+      </h2>
+      <div class="product-card__panel" id="${escapeHtml(panelId)}" role="region" aria-labelledby="${escapeHtml(buttonId)}" data-product-panel hidden>
+        <div class="product-card__gallery">${productMedia(product)}</div>
+      </div>
+    </article>`;
   }
 
   function renderProducts(products) {
@@ -100,6 +186,98 @@
     if (!container) return;
     container.innerHTML = products.map(productCard).join("");
     if (!products.length) container.innerHTML = '<div class="empty-state">No hay soluciones publicadas por el momento.</div>';
+  }
+
+  function setupProductAccordions() {
+    const cards = Array.from(document.querySelectorAll("[data-product-card]"));
+    if (!cards.length) return;
+    const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let revealRun = 0;
+
+    function placeholderFor(item) {
+      const number = item.dataset.imageNumber || "";
+      const productName = item.dataset.productName || "Producto";
+      item.classList.add("product-card__placeholder");
+      item.innerHTML = `<figcaption><span>Imagen ${escapeHtml(number)} del producto</span><strong>${escapeHtml(productName)}</strong></figcaption>`;
+    }
+
+    function loadImage(item) {
+      const image = item.querySelector("[data-product-image]");
+      if (!image || image.getAttribute("src")) return Promise.resolve();
+      return new Promise(function (resolve) {
+        let settled = false;
+        function finish() {
+          if (settled) return;
+          settled = true;
+          image.onload = null;
+          image.onerror = null;
+          resolve();
+        }
+        image.onload = finish;
+        image.onerror = function () {
+          placeholderFor(item);
+          finish();
+        };
+        image.src = image.dataset.productImage;
+        if (image.complete) {
+          window.setTimeout(function () {
+            if (!image.naturalWidth) placeholderFor(item);
+            finish();
+          }, 0);
+        }
+      });
+    }
+
+    async function revealMedia(panel, runId) {
+      const items = Array.from(panel.querySelectorAll("[data-product-media]"));
+      for (const item of items) {
+        await loadImage(item);
+        if (runId !== revealRun || panel.hidden) return;
+        item.classList.add("is-visible");
+        if (!reducedMotion) await new Promise(function (resolve) { window.setTimeout(resolve, 150); });
+      }
+    }
+
+    function closeCard(card) {
+      const button = card.querySelector("[data-product-toggle]");
+      const panel = card.querySelector("[data-product-panel]");
+      card.classList.remove("is-open");
+      button.setAttribute("aria-expanded", "false");
+      panel.hidden = true;
+      panel.querySelectorAll("[data-product-media]").forEach(function (item) {
+        item.classList.remove("is-visible");
+      });
+    }
+
+    function openCard(card) {
+      revealRun += 1;
+      cards.forEach(function (otherCard) {
+        if (otherCard !== card) closeCard(otherCard);
+      });
+      const button = card.querySelector("[data-product-toggle]");
+      const panel = card.querySelector("[data-product-panel]");
+      card.classList.add("is-open");
+      button.setAttribute("aria-expanded", "true");
+      panel.hidden = false;
+      revealMedia(panel, revealRun);
+    }
+
+    cards.forEach(function (card) {
+      const button = card.querySelector("[data-product-toggle]");
+      button.addEventListener("click", function () {
+        if (card.classList.contains("is-open")) {
+          revealRun += 1;
+          closeCard(card);
+          return;
+        }
+        openCard(card);
+      });
+    });
+
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target && target.matches("[data-product-card]")) openCard(target);
+    }
   }
 
   function projectImages(project) {
@@ -559,6 +737,7 @@
   const projects = getProjects();
   const products = getProducts();
   renderProducts(products);
+  setupProductAccordions();
   renderLatest(projects);
   renderAllProjects(projects);
   setupProjectsBackground();
