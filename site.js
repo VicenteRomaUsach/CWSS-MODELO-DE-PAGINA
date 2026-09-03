@@ -26,7 +26,7 @@
     { id: "data-center-scala-santa-teresa", name: "Data Center Scala Santa Teresa", contractor: "Puerto Octay", year: "2025", status: "", products: ["Panel compuesto de fachada"], imageFolder: "2025 - DATACENTER SCALA SANTA TERESA", imageBase: "DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA", imageCount: 4 },
     { id: "tavelli", name: "Tavelli", contractor: "Nahmias", year: "2025", status: "", products: ["Shower Door"], imageFolder: "2025 - TAVELLI", imageBase: "TAVELLI NAHMIAS 2025--TAVELLI", imageCount: 2 },
     { id: "apoquindo-los-militares", name: "Apoquindo Los Militares", contractor: "Echeverría Izquierdo", year: "2026", status: "En instalación", products: ["Barandas de cristal", "Separadores de cristal"], imageFolder: "2026 - APOQUINDO LOS MILITARES", imageBase: "APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO", imageCount: 4 },
-    { id: "el-sauce", name: "El Sauce", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas de cristal con balaustros"], imageFolder: "2026 - EL SAUCE", imageBase: "EL SAUCE POCURO 2026--EL-SAUCE", imageCount: 4 }
+    { id: "el-sauce", name: "El Sauce 3", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas de cristal con balaustros"], imageFolder: "2026 - EL SAUCE", imageBase: "EL SAUCE POCURO 2026--EL-SAUCE", imageCount: 4 }
   ];
 
   defaultProjects.forEach(function (project) {
