@@ -1,4 +1,6 @@
-# Sitio web CWSS
+# Sitio web CWSS — CWSS.CL3.1
+
+Versión de contenido: `CWSS.CL3.1`.
 
 Sitio HTML editable y sin dependencias. Los archivos principales son:
 

@@ -1,5 +1,28 @@
 # Historial de cambios de CWSS
 
+## CWSS.CL3.1 — 2026-09-03
+
+- Se actualizaron las 23 obras con las constructoras, años, ubicaciones y productos entregados.
+- Las obras ahora muestran `Constructora X` en el dato de cliente.
+- Se corrigió `Datacenter` a `Data Center` y Scala Santa Teresa quedó asociado a Constructora Puerto Octay.
+- Bustamante quedó como una sola obra con sus fotografías exteriores e interiores reunidas en una galería de ocho imágenes.
+- Todas las barandas y separadores se identifican como soluciones de cristal.
+- Los productos de las tarjetas y fichas se muestran en blanco y sin opacidad reducida.
+- Se agregó `#` a `Oficina #404` en todos los pies de página.
+- En `Quiénes somos`, el subtítulo quedó como `Soluciones vidriadas`, el título quedó 6 px sobre el texto normal y se aplicó el fondo de Soluciones.
+- Se agregó una separación azul de 5 px entre las dos portadas.
+- El bloque completo de `Quiénes somos` se centró verticalmente dentro de su columna.
+- La nueva imagen de `Quiénes somos` conserva su proporción completa y ya no se recorta.
+- La página de Obras alterna `FONDO SOLUCIONES.png` y `FONDO PROYECTOS.png` en bloques verticales apilados a lo largo del catálogo.
+- Cada ficha individual de obra recibe, según su ID, uno de los dos fondos en las áreas claras; la selección se mantiene estable para cada proyecto.
+- Cada ficha incorpora flechas anterior/siguiente y un contador sobre el título para recorrer circularmente las 23 obras.
+- La sección `Obras en instalación` del inicio usa `FONDO PROYECTOS.png`, distinto del fondo de `Quiénes somos`.
+- Los productos con el sufijo `de cristal` se agrupan automáticamente, por ejemplo `Barandas y separadores de cristal`.
+- El grosor y color del borde de `Quiénes somos`, junto con los tamaños de `Obras` y `Soluciones`, quedaron expuestos como variables editables al inicio del CSS.
+- Los títulos principales de `Obras` y `Soluciones` quedaron fijados en 36 px.
+- El borde entre `Quiénes somos` y `Obras en instalación` quedó en 10 px.
+- Esta actualización corresponde a la versión de contenido `CWSS.CL3.1`.
+
 ## 2026-09-02
 
 ### Segunda actualización visual y de contenido

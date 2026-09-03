@@ -1,260 +1,45 @@
 (function () {
   "use strict";
 
-  const PROJECTS_KEY = "cwss_projects_v10";
+  const PROJECTS_KEY = "cwss_projects_v11";
   const PRODUCTS_KEY = "cwss_products_v2";
   const ADMIN_KEY = "cwss_admin_session";
   const PHOTO_ROOT = "imagenes-optimizadas/";
   if (document.body) document.body.classList.add("page-transition");
   const defaultProjects = [
-    {
-      id: "angamos",
-      name: "Angamos",
-      contractor: "BMI",
-      year: "2018",
-      status: "",
-      imageFolder: "2018 - ANGAMOS",
-      imageBase: "ANGAMOS BMI 2018--ANGAMOS",
-      imageCount: 3
-    },
-    {
-      id: "angamos-nahmias",
-      name: "Angamos",
-      contractor: "Nahmias",
-      year: "2025",
-      status: "",
-      imageFolder: "2025 - ANGAMOS",
-      imageBase: "ANGAMOS NAHMIAS 2025--ANGAMOS",
-      imageCount: 4
-    },
-    {
-      id: "apoquindo-los-militares",
-      name: "Apoquindo Los Militares",
-      contractor: "Echeverría Izquierdo",
-      year: "2026",
-      status: "En instalación",
-      imageFolder: "2026 - APOQUINDO LOS MILITARES",
-      imageBase: "APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO",
-      imageCount: 4
-    },
-    {
-      id: "el-sauce",
-      name: "El Sauce",
-      contractor: "POCURO",
-      year: "2026",
-      status: "En instalación",
-      imageFolder: "2026 - EL SAUCE",
-      imageBase: "EL SAUCE POCURO 2026--EL-SAUCE",
-      imageCount: 4
-    },
-    {
-      id: "puerta-del-sol",
-      name: "Puerta del Sol",
-      contractor: "Mena y Ovalle",
-      year: "2018",
-      status: "",
-      imageFolder: "2018 - PUERTA DEL SOL",
-      imageBase: "PUERTA DEL SOL MENA Y OVALLE 2018--PUERTA-DEL-SOL",
-      imageCount: 1
-    },
-    {
-      id: "burgos",
-      name: "Burgos",
-      contractor: "Tecton",
-      year: "2025",
-      status: "",
-      imageFolder: "2025 - BURGOS",
-      imageBase: "BURGOS TECTON 2025--BURGOS",
-      imageCount: 4
-    },
-    {
-      id: "bustamante-exterior",
-      name: "Bustamante - Exterior",
-      contractor: "Nahmias",
-      year: "2024",
-      status: "",
-      imageFolder: "2024 - BUSTAMANTE EXTERIOR",
-      imageBase: "BUSTAMANTE EXTERIOR NAHMIAS 2024--BUSTAMANTE-EXTERIOR",
-      imageCount: 4
-    },
-    {
-      id: "bustamante-interior",
-      name: "Bustamante - Interior",
-      contractor: "Nahmias",
-      year: "2024",
-      status: "",
-      imageFolder: "2024 - BUSTAMANTE INTERIOR",
-      imageBase: "BUSTAMANTE INTERIOR NAHMIAS 2024--BUSTAMANTE-INTERIOR",
-      imageCount: 4
-    },
-    {
-      id: "casa-italia",
-      name: "Casa Italia",
-      contractor: "Tecton",
-      year: "2022",
-      status: "",
-      imageFolder: "2022 - CASA ITALIA",
-      imageBase: "CASA ITALIA TECTON 2022--CASA-ITALIA",
-      imageCount: 4
-    },
-    {
-      id: "club-de-campo-vitacura",
-      name: "Club de Campo Vitacura",
-      subtitle: "Boldo, Peumo y Quillai",
-      contractor: "Nahmias",
-      year: "2020",
-      status: "",
-      imageFolder: "2020 - CLUB DE CAMPO VITACURA",
-      imageBase: "CLUB DE CAMPO VITACURA NAHMIAS 2020--CLUB-DE-CAMPO",
-      imageCount: 9
-    },
-    {
-      id: "comapa-punta-arenas",
-      name: "Comapa - Punta Arenas",
-      contractor: "Bravo Izquierdo",
-      year: "2018",
-      status: "",
-      imageFolder: "2018 - COMAPA PUNTA ARENAS",
-      imageBase: "COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA",
-      imageCount: 4
-    },
-    {
-      id: "datacenter-scala-santa-teresa",
-      name: "Datacenter Scala Santa Teresa",
-      contractor: "Scala",
-      year: "2025",
-      status: "",
-      imageFolder: "2025 - DATACENTER SCALA SANTA TERESA",
-      imageBase: "DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA",
-      imageCount: 4
-    },
-    {
-      id: "data-center-chile-3",
-      name: "Data Center Chile 3",
-      contractor: "Puerto Octay",
-      year: "2024",
-      status: "",
-      imageFolder: "2024 - DATA CENTER CHILE 3",
-      imageBase: "DATA CENTER CHILE 3 PUERTO OCTAY 2024--DATA-CENTER-CHILE-3",
-      imageCount: 4
-    },
-    {
-      id: "edificio-el-roble",
-      name: "Edificio El Roble",
-      contractor: "Nahmias",
-      year: "2022",
-      status: "",
-      imageFolder: "2022 - EDIFICIO EL ROBLE",
-      imageBase: "EDIFICIO EL ROBLE NAHMIAS 2022--EL-ROBLE",
-      imageCount: 4
-    },
-    {
-      id: "jofre",
-      name: "Jofre",
-      contractor: "Nahmias",
-      year: "2024",
-      status: "",
-      imageFolder: "2024 - JOFRE",
-      imageBase: "JOFRE NAHMIAS 2024--JOFRE",
-      imageCount: 4
-    },
-    {
-      id: "jose-domingo-canas",
-      name: "José Domingo Cañas",
-      contractor: "Nahmias",
-      year: "2024",
-      status: "",
-      imageFolder: "2024 - JOSE DOMINGO CANAS",
-      imageBase: "JOSE DOMINGO CANAS NAHMIAS 2024--JOSE-DOMINGO-CANAS",
-      imageCount: 4
-    },
-    {
-      id: "la-capitania",
-      name: "La Capitanía",
-      contractor: "Nahmias",
-      year: "2022",
-      status: "",
-      imageFolder: "2022 - LA CAPITANIA",
-      imageBase: "LA CAPITANIA NAHMIAS 2022--LA-CAPITANIA",
-      imageCount: 2
-    },
-    {
-      id: "lote-19",
-      name: "Lote 19",
-      contractor: "Ignacio Hurtado",
-      year: "2024",
-      status: "",
-      imageFolder: "2024 - LOTE 19",
-      imageBase: "LOTE 19 IGNACIO HURTADO 2024--LOTE-19",
-      imageCount: 3
-    },
-    {
-      id: "onofre-jarpa",
-      name: "Onofre Jarpa",
-      contractor: "Sur G",
-      year: "2021",
-      status: "",
-      imageFolder: "2021 - ONOFRE JARPA",
-      imageBase: "ONOFRE JARPA SUR G 2021--ONOFRE-JARPA",
-      imageCount: 3
-    },
-    {
-      id: "pedro-navia",
-      name: "Pedro Navia",
-      contractor: "Tecton",
-      year: "2022",
-      status: "",
-      imageFolder: "2022 - PEDRO NAVIA",
-      imageBase: "PEDRO NAVIA TECTON 2022--PEDRO-NAVIA",
-      imageCount: 3
-    },
-    {
-      id: "principe-de-gales",
-      name: "Príncipe de Gales",
-      contractor: "Echeverría Izquierdo",
-      year: "2024",
-      status: "",
-      imageFolder: "2024 - PRINCIPE DE GALES",
-      imageBase: "PRINCIPE DE GALES ECHEVERRIA IZQUIERDO 2024--PRINCIPE-DE-GALES",
-      imageCount: 4
-    },
-    {
-      id: "puerto-nuevo-antofagasta",
-      name: "Puerto Nuevo - Antofagasta",
-      contractor: "Echeverría Izquierdo",
-      year: "2021",
-      status: "",
-      imageFolder: "2021 - PUERTO NUEVO ANTOFAGASTA",
-      imageBase: "PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO",
-      imageCount: 4
-    },
-    {
-      id: "tavelli",
-      name: "Tavelli",
-      contractor: "Nahmias",
-      year: "2025",
-      status: "",
-      imageFolder: "2025 - TAVELLI",
-      imageBase: "TAVELLI NAHMIAS 2025--TAVELLI",
-      imageCount: 2
-    },
-    {
-      id: "torres-centenario-antofagasta",
-      name: "Torres Centenario - Antofagasta",
-      contractor: "Mar Abierto",
-      year: "2018",
-      status: "",
-      imageFolder: "2018 - TORRES CENTENARIO ANTOFAGASTA",
-      imageBase: "TORRES CENTENARIO ANTOFAGASTA MAR ABIERTO 2018--TORRES-CENTENARIO",
-      imageCount: 4
-    }
+    { id: "angamos", name: "Angamos", location: "Antofagasta", contractor: "BMI", year: "2018", status: "", products: ["Muro cortina"], imageFolder: "2018 - ANGAMOS", imageBase: "ANGAMOS BMI 2018--ANGAMOS", imageCount: 3 },
+    { id: "comapa-punta-arenas", name: "Comapa", location: "Punta Arenas", contractor: "Bravo Izquierdo", year: "2018", status: "", products: ["Lucarnas de cristal", "Barandas de cristal"], imageFolder: "2018 - COMAPA PUNTA ARENAS", imageBase: "COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA", imageCount: 4 },
+    { id: "puerta-del-sol", name: "Puerta del Sol", contractor: "Mena y Ovalle", year: "2018", status: "", products: ["Shower Door"], imageFolder: "2018 - PUERTA DEL SOL", imageBase: "PUERTA DEL SOL MENA Y OVALLE 2018--PUERTA-DEL-SOL", imageCount: 1 },
+    { id: "torres-centenario-antofagasta", name: "Torres Centenario", location: "Antofagasta", contractor: "Mar Abierto", year: "2018", status: "", products: ["Muro cortina", "Panel compuesto de aluminio (ACM)"], imageFolder: "2018 - TORRES CENTENARIO ANTOFAGASTA", imageBase: "TORRES CENTENARIO ANTOFAGASTA MAR ABIERTO 2018--TORRES-CENTENARIO", imageCount: 4 },
+    { id: "club-de-campo-vitacura", name: "Club de Campo Vitacura", subtitle: "Boldo, Peumo y Quillai", contractor: "Nahmias", year: "2020", status: "", products: ["Barandas de cristal", "Separadores de cristal"], imageFolder: "2020 - CLUB DE CAMPO VITACURA", imageBase: "CLUB DE CAMPO VITACURA NAHMIAS 2020--CLUB-DE-CAMPO", imageCount: 9 },
+    { id: "onofre-jarpa", name: "Condominio Onofre Jarpa", contractor: "Sur G", year: "2021", status: "", products: ["Barandas de cristal", "Shower Door"], imageFolder: "2021 - ONOFRE JARPA", imageBase: "ONOFRE JARPA SUR G 2021--ONOFRE-JARPA", imageCount: 3 },
+    { id: "puerto-nuevo-antofagasta", name: "Puerto Nuevo", location: "Antofagasta", contractor: "Echeverría Izquierdo", year: "2021", status: "", products: ["Barandas de cristal", "Pasamanos de acero inoxidable"], imageFolder: "2021 - PUERTO NUEVO ANTOFAGASTA", imageBase: "PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO", imageCount: 4 },
+    { id: "casa-italia", name: "Casa Italia", contractor: "Tecton", year: "2022", status: "", products: ["Shower Door"], imageFolder: "2022 - CASA ITALIA", imageBase: "CASA ITALIA TECTON 2022--CASA-ITALIA", imageCount: 4 },
+    { id: "edificio-el-roble", name: "Edificio El Roble", contractor: "Nahmias", year: "2022", status: "", products: ["Canopy de acceso", "Mamparas de oficina"], imageFolder: "2022 - EDIFICIO EL ROBLE", imageBase: "EDIFICIO EL ROBLE NAHMIAS 2022--EL-ROBLE", imageCount: 4 },
+    { id: "la-capitania", name: "La Capitanía", contractor: "Nahmias", year: "2022", status: "", products: ["Shower Door", "Espejos"], imageFolder: "2022 - LA CAPITANIA", imageBase: "LA CAPITANIA NAHMIAS 2022--LA-CAPITANIA", imageCount: 2 },
+    { id: "pedro-navia", name: "Pedro Navia", contractor: "Tecton", year: "2022", status: "", products: ["Barandas de cristal", "Lucarnas de cristal"], imageFolder: "2022 - PEDRO NAVIA", imageBase: "PEDRO NAVIA TECTON 2022--PEDRO-NAVIA", imageCount: 3 },
+    { id: "bustamante", name: "Bustamante", contractor: "Nahmias", year: "2024", status: "", products: ["Barandas de cristal", "Shower Door", "Espejos"], imageSets: [{ folder: "2024 - BUSTAMANTE EXTERIOR", base: "BUSTAMANTE EXTERIOR NAHMIAS 2024--BUSTAMANTE-EXTERIOR", count: 4 }, { folder: "2024 - BUSTAMANTE INTERIOR", base: "BUSTAMANTE INTERIOR NAHMIAS 2024--BUSTAMANTE-INTERIOR", count: 4 }] },
+    { id: "data-center-chile-3", name: "Data Center Chile 3", contractor: "Puerto Octay", year: "2024", status: "", products: ["Barandas de cristal", "Tablones vidriados"], imageFolder: "2024 - DATA CENTER CHILE 3", imageBase: "DATA CENTER CHILE 3 PUERTO OCTAY 2024--DATA-CENTER-CHILE-3", imageCount: 4 },
+    { id: "jofre", name: "Jofre", contractor: "Nahmias", year: "2024", status: "", products: ["Shower Door"], imageFolder: "2024 - JOFRE", imageBase: "JOFRE NAHMIAS 2024--JOFRE", imageCount: 4 },
+    { id: "jose-domingo-canas", name: "José Domingo Cañas", contractor: "Nahmias", year: "2024", status: "", products: ["Barandas de cristal", "Shower Door"], imageFolder: "2024 - JOSE DOMINGO CANAS", imageBase: "JOSE DOMINGO CANAS NAHMIAS 2024--JOSE-DOMINGO-CANAS", imageCount: 4 },
+    { id: "lote-19", name: "Lote 19", contractor: "Ignacio Hurtado", year: "2024", status: "", products: ["Shower Door", "Espejos"], imageFolder: "2024 - LOTE 19", imageBase: "LOTE 19 IGNACIO HURTADO 2024--LOTE-19", imageCount: 3 },
+    { id: "principe-de-gales", name: "Príncipe de Gales", contractor: "Echeverría Izquierdo", year: "2024", status: "", products: ["Mamparas de acceso", "Shower Door"], imageFolder: "2024 - PRINCIPE DE GALES", imageBase: "PRINCIPE DE GALES ECHEVERRIA IZQUIERDO 2024--PRINCIPE-DE-GALES", imageCount: 4 },
+    { id: "angamos-nahmias", name: "Angamos", contractor: "Nahmias", year: "2025", status: "", products: ["Shower Door", "Espejos"], imageFolder: "2025 - ANGAMOS", imageBase: "ANGAMOS NAHMIAS 2025--ANGAMOS", imageCount: 4 },
+    { id: "burgos", name: "Burgos", contractor: "Tecton", year: "2025", status: "", products: ["Espejos"], imageFolder: "2025 - BURGOS", imageBase: "BURGOS TECTON 2025--BURGOS", imageCount: 4 },
+    { id: "data-center-scala-santa-teresa", name: "Data Center Scala Santa Teresa", contractor: "Puerto Octay", year: "2025", status: "", products: ["Panel compuesto de fachada"], imageFolder: "2025 - DATACENTER SCALA SANTA TERESA", imageBase: "DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA", imageCount: 4 },
+    { id: "tavelli", name: "Tavelli", contractor: "Nahmias", year: "2025", status: "", products: ["Shower Door"], imageFolder: "2025 - TAVELLI", imageBase: "TAVELLI NAHMIAS 2025--TAVELLI", imageCount: 2 },
+    { id: "apoquindo-los-militares", name: "Apoquindo Los Militares", contractor: "Echeverría Izquierdo", year: "2026", status: "En instalación", products: ["Barandas de cristal", "Separadores de cristal"], imageFolder: "2026 - APOQUINDO LOS MILITARES", imageBase: "APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO", imageCount: 4 },
+    { id: "el-sauce", name: "El Sauce", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas de cristal con balaustros"], imageFolder: "2026 - EL SAUCE", imageBase: "EL SAUCE POCURO 2026--EL-SAUCE", imageCount: 4 }
   ];
 
   defaultProjects.forEach(function (project) {
-    const images = Array.from({ length: project.imageCount }, function (_, index) {
-      const number = String(index + 1).padStart(2, "0");
-      return PHOTO_ROOT + project.imageFolder + "/" + project.imageBase + "--" + number + ".webp";
-    });
+    const imageSets = project.imageSets || [{ folder: project.imageFolder, base: project.imageBase, count: project.imageCount }];
+    const images = imageSets.flatMap(function (set) {
+      return Array.from({ length: set.count }, function (_, index) {
+        const number = String(index + 1).padStart(2, "0");
+        return PHOTO_ROOT + set.folder + "/" + set.base + "--" + number + ".webp";
+      });
+    }).slice(0, 10);
     project.cover = images[0];
     project.gallery = images.slice(1);
     project.products = Array.isArray(project.products) && project.products.length
@@ -263,6 +48,7 @@
     delete project.imageFolder;
     delete project.imageBase;
     delete project.imageCount;
+    delete project.imageSets;
   });
 
   // Canonical bundled assets. This repairs stale paths stored by older versions
@@ -315,7 +101,7 @@
               project.gallery = expectedGallery.slice();
               changed = true;
             }
-            ["name", "contractor", "year", "status", "subtitle"].forEach(function (field) {
+            ["name", "location", "contractor", "year", "status", "subtitle"].forEach(function (field) {
               const expected = bundledDefault[field] || "";
               if ((project[field] || "") !== expected) {
                 project[field] = expected;
@@ -447,20 +233,55 @@
   }
 
   function projectProductsMarkup(project) {
-    return projectProducts(project).map(function (product) {
+    return groupedProjectProducts(project).map(function (product) {
       return `<span>${escapeHtml(product)}</span>`;
     }).join("");
   }
 
+  function groupedProjectProducts(project) {
+    const products = projectProducts(project);
+    const crystalProducts = products.map(function (product, index) {
+      const match = String(product).trim().match(/^(.+?)\s+de cristal$/i);
+      return match ? { index: index, name: match[1].trim() } : null;
+    }).filter(Boolean);
+    if (crystalProducts.length < 2) return products;
+
+    const names = crystalProducts.map(function (product, index) {
+      if (index === 0) return product.name;
+      return product.name.charAt(0).toLowerCase() + product.name.slice(1);
+    });
+    const groupedName = names.length === 2
+      ? names[0] + " y " + names[1] + " de cristal"
+      : names.slice(0, -1).join(", ") + " y " + names[names.length - 1] + " de cristal";
+    const crystalIndexes = new Set(crystalProducts.map(function (product) { return product.index; }));
+    const firstCrystalIndex = crystalProducts[0].index;
+    const result = [];
+    products.forEach(function (product, index) {
+      if (index === firstCrystalIndex) result.push(groupedName);
+      if (!crystalIndexes.has(index)) result.push(product);
+    });
+    return result;
+  }
+
+  function projectDisplayName(project) {
+    return project.name + (project.location ? " (" + project.location + ")" : "");
+  }
+
+  function projectConstructor(project) {
+    const contractor = project.contractor || "No indica";
+    return /^Constructora\s/i.test(contractor) ? contractor : "Constructora " + contractor;
+  }
+
   function projectCard(project, autoplay) {
-    const client = project.contractor || "No indica";
+    const client = projectConstructor(project);
+    const displayName = projectDisplayName(project);
     const subtitle = project.subtitle ? `<p class="project-card__subtitle">${escapeHtml(project.subtitle)}</p>` : "";
     const images = projectImages(project);
     const media = autoplay
       ? `<div class="project-card__media" data-card-slideshow>${images.map(function (image, index) {
-          return `<img class="project-card__slide${index === 0 ? " is-active" : ""}" src="${escapeHtml(image)}" alt="${index === 0 ? escapeHtml(project.name) : ""}" ${index === 0 ? "" : 'loading="lazy" '}decoding="async">`;
+          return `<img class="project-card__slide${index === 0 ? " is-active" : ""}" src="${escapeHtml(image)}" alt="${index === 0 ? escapeHtml(displayName) : ""}" ${index === 0 ? "" : 'loading="lazy" '}decoding="async">`;
         }).join("")}</div>`
-      : `<img src="${escapeHtml(project.cover)}" alt="${escapeHtml(project.name)}" loading="lazy" decoding="async">`;
+      : `<img src="${escapeHtml(project.cover)}" alt="${escapeHtml(displayName)}" loading="lazy" decoding="async">`;
     const controls = autoplay && images.length > 1
       ? `<div class="project-card__slider-controls" aria-label="Controles de imágenes">
           <button type="button" data-card-previous aria-label="Imagen anterior">←</button>
@@ -470,10 +291,10 @@
       : "";
     return `
       <article class="project-card">
-        <a class="project-card__link" href="${projectUrl(project.id)}" aria-label="Ver obra ${escapeHtml(project.name)}">
+        <a class="project-card__link" href="${projectUrl(project.id)}" aria-label="Ver obra ${escapeHtml(displayName)}">
           ${media}
           <div class="project-card__content">
-            <div><h3>${escapeHtml(project.name)}</h3>${subtitle}</div>
+            <div><h3>${escapeHtml(displayName)}</h3>${subtitle}</div>
             <div class="project-card__facts">
               <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
               <p><span>Año</span><strong>${escapeHtml(project.year || "Por confirmar")}</strong></p>
@@ -509,6 +330,36 @@
     if (empty) empty.hidden = projects.length > 0;
   }
 
+  function projectBackgroundVariant(id) {
+    const hash = String(id || "").split("").reduce(function (total, character) {
+      return ((total * 31) + character.charCodeAt(0)) >>> 0;
+    }, 0);
+    return hash % 2 === 0 ? "solutions" : "projects";
+  }
+
+  function setupProjectsBackground() {
+    const background = document.querySelector("[data-projects-background]");
+    const main = background && background.closest("main");
+    if (!background || !main) return;
+    let resizeFrame = null;
+
+    function renderPanels() {
+      const pageWidth = Math.max(main.clientWidth, 320);
+      const pairHeight = pageWidth * ((9 / 16) + (16 / 9));
+      const pairs = Math.max(1, Math.ceil(main.scrollHeight / pairHeight) + 1);
+      background.innerHTML = Array.from({ length: pairs }, function () {
+        return '<span class="projects-background__panel projects-background__panel--solutions"></span>'
+          + '<span class="projects-background__panel projects-background__panel--projects"></span>';
+      }).join("");
+    }
+
+    renderPanels();
+    window.addEventListener("resize", function () {
+      if (resizeFrame !== null) window.cancelAnimationFrame(resizeFrame);
+      resizeFrame = window.requestAnimationFrame(renderPanels);
+    });
+  }
+
   function renderProjectDetail(projects) {
     const container = document.querySelector("[data-project-detail]");
     if (!container) return;
@@ -519,20 +370,34 @@
       document.querySelector("[data-project-not-found]").hidden = false;
       return;
     }
-    document.title = project.name + " | CWSS";
+    document.body.dataset.projectBackground = projectBackgroundVariant(project.id);
+    const displayName = projectDisplayName(project);
+    const orderedProjects = projects.slice().sort(compareProjectsByYearAndName);
+    const currentProjectIndex = orderedProjects.findIndex(function (item) { return item.id === project.id; });
+    const previousProject = orderedProjects[(currentProjectIndex - 1 + orderedProjects.length) % orderedProjects.length];
+    const nextProject = orderedProjects[(currentProjectIndex + 1) % orderedProjects.length];
+    const projectNavigation = orderedProjects.length > 1
+      ? `<nav class="project-detail__navigation" aria-label="Navegación entre obras">
+          <a href="${projectUrl(previousProject.id)}" aria-label="Obra anterior: ${escapeHtml(projectDisplayName(previousProject))}">←</a>
+          <span>${currentProjectIndex + 1} / ${orderedProjects.length}</span>
+          <a href="${projectUrl(nextProject.id)}" aria-label="Obra siguiente: ${escapeHtml(projectDisplayName(nextProject))}">→</a>
+        </nav>`
+      : "";
+    document.title = displayName + " | CWSS";
     const galleryImages = projectImages(project);
     const gallery = galleryImages.map(function (image, index) {
-      return `<figure class="project-gallery__slide" aria-hidden="${index === 0 ? "false" : "true"}"><img src="${escapeHtml(image)}" alt="${escapeHtml(project.name)} - imagen ${index + 1}" loading="lazy" decoding="async"><button class="project-gallery__full" type="button" data-full-image${index === 0 ? "" : ' tabindex="-1"'}>Ver imagen completa</button></figure>`;
+      return `<figure class="project-gallery__slide" aria-hidden="${index === 0 ? "false" : "true"}"><img src="${escapeHtml(image)}" alt="${escapeHtml(displayName)} - imagen ${index + 1}" loading="lazy" decoding="async"><button class="project-gallery__full" type="button" data-full-image${index === 0 ? "" : ' tabindex="-1"'}>Ver imagen completa</button></figure>`;
     }).join("");
     const selectors = galleryImages.map(function (image, index) {
       return `<button class="project-gallery__thumb${index === 0 ? " is-active" : ""}" type="button" data-gallery-select="${index}" aria-label="Ver imagen ${index + 1}" aria-current="${index === 0 ? "true" : "false"}"><img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async"></button>`;
     }).join("");
-    const client = project.contractor || "No indica";
+    const client = projectConstructor(project);
     const subtitle = project.subtitle ? `<p class="project-detail__subtitle">${escapeHtml(project.subtitle)}</p>` : "";
     container.innerHTML = `
       <section class="project-detail__hero" style="background-image:url('${escapeHtml(project.cover)}')">
         <div class="project-detail__title">
-          <p class="project-detail__project">${escapeHtml(project.name)}</p>
+          ${projectNavigation}
+          <p class="project-detail__project">${escapeHtml(displayName)}</p>
           ${subtitle}
           <div class="project-detail__facts">
             <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
@@ -541,7 +406,7 @@
           </div>
         </div>
       </section>
-      <section class="project-gallery" aria-label="Galería de ${escapeHtml(project.name)}" data-project-gallery tabindex="0">
+      <section class="project-gallery" aria-label="Galería de ${escapeHtml(displayName)}" data-project-gallery tabindex="0">
         <div class="project-gallery__viewport">
           <div class="project-gallery__track" data-gallery-track>${gallery}</div>
         </div>
@@ -685,56 +550,6 @@
     });
   }
 
-  function setupSolutionsSlideshow() {
-    const slideshow = document.querySelector("[data-solutions-slideshow]");
-    if (!slideshow) return;
-    const slides = Array.from(slideshow.querySelectorAll(".solutions-showcase__slide"));
-    const dots = Array.from(slideshow.querySelectorAll("[data-solutions-slide]"));
-    const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let current = 0;
-    let timer = null;
-
-    function show(index) {
-      current = (index + slides.length) % slides.length;
-      slides.forEach(function (slide, slideIndex) {
-        slide.classList.toggle("is-active", slideIndex === current);
-      });
-      dots.forEach(function (dot, dotIndex) {
-        const active = dotIndex === current;
-        dot.classList.toggle("is-active", active);
-        dot.setAttribute("aria-current", String(active));
-      });
-    }
-
-    function stop() {
-      if (timer !== null) window.clearInterval(timer);
-      timer = null;
-    }
-
-    function start() {
-      stop();
-      if (reducedMotion || slides.length <= 1 || document.hidden) return;
-      timer = window.setInterval(function () { show(current + 1); }, 5200);
-    }
-
-    dots.forEach(function (dot) {
-      dot.addEventListener("click", function () {
-        show(Number(dot.dataset.solutionsSlide));
-        start();
-      });
-    });
-    slideshow.addEventListener("mouseenter", stop);
-    slideshow.addEventListener("mouseleave", start);
-    slideshow.addEventListener("focusin", stop);
-    slideshow.addEventListener("focusout", function (event) {
-      if (!slideshow.contains(event.relatedTarget)) start();
-    });
-    document.addEventListener("visibilitychange", function () {
-      if (document.hidden) stop(); else start();
-    });
-    start();
-  }
-
   function setupImageDialog() {
     const dialog = document.querySelector("[data-image-dialog]");
     if (!dialog || typeof dialog.showModal !== "function") return;
@@ -831,7 +646,6 @@
       ".projects-page .project-card",
       ".products-page > h1",
       ".products-page .product-card",
-      ".products-page .solutions-showcase",
       ".project-detail__title > *",
       ".project-gallery__viewport",
       ".project-gallery__selector",
@@ -919,7 +733,7 @@
       return `
         <article class="admin-project-row">
           <img src="${escapeHtml(project.cover)}" alt="">
-          <div><h3>${escapeHtml(project.name)}</h3><p class="admin-project-row__meta">Cliente: ${escapeHtml(project.contractor || "No indica")} · Año: ${escapeHtml(project.year || "Por confirmar")} · Productos: ${escapeHtml(projectProducts(project).join(", "))}</p></div>
+          <div><h3>${escapeHtml(projectDisplayName(project))}</h3><p class="admin-project-row__meta">Cliente: ${escapeHtml(projectConstructor(project))} · Año: ${escapeHtml(project.year || "Por confirmar")} · Productos: ${escapeHtml(groupedProjectProducts(project).join(", "))}</p></div>
           <button class="delete-button" type="button" data-delete-project="${escapeHtml(project.id)}">Eliminar</button>
         </article>`;
     }).join("");
@@ -1091,9 +905,9 @@
   renderProducts(products);
   renderLatest(projects);
   renderAllProjects(projects);
+  setupProjectsBackground();
   renderProjectDetail(projects);
   setupProjectCardSlides();
-  setupSolutionsSlideshow();
   setupProjectGallery();
   setupImageDialog();
   setupNavigation();
