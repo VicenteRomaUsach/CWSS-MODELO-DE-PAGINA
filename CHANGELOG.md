@@ -1,5 +1,21 @@
 # Historial de cambios de CWSS
 
+## 2026-09-03 — actualización local
+
+- Se actualizaron las 23 obras con las constructoras, años, ubicaciones y productos entregados.
+- Las obras ahora muestran `Constructora X` en el dato de cliente.
+- Se corrigió `Datacenter` a `Data Center` y Scala Santa Teresa quedó asociado a Constructora Puerto Octay.
+- Bustamante quedó como una sola obra con sus fotografías exteriores e interiores reunidas en una galería de ocho imágenes.
+- Todas las barandas y separadores se identifican como soluciones de cristal.
+- Los productos de las tarjetas y fichas se muestran en blanco y sin opacidad reducida.
+- Se agregó `#` a `Oficina #404` en todos los pies de página.
+- En `Quiénes somos`, el subtítulo quedó como `Soluciones vidriadas`, el título quedó 6 px sobre el texto normal y se aplicó el fondo de Soluciones.
+- Se agregó una separación azul de 5 px entre las dos portadas.
+- El bloque completo de `Quiénes somos` se centró verticalmente dentro de su columna.
+- La nueva imagen de `Quiénes somos` conserva su proporción completa y ya no se recorta.
+- La página de Obras alterna fondos derivados de las fotografías optimizadas de Club de Campo Vitacura en bloques verticales apilados a lo largo del catálogo, evitando duplicar recursos pesados.
+- Esta actualización se mantuvo únicamente en la copia local y no se publicó en GitHub.
+
 ## 2026-09-02
 
 ### Segunda actualización visual y de contenido
@@ -27,7 +43,7 @@
 - El formulario de obras admite hasta 10 imágenes totales: una portada y nueve imágenes adicionales.
 - Se agregaron controles anterior/siguiente y contador al mini slider de las obras en instalación.
 - Se redujo en 4 px la tipografía principal de Obras y de los títulos de las fichas.
-- La segunda fotografía activa de portada fue normalizada como `CWSS--PORTADA--02.webp`.
+- La segunda fotografía activa de portada reutiliza la versión optimizada de Bustamante Exterior ya publicada en el repositorio.
 
 ### Catálogo de obras
 
