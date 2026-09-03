@@ -2,6 +2,8 @@
 
 ## Cambios locales posteriores a CWSS.CL3.1 — 2026-09-03
 
+- Se reemplazó la presentación de Quiénes somos por el nuevo texto corporativo de CWSS Ingeniería Ltda., organizado en tres párrafos.
+- El bloque aumentó su altura mínima para alojar el contenido sin comprimirlo.
 - `Quiénes somos` incorpora tres pestañas en su borde derecho: `Quiénes somos`, `Misión` y `Visión`.
 - Las pestañas reemplazan el párrafo del bloque sin abandonar la página; `Quiénes somos` restaura el texto original.
 - En pantallas móviles las tres pestañas se reorganizan horizontalmente bajo el contenido para conservar su legibilidad.

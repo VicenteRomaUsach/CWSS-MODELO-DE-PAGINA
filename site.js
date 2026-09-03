@@ -286,7 +286,7 @@
     if (!text || !buttons.length) return;
 
     const content = {
-      quienes: "Somos CWSS, Contamos con más de 13 años de experiencia desarrollando soluciones para obras inmobiliarias y comerciales. Participamos en cada obra desde la ingeniería de detalle y planificación hasta el montaje y la entrega final. Nuestro sello es la precisión técnica, la flexibilidad operativa y el acompañamiento personalizado durante toda la obra.",
+      quienes: "En CWSS Ingeniería Ltda. contamos con más de 10 años de experiencia en el desarrollo e instalación de soluciones vidriadas para nuestros clientes, principalmente arquitectos, inmobiliarias y empresas constructoras.\n\nNuestro principal valor es la experiencia y el profesionalismo de un equipo que participa activamente en cada etapa del proyecto, entregando asesoría especializada desde el diseño hasta la ingeniería de detalles, fabricación y montaje final.\n\nTrabajamos con un enfoque integral, buscando entregar soluciones que respondan a las necesidades técnicas y arquitectónicas de cada proyecto, asegurando una ejecución eficiente y de calidad.",
       mision: "Nuestra misión es transformar espacios excepcionales mediante el diseño, fabricación y ejecución de cristales. Nos comprometemos a ofrecer calidad en cada proyecto y a buscar continuamente la satisfacción final del cliente como nuestro principal objetivo.",
       vision: "En CWSS Ingeniería, aspiramos a expandir nuestra presencia, sumando constantemente nuevos clientes, manteniendo siempre los más altos estándares de calidad y satisfacción."
     };
