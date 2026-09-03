@@ -185,7 +185,7 @@
     const container = document.querySelector("[data-products]");
     if (!container) return;
     container.innerHTML = products.map(productCard).join("");
-    if (!products.length) container.innerHTML = '<div class="empty-state">No hay soluciones publicadas por el momento.</div>';
+    if (!products.length) container.innerHTML = '<div class="empty-state">No hay productos publicados por el momento.</div>';
   }
 
   function setupProductAccordions() {
@@ -286,9 +286,9 @@
     if (!text || !buttons.length) return;
 
     const content = {
-      quienes: "En CWSS Ingeniería Ltda. contamos con más de 10 años de experiencia en el desarrollo e instalación de soluciones vidriadas para nuestros clientes, principalmente arquitectos, inmobiliarias y empresas constructoras.\n\nNuestro principal valor es la experiencia y el profesionalismo de un equipo que participa activamente en cada etapa del proyecto, entregando asesoría especializada desde el diseño hasta la ingeniería de detalles, fabricación y montaje final.\n\nTrabajamos con un enfoque integral, buscando entregar soluciones que respondan a las necesidades técnicas y arquitectónicas de cada proyecto, asegurando una ejecución eficiente y de calidad.",
-      mision: "Nuestra misión es transformar espacios excepcionales mediante el diseño, fabricación y ejecución de cristales. Nos comprometemos a ofrecer calidad en cada proyecto y a buscar continuamente la satisfacción final del cliente como nuestro principal objetivo.",
-      vision: "En CWSS Ingeniería, aspiramos a expandir nuestra presencia, sumando constantemente nuevos clientes, manteniendo siempre los más altos estándares de calidad y satisfacción."
+      quienes: '<span class="about-text__paragraph">En <strong>CWSS Ingeniería Ltda</strong>. contamos con más de 10 años de experiencia en el desarrollo e instalación de soluciones vidriadas para nuestros clientes, principalmente: arquitectos, inmobiliarias y empresas constructoras.</span><span class="about-text__paragraph">Nuestro principal valor es la experiencia y el profesionalismo de un equipo que participa activamente en cada etapa del proyecto, entregando asesoría especializada desde el diseño hasta la ingeniería de detalles, fabricación y montaje final del producto.</span><span class="about-text__paragraph">Trabajamos con un enfoque integral, buscando entregar soluciones que respondan a las necesidades técnicas y arquitectónicas de cada proyecto, asegurando una ejecución eficiente y de calidad.</span>',
+      mision: '<span class="about-text__paragraph">Nuestra misión es transformar espacios excepcionales mediante el diseño, fabricación y ejecución de cristales. Nos comprometemos a ofrecer calidad en cada proyecto y a buscar continuamente la satisfacción final del cliente como nuestro principal objetivo.</span>',
+      vision: '<span class="about-text__paragraph">En CWSS Ingeniería, aspiramos a expandir nuestra presencia, sumando constantemente nuevos clientes, manteniendo siempre los más altos estándares de calidad y satisfacción.</span>'
     };
 
     function selectTab(button) {
@@ -300,7 +300,7 @@
         item.setAttribute("aria-selected", String(selected));
         item.tabIndex = selected ? 0 : -1;
       });
-      text.textContent = content[key];
+      text.innerHTML = content[key];
       text.setAttribute("aria-labelledby", button.id);
       text.classList.remove("is-switching");
       void text.offsetWidth;

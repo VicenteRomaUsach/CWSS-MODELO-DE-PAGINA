@@ -3,7 +3,7 @@
 La página tiene tres categorías principales:
 
 - Índice: `index.html`.
-- Soluciones: `soluciones.html`.
+- Productos: `soluciones.html`.
 - Obras: `proyectos.html` y `proyecto.html`.
 
 El código está escrito generalmente en inglés. Los ajustes estéticos principales se encuentran al comienzo de `styles.css`, donde están los tamaños, colores y bordes editables.
@@ -13,7 +13,7 @@ El código está escrito generalmente en inglés. Los ajustes estéticos princip
 - `index.html`: página de inicio.
 - `proyectos.html`: listado de obras.
 - `proyecto.html`: ficha y galería de cada obra.
-- `soluciones.html`: listado textual de soluciones y servicios.
+- `soluciones.html`: catálogo desplegable de productos y servicios.
 - `styles.css`: diseño completo y adaptación móvil.
 - `site.js`: navegación, catálogo, fondos y galerías.
 - `imagenes/`: recursos gráficos del sitio.

@@ -2,6 +2,8 @@
 
 ## Cambios locales posteriores a CWSS.CL3.1 — 2026-09-03
 
+- La categoría visible Soluciones pasó a llamarse Productos en el menú, el encabezado de la página y sus mensajes, manteniendo la ruta existente.
+- El texto de Quiénes somos ahora resalta en negrita CWSS Ingeniería Ltda. e incorpora los ajustes de redacción solicitados.
 - Se reemplazó la presentación de Quiénes somos por el nuevo texto corporativo de CWSS Ingeniería Ltda., organizado en tres párrafos.
 - El bloque aumentó su altura mínima para alojar el contenido sin comprimirlo.
 - `Quiénes somos` incorpora tres pestañas en su borde derecho: `Quiénes somos`, `Misión` y `Visión`.
