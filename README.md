@@ -1,14 +1,37 @@
 # Sitio web CWSS — CWSS.CL3.1
 
-hola la pgaina tiene 3 tipos de categorias
-indice INDEX
-soluciones SOLUCIONES
-obras PROYECTO/PROYECTO
+La página tiene tres categorías principales:
 
-el codigo esta en ingles generalmente porque fueras de las funciones de java script me pierdo si las pongo en espannol, es horrible usar javascript, nunca lo habia usado.
+- Índice: `index.html`.
+- Soluciones: `soluciones.html`.
+- Obras: `proyectos.html` y `proyecto.html`.
 
-de todas maneraes es re sencillo y si hay que cambiar algo estetico las primeras 20 lineas de CSS son super claras a nivel de titulos, tamannos y colores de codigo HEX.
+El código está escrito generalmente en inglés. Los ajustes estéticos principales se encuentran al comienzo de `styles.css`, donde están los tamaños, colores y bordes editables.
 
-voy a seguir intentando aplicar una forma de conectar con SQL para poder conectar bien.
+## Archivos principales
 
+- `index.html`: página de inicio.
+- `proyectos.html`: listado de obras.
+- `proyecto.html`: ficha y galería de cada obra.
+- `soluciones.html`: listado textual de soluciones y servicios.
+- `styles.css`: diseño completo y adaptación móvil.
+- `site.js`: navegación, catálogo, fondos y galerías.
+- `imagenes/`: recursos gráficos del sitio.
 
+La administración local fue retirada. El catálogo se actualiza editando los archivos del proyecto; no existe una conexión SQL o backend.
+
+La portada usa dos imágenes. La sección `Obras en instalación` muestra dos obras, sus fotografías cambian automáticamente y también se pueden recorrer con sus controles. Las galerías de las fichas avanzan automáticamente y conservan sus controles manuales. Cada obra admite varios productos y un máximo de 10 imágenes totales.
+
+El historial detallado de correcciones y actualizaciones está disponible en [`CHANGELOG.md`](CHANGELOG.md).
+
+Cada ficha muestra nombre, cliente y año. La etiqueta de estado se muestra solamente en las obras que están en instalación. Las galerías se pueden recorrer con los controles visibles o con las flechas izquierda y derecha del teclado. Cuando el cliente no está informado se muestra `No indica`.
+
+## Abrir el sitio
+
+1. Extrae la carpeta completa del ZIP.
+2. Abre `index.html` directamente con doble clic.
+3. No necesitas Python, servidor local ni archivo `.bat` para visualizar las páginas e imágenes incluidas.
+
+Si ya habías abierto una versión anterior, cierra esa pestaña y vuelve a abrir `index.html`. Esta edición usa una nueva versión del catálogo para evitar que el navegador recupere rutas antiguas o galerías duplicadas guardadas por `localhost`.
+
+Importante: no abras `index.html` desde dentro del ZIP sin extraerlo, porque Windows puede abrir únicamente una copia temporal del HTML y las rutas relativas a imágenes/CSS/JS dejarán de existir.

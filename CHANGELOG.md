@@ -1,5 +1,14 @@
 # Historial de cambios de CWSS
 
+## Cambios locales posteriores a CWSS.CL3.1 — 2026-09-03
+
+- Se retiró la administración local, su página de acceso, el código de edición y sus recursos asociados. El catálogo público permanece estático.
+- En `Obras en instalación` se retiró la línea negra del enlace y se alineó el encabezado con la primera miniatura.
+- En `proyectos.html` se eliminó el título `Obras` y la línea negra anterior al catálogo.
+- La página de Soluciones incorpora más espacio vacío antes del pie y ya no muestra una franja blanca posterior.
+- Los dos sliders de `Obras en instalación` avanzan con el mismo intervalo.
+- El logo del encabezado quedó fuera del efecto de aparición y el resto de los elementos ahora aparece de abajo hacia arriba.
+
 ## CWSS.CL3.1 — 2026-09-03
 
 - Se actualizaron las 23 obras con las constructoras, años, ubicaciones y productos entregados.

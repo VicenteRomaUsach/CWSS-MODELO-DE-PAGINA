@@ -1,9 +1,6 @@
 (function () {
   "use strict";
 
-  const PROJECTS_KEY = "cwss_projects_v11";
-  const PRODUCTS_KEY = "cwss_products_v2";
-  const ADMIN_KEY = "cwss_admin_session";
   const PHOTO_ROOT = "imagenes-optimizadas/";
   if (document.body) document.body.classList.add("page-transition");
   const defaultProjects = [
@@ -51,20 +48,6 @@
     delete project.imageSets;
   });
 
-  // Canonical bundled assets. This repairs stale paths stored by older versions
-  // (especially when the site is opened directly with file:// instead of localhost).
-  const defaultProjectById = new Map(defaultProjects.map(function (project) {
-    return [project.id, project];
-  }));
-
-  const elSauceDefaults = defaultProjects.find(function (project) {
-    return project.id === "el-sauce";
-  });
-
-  const puertaDelSolDefaults = defaultProjects.find(function (project) {
-    return project.id === "puerta-del-sol";
-  });
-
   const defaultProducts = [
     { id: "mamparas-cristal", name: "Mamparas de cristal", anchor: "vidriadas" },
     { id: "puertas-protex", name: "Puertas Protex" },
@@ -83,90 +66,7 @@
   }
 
   function getProjects() {
-    try {
-      const saved = localStorage.getItem(PROJECTS_KEY);
-      if (saved !== null) {
-        const parsed = JSON.parse(saved);
-        if (!Array.isArray(parsed)) return cloneDefaults();
-        let changed = false;
-        parsed.forEach(function (project) {
-          const bundledDefault = defaultProjectById.get(project.id);
-          if (bundledDefault) {
-            const expectedGallery = bundledDefault.gallery || [];
-            const sameGallery = Array.isArray(project.gallery)
-              && project.gallery.length === expectedGallery.length
-              && project.gallery.every(function (image, index) { return image === expectedGallery[index]; });
-            if (project.cover !== bundledDefault.cover || !sameGallery) {
-              project.cover = bundledDefault.cover;
-              project.gallery = expectedGallery.slice();
-              changed = true;
-            }
-            ["name", "location", "contractor", "year", "status", "subtitle"].forEach(function (field) {
-              const expected = bundledDefault[field] || "";
-              if ((project[field] || "") !== expected) {
-                project[field] = expected;
-                changed = true;
-              }
-            });
-            if (JSON.stringify(project.products || []) !== JSON.stringify(bundledDefault.products || [])) {
-              project.products = (bundledDefault.products || []).slice();
-              changed = true;
-            }
-          }
-          const isElSauce = project.id === "el-sause" || project.name === "El Sause" || project.id === "el-sauce";
-          const hasCurrentSauceGallery = Array.isArray(project.gallery)
-            && project.gallery.length === elSauceDefaults.gallery.length
-            && project.gallery.every(function (image, index) { return image === elSauceDefaults.gallery[index]; });
-          if (isElSauce && (project.id !== elSauceDefaults.id
-            || project.name !== elSauceDefaults.name
-            || project.contractor !== elSauceDefaults.contractor
-            || project.cover !== elSauceDefaults.cover
-            || !hasCurrentSauceGallery)) {
-            project.id = elSauceDefaults.id;
-            project.name = elSauceDefaults.name;
-            project.contractor = elSauceDefaults.contractor;
-            project.cover = elSauceDefaults.cover;
-            project.gallery = elSauceDefaults.gallery.slice();
-            changed = true;
-          }
-          if (!project.year) { project.year = "Por confirmar"; changed = true; }
-          if (project.contractor === undefined) { project.contractor = project.client || ""; changed = true; }
-          if (!Array.isArray(project.products) || !project.products.length) {
-            project.products = project.product
-              ? [String(project.product)]
-              : ["PLACEHOLDER #1", "PLACEHOLDER #2"];
-            changed = true;
-          }
-          if (/^Proyecto\s+\d+$/i.test(String(project.name || ""))) { project.name = String(project.name).replace(/^Proyecto/i, "Obra"); changed = true; }
-          if (!Array.isArray(project.gallery)) { project.gallery = []; changed = true; }
-          const uniqueGallery = project.gallery.filter(function (image, index, gallery) {
-            return image && image !== project.cover && gallery.indexOf(image) === index;
-          });
-          if (uniqueGallery.length !== project.gallery.length) { project.gallery = uniqueGallery; changed = true; }
-        });
-        if (!parsed.some(function (project) { return project.id === puertaDelSolDefaults.id; })) {
-          const sauceIndex = parsed.findIndex(function (project) { return project.id === elSauceDefaults.id; });
-          parsed.splice(sauceIndex >= 0 ? sauceIndex + 1 : 0, 0, JSON.parse(JSON.stringify(puertaDelSolDefaults)));
-          changed = true;
-        }
-        if (changed) localStorage.setItem(PROJECTS_KEY, JSON.stringify(parsed));
-        return parsed;
-      }
-      const initial = cloneDefaults();
-      localStorage.setItem(PROJECTS_KEY, JSON.stringify(initial));
-      return initial;
-    } catch (error) {
-      return cloneDefaults();
-    }
-  }
-
-  function saveProjects(projects) {
-    try {
-      localStorage.setItem(PROJECTS_KEY, JSON.stringify(projects));
-      return true;
-    } catch (error) {
-      return false;
-    }
+    return cloneDefaults();
   }
 
   function cloneProductDefaults() {
@@ -174,27 +74,7 @@
   }
 
   function getProducts() {
-    try {
-      const saved = localStorage.getItem(PRODUCTS_KEY);
-      if (saved !== null) {
-        const parsed = JSON.parse(saved);
-        return Array.isArray(parsed) ? parsed : cloneProductDefaults();
-      }
-      const initial = cloneProductDefaults();
-      localStorage.setItem(PRODUCTS_KEY, JSON.stringify(initial));
-      return initial;
-    } catch (error) {
-      return cloneProductDefaults();
-    }
-  }
-
-  function saveProducts(products) {
-    try {
-      localStorage.setItem(PRODUCTS_KEY, JSON.stringify(products));
-      return true;
-    } catch (error) {
-      return false;
-    }
+    return cloneProductDefaults();
   }
 
   function escapeHtml(value) {
@@ -503,7 +383,7 @@
 
   function setupProjectCardSlides() {
     const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    document.querySelectorAll("[data-card-slideshow]").forEach(function (media, cardIndex) {
+    document.querySelectorAll("[data-card-slideshow]").forEach(function (media) {
       const slides = Array.from(media.querySelectorAll(".project-card__slide"));
       const card = media.closest(".project-card");
       const previous = card && card.querySelector("[data-card-previous]");
@@ -532,7 +412,7 @@
       function start() {
         stop();
         if (reducedMotion || document.hidden) return;
-        timer = window.setInterval(showNext, 3900 + (cardIndex * 450));
+        timer = window.setInterval(showNext, 3900);
       }
 
       if (previous) previous.addEventListener("click", function () { show(current - 1); start(); });
@@ -636,7 +516,6 @@
 
   function setupRevealAnimations() {
     const selectors = [
-      ".site-header .brand",
       ".site-header .main-nav > a",
       ".about-visual",
       ".about-copy > *",
@@ -650,12 +529,7 @@
       ".project-gallery__viewport",
       ".project-gallery__selector",
       ".project-gallery__controls",
-      ".not-found > *",
-      ".login-panel > *",
-      ".admin-heading > *",
-      ".admin-layout > *",
-      ".admin-products-heading > *",
-      ".admin-products-layout > *"
+      ".not-found > *"
     ];
     const elements = Array.from(document.querySelectorAll(selectors.join(",")));
     if (!elements.length) return;
@@ -682,224 +556,6 @@
     elements.forEach(function (element) { observer.observe(element); });
   }
 
-  function imageToDataUrl(file) {
-    return new Promise(function (resolve, reject) {
-      const reader = new FileReader();
-      reader.onerror = function () { reject(new Error("No se pudo leer la imagen.")); };
-      reader.onload = function () {
-        const image = new Image();
-        image.onerror = function () { reject(new Error("El archivo no es una imagen válida.")); };
-        image.onload = function () {
-          let width = image.width;
-          let height = image.height;
-          const maxSide = 1400;
-          if (Math.max(width, height) > maxSide) {
-            const scale = maxSide / Math.max(width, height);
-            width = Math.round(width * scale);
-            height = Math.round(height * scale);
-          }
-          const canvas = document.createElement("canvas");
-          canvas.width = width;
-          canvas.height = height;
-          const context = canvas.getContext("2d");
-          context.drawImage(image, 0, 0, width, height);
-          let result = canvas.toDataURL("image/jpeg", .74);
-          if (result.length > 850000) {
-            const reducedScale = 950 / Math.max(width, height);
-            canvas.width = Math.round(width * reducedScale);
-            canvas.height = Math.round(height * reducedScale);
-            context.drawImage(image, 0, 0, canvas.width, canvas.height);
-            result = canvas.toDataURL("image/jpeg", .64);
-          }
-          resolve(result);
-        };
-        image.src = reader.result;
-      };
-      reader.readAsDataURL(file);
-    });
-  }
-
-  function renderAdminList() {
-    const list = document.querySelector("[data-admin-project-list]");
-    if (!list) return;
-    const projects = getProjects();
-    const count = document.querySelector("[data-project-count]");
-    if (count) count.textContent = projects.length + (projects.length === 1 ? " obra" : " obras");
-    if (!projects.length) {
-      list.innerHTML = '<div class="empty-state">No hay obras publicadas.</div>';
-      return;
-    }
-    list.innerHTML = projects.map(function (project) {
-      return `
-        <article class="admin-project-row">
-          <img src="${escapeHtml(project.cover)}" alt="">
-          <div><h3>${escapeHtml(projectDisplayName(project))}</h3><p class="admin-project-row__meta">Cliente: ${escapeHtml(projectConstructor(project))} · Año: ${escapeHtml(project.year || "Por confirmar")} · Productos: ${escapeHtml(groupedProjectProducts(project).join(", "))}</p></div>
-          <button class="delete-button" type="button" data-delete-project="${escapeHtml(project.id)}">Eliminar</button>
-        </article>`;
-    }).join("");
-    list.querySelectorAll("[data-delete-project]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        const project = projects.find(function (item) { return item.id === button.dataset.deleteProject; });
-        if (!project || !window.confirm('¿Eliminar la obra "' + project.name + '"?')) return;
-        saveProjects(projects.filter(function (item) { return item.id !== project.id; }));
-        renderAdminList();
-      });
-    });
-  }
-
-  function renderAdminProductList() {
-    const list = document.querySelector("[data-admin-product-list]");
-    if (!list) return;
-    const products = getProducts();
-    document.querySelectorAll("[data-product-count], [data-product-list-count]").forEach(function (count) {
-      count.textContent = products.length + (products.length === 1 ? " solución" : " soluciones");
-    });
-    if (!products.length) {
-      list.innerHTML = '<div class="empty-state">No hay soluciones publicadas.</div>';
-      return;
-    }
-    list.innerHTML = products.map(function (product) {
-      return `
-        <article class="admin-product-row">
-          <div><h3>${escapeHtml(product.name)}</h3></div>
-          <button class="delete-button" type="button" data-delete-product="${escapeHtml(product.id)}">Eliminar</button>
-        </article>`;
-    }).join("");
-    list.querySelectorAll("[data-delete-product]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        const product = products.find(function (item) { return item.id === button.dataset.deleteProduct; });
-        if (!product || !window.confirm('¿Eliminar la solución "' + product.name + '"?')) return;
-        saveProducts(products.filter(function (item) { return item.id !== product.id; }));
-        renderAdminProductList();
-        renderProducts(getProducts());
-      });
-    });
-  }
-
-  function showAccountState() {
-    const loginPanel = document.querySelector("[data-login-panel]");
-    const adminPanel = document.querySelector("[data-admin-panel]");
-    if (!loginPanel || !adminPanel) return;
-    const loggedIn = sessionStorage.getItem(ADMIN_KEY) === "1";
-    loginPanel.hidden = loggedIn;
-    adminPanel.hidden = !loggedIn;
-    if (loggedIn) {
-      renderAdminList();
-      renderAdminProductList();
-    }
-  }
-
-  function setupAccount() {
-    const loginForm = document.querySelector("[data-login-form]");
-    if (!loginForm) return;
-    showAccountState();
-    loginForm.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const formData = new FormData(loginForm);
-      const username = String(formData.get("username") || "").trim().toLowerCase();
-      const password = String(formData.get("password") || "");
-      const message = document.querySelector("[data-login-message]");
-      if (username === "roman" && password === "roman") {
-        sessionStorage.setItem(ADMIN_KEY, "1");
-        message.textContent = "";
-        loginForm.reset();
-        showAccountState();
-      } else {
-        message.textContent = "Usuario o contraseña incorrectos.";
-      }
-    });
-
-    document.querySelector("[data-logout]").addEventListener("click", function () {
-      sessionStorage.removeItem(ADMIN_KEY);
-      showAccountState();
-    });
-
-    const projectForm = document.querySelector("[data-project-form]");
-    projectForm.addEventListener("submit", async function (event) {
-      event.preventDefault();
-      const message = document.querySelector("[data-project-message]");
-      const submit = projectForm.querySelector('button[type="submit"]');
-      const formData = new FormData(projectForm);
-      const coverFile = projectForm.elements.cover.files[0];
-      const galleryFiles = Array.from(projectForm.elements.gallery.files);
-      message.classList.remove("is-success");
-      if (!coverFile) {
-        message.textContent = "Selecciona una imagen de portada.";
-        return;
-      }
-      if (galleryFiles.length > 9) {
-        message.textContent = "Selecciona un máximo de 9 imágenes adicionales.";
-        return;
-      }
-      submit.disabled = true;
-      submit.textContent = "Procesando imágenes…";
-      message.textContent = "";
-      try {
-        const cover = await imageToDataUrl(coverFile);
-        const gallery = await Promise.all(galleryFiles.map(imageToDataUrl));
-        const projects = getProjects();
-        projects.unshift({
-          id: "obra-" + Date.now(),
-          name: String(formData.get("name") || "").trim(),
-          year: String(formData.get("year") || "").trim(),
-          contractor: String(formData.get("contractor") || "No indica").trim(),
-          products: String(formData.get("projectProducts") || "")
-            .split(/[,;\n]+/)
-            .map(function (product) { return product.trim(); })
-            .filter(Boolean),
-          status: String(formData.get("status") || ""),
-          cover: cover,
-          gallery: gallery,
-          createdAt: new Date().toISOString()
-        });
-        saveProjects(projects);
-        projectForm.reset();
-        message.textContent = "Obra publicada correctamente.";
-        message.classList.add("is-success");
-        renderAdminList();
-      } catch (error) {
-        message.textContent = error && error.name === "QuotaExceededError"
-          ? "No queda espacio local. Elimina una obra o usa imágenes más livianas."
-          : (error.message || "No fue posible guardar la obra.");
-      } finally {
-        submit.disabled = false;
-        submit.textContent = "Publicar obra";
-      }
-    });
-
-    const productForm = document.querySelector("[data-product-form]");
-    productForm.addEventListener("submit", async function (event) {
-      event.preventDefault();
-      const message = document.querySelector("[data-product-message]");
-      const submit = productForm.querySelector('button[type="submit"]');
-      const formData = new FormData(productForm);
-      message.classList.remove("is-success");
-      submit.disabled = true;
-      submit.textContent = "Publicando…";
-      message.textContent = "";
-      try {
-        const products = getProducts();
-        products.push({
-          id: "producto-" + Date.now(),
-          name: String(formData.get("productName") || "").trim()
-        });
-        saveProducts(products);
-        productForm.reset();
-        message.textContent = "Solución publicada correctamente.";
-        message.classList.add("is-success");
-        renderAdminProductList();
-        renderProducts(products);
-      } catch (error) {
-        message.textContent = error && error.name === "QuotaExceededError"
-          ? "No queda espacio local. Elimina una solución."
-          : (error.message || "No fue posible guardar la solución.");
-      } finally {
-        submit.disabled = false;
-        submit.textContent = "Publicar solución";
-      }
-    });
-  }
-
   const projects = getProjects();
   const products = getProducts();
   renderProducts(products);
@@ -912,7 +568,6 @@
   setupImageDialog();
   setupNavigation();
   setupPageTransitions();
-  setupAccount();
   setupRevealAnimations();
   document.querySelectorAll("[data-year]").forEach(function (year) {
     year.textContent = String(new Date().getFullYear());
