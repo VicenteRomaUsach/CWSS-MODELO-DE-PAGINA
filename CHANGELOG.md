@@ -2,6 +2,9 @@
 
 ## Cambios locales posteriores a CWSS.CL3.1 — 2026-09-03
 
+- `Quiénes somos` incorpora tres pestañas en su borde derecho: `Quiénes somos`, `Misión` y `Visión`.
+- Las pestañas reemplazan el párrafo del bloque sin abandonar la página; `Quiénes somos` restaura el texto original.
+- En pantallas móviles las tres pestañas se reorganizan horizontalmente bajo el contenido para conservar su legibilidad.
 - La obra `El Sauce` pasó a llamarse `El Sauce 3` sin modificar su identificador ni las rutas de sus fotografías.
 - El título `Obras en instalación` usa exactamente el mismo tamaño que `Quiénes somos`.
 - Cada solución se convirtió en un botón desplegable que empuja el contenido siguiente hacia abajo y cierra cualquier otro producto abierto.

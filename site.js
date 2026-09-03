@@ -280,6 +280,49 @@
     }
   }
 
+  function setupAboutTabs() {
+    const text = document.querySelector("[data-about-text]");
+    const buttons = Array.from(document.querySelectorAll("[data-about-tab]"));
+    if (!text || !buttons.length) return;
+
+    const content = {
+      quienes: "Somos CWSS, Contamos con más de 13 años de experiencia desarrollando soluciones para obras inmobiliarias y comerciales. Participamos en cada obra desde la ingeniería de detalle y planificación hasta el montaje y la entrega final. Nuestro sello es la precisión técnica, la flexibilidad operativa y el acompañamiento personalizado durante toda la obra.",
+      mision: "Nuestra misión es transformar espacios excepcionales mediante el diseño, fabricación y ejecución de cristales. Nos comprometemos a ofrecer calidad en cada proyecto y a buscar continuamente la satisfacción final del cliente como nuestro principal objetivo.",
+      vision: "En CWSS Ingeniería, aspiramos a expandir nuestra presencia, sumando constantemente nuevos clientes, manteniendo siempre los más altos estándares de calidad y satisfacción."
+    };
+
+    function selectTab(button) {
+      const key = button.dataset.aboutTab;
+      if (!content[key]) return;
+      buttons.forEach(function (item) {
+        const selected = item === button;
+        item.classList.toggle("is-active", selected);
+        item.setAttribute("aria-selected", String(selected));
+        item.tabIndex = selected ? 0 : -1;
+      });
+      text.textContent = content[key];
+      text.setAttribute("aria-labelledby", button.id);
+      text.classList.remove("is-switching");
+      void text.offsetWidth;
+      text.classList.add("is-switching");
+    }
+
+    buttons.forEach(function (button, index) {
+      button.addEventListener("click", function () { selectTab(button); });
+      button.addEventListener("keydown", function (event) {
+        if (!["ArrowDown", "ArrowUp", "ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
+        event.preventDefault();
+        let nextIndex = index;
+        if (event.key === "Home") nextIndex = 0;
+        else if (event.key === "End") nextIndex = buttons.length - 1;
+        else if (event.key === "ArrowDown" || event.key === "ArrowRight") nextIndex = (index + 1) % buttons.length;
+        else nextIndex = (index - 1 + buttons.length) % buttons.length;
+        buttons[nextIndex].focus();
+        selectTab(buttons[nextIndex]);
+      });
+    });
+  }
+
   function projectImages(project) {
     return Array.from(new Set([project.cover].concat(project.gallery || []).filter(Boolean)));
   }
@@ -738,6 +781,7 @@
   const products = getProducts();
   renderProducts(products);
   setupProductAccordions();
+  setupAboutTabs();
   renderLatest(projects);
   renderAllProjects(projects);
   setupProjectsBackground();

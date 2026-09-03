@@ -22,6 +22,8 @@ La administración local fue retirada. El catálogo se actualiza editando los ar
 
 La portada usa dos imágenes. La sección `Obras en instalación` muestra dos obras, sus fotografías cambian automáticamente y también se pueden recorrer con sus controles. Las galerías de las fichas avanzan automáticamente y conservan sus controles manuales. Cada obra admite varios productos y un máximo de 10 imágenes totales.
 
+El bloque `Quiénes somos` incluye pestañas para alternar entre la presentación de la empresa, su misión y su visión sin cambiar de página.
+
 En `soluciones.html`, cada producto funciona como un botón desplegable. Solo puede permanecer uno abierto y sus tres imágenes se cargan y aparecen de izquierda a derecha; cuando no existe una fotografía verificada se muestra un placeholder identificado.
 
 El historial detallado de correcciones y actualizaciones está disponible en [`CHANGELOG.md`](CHANGELOG.md).

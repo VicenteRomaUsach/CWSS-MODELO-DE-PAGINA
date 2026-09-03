@@ -8,8 +8,8 @@
   <title>CWSS | Soluciones Vidriadas</title>
   <link rel="icon" href="imagenes/Logoico.ico" type="image/x-icon">
   <link rel="preload" as="image" href="imagenes-optimizadas/PORTADA/CWSS--PORTADA--01.webp" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=20260903q">
-  <script src="site.js?v=20260903q" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260903r">
+  <script src="site.js?v=20260903r" defer></script>
 </head>
 <body data-page="inicio">
   <header class="site-header">
@@ -37,7 +37,12 @@
       <div class="about-copy">
         <p class="eyebrow"></p>
         <h1>QUIÉNES SOMOS</h1>
-        <p class="about-text">Somos CWSS, Contamos con más de de 13 años de experiencia desarrollando soluciones para obras inmobiliarias y comerciales. Participamos en cada obra desde la ingeniería de detalle y planificación hasta el montaje y la entrega final. Nuestro sello es la precisión técnica, la flexibilidad operativa y el acompañamiento personalizado durante toda la obra.</p>
+        <p class="about-text" id="about-panel" role="tabpanel" aria-labelledby="about-tab-quienes" data-about-text>Somos CWSS, Contamos con más de 13 años de experiencia desarrollando soluciones para obras inmobiliarias y comerciales. Participamos en cada obra desde la ingeniería de detalle y planificación hasta el montaje y la entrega final. Nuestro sello es la precisión técnica, la flexibilidad operativa y el acompañamiento personalizado durante toda la obra.</p>
+      </div>
+      <div class="about-tabs" role="tablist" aria-label="Información de CWSS">
+        <button class="about-tab is-active" id="about-tab-quienes" type="button" role="tab" aria-selected="true" aria-controls="about-panel" data-about-tab="quienes">Quiénes somos</button>
+        <button class="about-tab" id="about-tab-mision" type="button" role="tab" aria-selected="false" aria-controls="about-panel" tabindex="-1" data-about-tab="mision">Misión</button>
+        <button class="about-tab" id="about-tab-vision" type="button" role="tab" aria-selected="false" aria-controls="about-panel" tabindex="-1" data-about-tab="vision">Visión</button>
       </div>
     </section>
 
