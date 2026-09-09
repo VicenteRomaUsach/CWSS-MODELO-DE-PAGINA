@@ -36,7 +36,7 @@
     { id: "tavelli", name: "Tavelli", contractor: "Nahmias", year: "2025", status: "", products: ["Shower Door"], imageFolder: "2025 - TAVELLI", imageBase: "TAVELLI NAHMIAS 2025--TAVELLI", imageCount: 2 },
     { id: "apoquindo-los-militares", name: "Apoquindo Los Militares", contractor: "Echeverría Izquierdo", year: "2026", status: "En instalación", products: ["Barandas de cristal", "Separadores de cristal"], imageFolder: "2026 - APOQUINDO LOS MILITARES", imageBase: "APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO", imageCount: 4 },
     { id: "el-sauce", name: "El Sauce 3", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas de cristal con balaustros"], imageFolder: "2026 - EL SAUCE", imageBase: "EL SAUCE POCURO 2026--EL-SAUCE", imageCount: 4 },
-    { id: "comisaria", name: "Comisaría", contractor: "Bravo Izquierdo", year: "N/A", status: "", products: ["N/A"], imageFolder: "N-A - COMISARIA", imageFiles: ["COMISARIA 1.png", "comisaria 2.png", "comisaria 3.jpeg", "comisaria 4.jpeg"] },
+    { id: "comisaria", name: "Primera Comisaría de Punta Arenas", contractor: "Bravo Izquierdo", year: "2026", status: "", products: ["N/A"], imageFolder: "N-A - COMISARIA", imageFiles: ["COMISARIA 1.png", "comisaria 2.png", "comisaria 3.jpeg", "comisaria 4.jpeg"] },
     { id: "papudo", name: "Papudo", contractor: "N/A", year: "N/A", status: "", products: [] }
   ];
 
@@ -66,7 +66,7 @@
     { id: "tabiques-vidriados", name: "Tabiques vidriados", anchor: "vidriadas", images: ["imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--01.webp", "imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--02.webp", "imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--03.webp", "imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--04.webp"] },
     { id: "barandas-cristal", name: "Barandas de cristal", anchor: "barandas", images: ["imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--01.webp", "imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--02.webp", "imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--03.webp", "imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--04.webp"] },
     { id: "shower-door", name: "Shower Door", images: ["imagenes-productos/SHOWER DOOR/SHOWER-DOOR--01.webp", "imagenes-productos/SHOWER DOOR/SHOWER-DOOR--02.webp", "imagenes-productos/SHOWER DOOR/SHOWER-DOOR--03.webp", "imagenes-productos/SHOWER DOOR/SHOWER-DOOR--04.webp"] },
-    { id: "espejos-retroiluminados", name: "Espejos retroiluminados", images: ["imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--01.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--02.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--03.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--04.webp"] },
+    { id: "espejos-retroiluminados", name: "Espejos retroiluminados", images: ["", "", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--03.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--04.webp"] },
     { id: "pasamanos-acero", name: "Pasamanos acero inoxidable", images: ["imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--01.webp", "imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--02.webp", "imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--03.webp", "imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--04.webp"] },
     { id: "revestimientos-muros-chambranas", name: "Revestimientos de muros y chambranas de ascensor inoxidable", anchor: "revestimientos", images: ["imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--01.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--02.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--03.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--04.webp"] },
     { id: "fachadas-panel-aluminio", name: "Revestimientos de fachadas en panel de aluminio compuesto.", images: ["imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--01.webp", "imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--02.webp", "imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--03.webp", "imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--04.webp"] },
@@ -102,33 +102,43 @@
     return "proyecto.html?id=" + encodeURIComponent(id);
   }
 
-  function productMedia(product) {
+  function productSlides(product) {
     const images = Array.isArray(product.images) ? product.images.slice(0, 4) : [];
     while (images.length < 4) images.push(null);
     return images.map(function (source, index) {
       const number = index + 1;
       if (!source) {
-        return `<figure class="product-card__media product-card__placeholder" data-product-media data-image-number="${number}" data-product-name="${escapeHtml(product.name)}" role="img" aria-label="Imagen ${number} pendiente de ${escapeHtml(product.name)}"></figure>`;
+        return `<figure class="product-carousel__slide product-card__placeholder" data-carousel-slide role="img" aria-label="Imagen ${number} pendiente de ${escapeHtml(product.name)}"><span>Imagen ${number}</span></figure>`;
       }
-      return `<figure class="product-card__media" data-product-media data-image-number="${number}" data-product-name="${escapeHtml(product.name)}">
-        <img data-product-image="${escapeHtml(source)}" alt="Imagen ${number} de ${escapeHtml(product.name)}" decoding="async">
-        <figcaption>${escapeHtml(product.name)}</figcaption>
+      return `<figure class="product-carousel__slide" data-carousel-slide aria-hidden="${index === 0 ? "false" : "true"}">
+        <img src="${escapeHtml(source)}" alt="${escapeHtml(product.name)} - imagen ${number}" loading="lazy" decoding="async" draggable="false">
       </figure>`;
     }).join("");
   }
 
-  function productCard(product) {
+  function productCard(product, index) {
     const articleId = product.anchor || product.id;
     const buttonId = "producto-boton-" + product.id;
     const panelId = "producto-panel-" + product.id;
-    return `<article class="product-card" id="${escapeHtml(articleId)}" data-product-card>
+    const imageCount = Math.max(1, Array.isArray(product.images) ? product.images.slice(0, 4).length : 0);
+    return `<article class="product-card" id="${escapeHtml(articleId)}" data-product-card data-product-index="${index}">
       <h2 class="product-card__heading">
         <button class="product-card__toggle" id="${escapeHtml(buttonId)}" type="button" aria-expanded="false" aria-controls="${escapeHtml(panelId)}" data-product-toggle>
-          <span>${escapeHtml(product.name)}</span><span class="product-card__indicator" aria-hidden="true">+</span>
+          <span>${escapeHtml(product.name)}</span><span class="product-card__indicator" aria-hidden="true"></span>
         </button>
       </h2>
       <div class="product-card__panel" id="${escapeHtml(panelId)}" role="region" aria-labelledby="${escapeHtml(buttonId)}" data-product-panel hidden>
-        <div class="product-card__gallery">${productMedia(product)}</div>
+        <div class="product-carousel" data-product-carousel>
+          <div class="product-carousel__viewport" data-carousel-viewport>
+            <div class="product-carousel__track" data-carousel-track>${productSlides(product)}</div>
+          </div>
+          <button class="product-carousel__expand" type="button" data-product-expand aria-label="Ampliar galería de ${escapeHtml(product.name)}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5"/></svg></button>
+          <div class="product-carousel__controls">
+            <button type="button" data-carousel-previous aria-label="Imagen anterior de ${escapeHtml(product.name)}">←</button>
+            <p aria-live="polite"><span data-carousel-current>1</span> / ${imageCount}</p>
+            <button type="button" data-carousel-next aria-label="Imagen siguiente de ${escapeHtml(product.name)}">→</button>
+          </div>
+        </div>
       </div>
     </article>`;
   }
@@ -140,91 +150,232 @@
     if (!products.length) container.innerHTML = '<div class="empty-state">No hay productos publicados por el momento.</div>';
   }
 
-  function setupProductAccordions() {
+  function createProductSlider(root, options) {
+    const settings = options || {};
+    const viewport = root.querySelector("[data-carousel-viewport]");
+    const track = root.querySelector("[data-carousel-track]");
+    const slides = Array.from(root.querySelectorAll("[data-carousel-slide]"));
+    const currentLabel = root.querySelector("[data-carousel-current]");
+    const previous = root.querySelector("[data-carousel-previous]");
+    const next = root.querySelector("[data-carousel-next]");
+    const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let current = Math.min(Number(settings.initialIndex) || 0, Math.max(slides.length - 1, 0));
+    let timer = null;
+    let dragging = false;
+    let pointerId = null;
+    let startX = 0;
+    let deltaX = 0;
+
+    function setTransform(extraPixels) {
+      track.style.transform = `translate3d(calc(${-current * 100}% + ${extraPixels || 0}px), 0, 0)`;
+    }
+
+    function show(index, animate) {
+      if (!slides.length) return;
+      const useAnimation = animate !== false && !reducedMotion;
+      current = (index + slides.length) % slides.length;
+      track.classList.toggle("is-jumping", !useAnimation);
+      setTransform(0);
+      slides.forEach(function (slide, slideIndex) {
+        slide.setAttribute("aria-hidden", String(slideIndex !== current));
+      });
+      if (currentLabel) currentLabel.textContent = String(current + 1);
+      if (!useAnimation) window.requestAnimationFrame(function () { track.classList.remove("is-jumping"); });
+    }
+
+    function stop() {
+      if (timer !== null) window.clearInterval(timer);
+      timer = null;
+    }
+
+    function start() {
+      stop();
+      if (reducedMotion || slides.length <= 1 || document.hidden) return;
+      if (settings.shouldAutoplay && !settings.shouldAutoplay()) return;
+      timer = window.setInterval(function () { show(current + 1); }, settings.interval || 4600);
+    }
+
+    function select(index) {
+      show(index);
+      start();
+    }
+
+    function finishDrag(event) {
+      if (!dragging || (event && event.pointerId !== pointerId)) return;
+      const threshold = Math.min(90, Math.max(42, viewport.clientWidth * 0.12));
+      dragging = false;
+      track.classList.remove("is-dragging");
+      if (viewport.hasPointerCapture && viewport.hasPointerCapture(pointerId)) viewport.releasePointerCapture(pointerId);
+      if (deltaX <= -threshold) show(current + 1);
+      else if (deltaX >= threshold) show(current - 1);
+      else show(current);
+      pointerId = null;
+      deltaX = 0;
+      start();
+    }
+
+    function onPointerDown(event) {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+      stop();
+      dragging = true;
+      pointerId = event.pointerId;
+      startX = event.clientX;
+      deltaX = 0;
+      track.classList.add("is-dragging");
+      viewport.setPointerCapture(pointerId);
+    }
+
+    function onPointerMove(event) {
+      if (!dragging || event.pointerId !== pointerId) return;
+      deltaX = event.clientX - startX;
+      setTransform(deltaX);
+    }
+
+    function onVisibilityChange() {
+      if (document.hidden) stop(); else start();
+    }
+
+    if (previous) previous.addEventListener("click", function () { select(current - 1); });
+    if (next) next.addEventListener("click", function () { select(current + 1); });
+    viewport.addEventListener("pointerdown", onPointerDown);
+    viewport.addEventListener("pointermove", onPointerMove);
+    viewport.addEventListener("pointerup", finishDrag);
+    viewport.addEventListener("pointercancel", finishDrag);
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", start);
+    root.addEventListener("focusin", stop);
+    root.addEventListener("focusout", function (event) {
+      if (!root.contains(event.relatedTarget)) start();
+    });
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    show(current, false);
+
+    return {
+      destroy: function () {
+        stop();
+        viewport.removeEventListener("pointerdown", onPointerDown);
+        viewport.removeEventListener("pointermove", onPointerMove);
+        viewport.removeEventListener("pointerup", finishDrag);
+        viewport.removeEventListener("pointercancel", finishDrag);
+        document.removeEventListener("visibilitychange", onVisibilityChange);
+      },
+      getIndex: function () { return current; },
+      show: show,
+      start: start,
+      stop: stop
+    };
+  }
+
+  function setupProductAccordions(products) {
     const cards = Array.from(document.querySelectorAll("[data-product-card]"));
     if (!cards.length) return;
-    const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let revealRun = 0;
+    const controllers = new Map();
+    let activeProduct = null;
+    let fullscreenController = null;
+    let fullscreenSource = null;
+    const dialog = document.createElement("dialog");
+    dialog.className = "product-lightbox";
+    dialog.setAttribute("aria-label", "Galería ampliada de producto");
+    dialog.innerHTML = `<button class="product-lightbox__close" type="button" data-product-lightbox-close aria-label="Cerrar galería ampliada">×</button>
+      <p class="product-lightbox__title" data-product-lightbox-title></p>
+      <div class="product-lightbox__stage" data-product-lightbox-stage></div>`;
+    document.body.appendChild(dialog);
 
-    function placeholderFor(item) {
-      const number = item.dataset.imageNumber || "";
-      const productName = item.dataset.productName || "Producto";
-      item.classList.add("product-card__placeholder");
-      item.replaceChildren();
-      item.setAttribute("role", "img");
-      item.setAttribute("aria-label", `Imagen ${escapeHtml(number)} pendiente de ${escapeHtml(productName)}`);
-    }
-
-    function loadImage(item) {
-      const image = item.querySelector("[data-product-image]");
-      if (!image || image.getAttribute("src")) return Promise.resolve();
-      return new Promise(function (resolve) {
-        let settled = false;
-        function finish() {
-          if (settled) return;
-          settled = true;
-          image.onload = null;
-          image.onerror = null;
-          resolve();
-        }
-        image.onload = finish;
-        image.onerror = function () {
-          placeholderFor(item);
-          finish();
-        };
-        image.src = image.dataset.productImage;
-        if (image.complete) {
-          window.setTimeout(function () {
-            if (!image.naturalWidth) placeholderFor(item);
-            finish();
-          }, 0);
-        }
+    function openFullscreen(card, product, controller) {
+      controller.stop();
+      activeProduct = product;
+      fullscreenSource = controller;
+      dialog.querySelector("[data-product-lightbox-title]").textContent = product.name;
+      dialog.querySelector("[data-product-lightbox-stage]").innerHTML = `<div class="product-carousel product-carousel--fullscreen" data-product-fullscreen-carousel>
+        <div class="product-carousel__viewport" data-carousel-viewport>
+          <div class="product-carousel__track" data-carousel-track>${productSlides(product)}</div>
+        </div>
+        <div class="product-carousel__controls">
+          <button type="button" data-carousel-previous aria-label="Imagen anterior de ${escapeHtml(product.name)}">←</button>
+          <p aria-live="polite"><span data-carousel-current>1</span> / ${product.images.length}</p>
+          <button type="button" data-carousel-next aria-label="Imagen siguiente de ${escapeHtml(product.name)}">→</button>
+        </div>
+      </div>`;
+      const fullscreenRoot = dialog.querySelector("[data-product-fullscreen-carousel]");
+      fullscreenController = createProductSlider(fullscreenRoot, {
+        initialIndex: controller.getIndex(),
+        interval: 4600,
+        shouldAutoplay: function () { return dialog.open; }
       });
+      dialog.showModal();
+      fullscreenController.start();
     }
 
-    async function revealMedia(panel, runId) {
-      const items = Array.from(panel.querySelectorAll("[data-product-media]"));
-      for (const item of items) {
-        await loadImage(item);
-        if (runId !== revealRun || panel.hidden) return;
-        item.classList.add("is-visible");
-        if (!reducedMotion) await new Promise(function (resolve) { window.setTimeout(resolve, 150); });
-      }
+    function cleanupFullscreen() {
+      if (fullscreenController && fullscreenSource) fullscreenSource.show(fullscreenController.getIndex(), false);
+      if (fullscreenController) fullscreenController.destroy();
+      if (fullscreenSource) fullscreenSource.start();
+      fullscreenController = null;
+      fullscreenSource = null;
+      activeProduct = null;
+      dialog.querySelector("[data-product-lightbox-stage]").replaceChildren();
     }
+
+    dialog.querySelector("[data-product-lightbox-close]").addEventListener("click", function () { dialog.close(); });
+    dialog.addEventListener("close", cleanupFullscreen);
+    dialog.addEventListener("click", function (event) {
+      if (event.target === dialog) dialog.close();
+    });
+    dialog.addEventListener("keydown", function (event) {
+      if (!fullscreenController || !activeProduct) return;
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        fullscreenController.show(fullscreenController.getIndex() - 1);
+        fullscreenController.start();
+      }
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        fullscreenController.show(fullscreenController.getIndex() + 1);
+        fullscreenController.start();
+      }
+    });
 
     function closeCard(card) {
       const button = card.querySelector("[data-product-toggle]");
       const panel = card.querySelector("[data-product-panel]");
+      const controller = controllers.get(card);
+      if (controller) controller.stop();
       card.classList.remove("is-open");
       button.setAttribute("aria-expanded", "false");
       panel.hidden = true;
-      panel.querySelectorAll("[data-product-media]").forEach(function (item) {
-        item.classList.remove("is-visible");
-      });
     }
 
     function openCard(card) {
-      revealRun += 1;
       cards.forEach(function (otherCard) {
         if (otherCard !== card) closeCard(otherCard);
       });
       const button = card.querySelector("[data-product-toggle]");
       const panel = card.querySelector("[data-product-panel]");
+      const controller = controllers.get(card);
       card.classList.add("is-open");
       button.setAttribute("aria-expanded", "true");
       panel.hidden = false;
-      revealMedia(panel, revealRun);
+      if (controller) controller.start();
     }
 
     cards.forEach(function (card) {
       const button = card.querySelector("[data-product-toggle]");
+      const product = products[Number(card.dataset.productIndex)];
+      const carousel = card.querySelector("[data-product-carousel]");
+      const controller = createProductSlider(carousel, {
+        interval: 4600,
+        shouldAutoplay: function () { return card.classList.contains("is-open") && !dialog.open; }
+      });
+      controllers.set(card, controller);
       button.addEventListener("click", function () {
         if (card.classList.contains("is-open")) {
-          revealRun += 1;
           closeCard(card);
           return;
         }
         openCard(card);
+      });
+      card.querySelector("[data-product-expand]").addEventListener("click", function () {
+        openFullscreen(card, product, controller);
       });
     });
 
@@ -234,6 +385,76 @@
     }
   }
 
+  function featuredProductCard(product, imageIndex) {
+    const images = (product.images || []).filter(Boolean);
+    const source = images[imageIndex % images.length];
+    const target = product.anchor || product.id;
+    return `<article class="featured-product-card">
+      <a href="soluciones.html#${encodeURIComponent(target)}" aria-label="Ver producto ${escapeHtml(product.name)}">
+        <img src="${escapeHtml(source)}" alt="${escapeHtml(product.name)}" loading="lazy" decoding="async">
+        <div class="featured-product-card__content">
+          <h3>${escapeHtml(product.name)}</h3>
+        </div>
+        <span class="featured-product-card__arrow" aria-hidden="true">↗</span>
+      </a>
+    </article>`;
+  }
+
+  function setupFeaturedProducts(products) {
+    const container = document.querySelector("[data-featured-products]");
+    if (!container) return;
+    const available = products.filter(function (product) {
+      return Array.isArray(product.images) && product.images.some(Boolean);
+    });
+    if (!available.length) return;
+    const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let cursor = 0;
+    let round = 0;
+    let timer = null;
+
+    function renderPair() {
+      const count = Math.min(2, available.length);
+      const pair = Array.from({ length: count }, function (_, offset) {
+        return available[(cursor + offset) % available.length];
+      });
+      container.innerHTML = pair.map(function (product, offset) {
+        return featuredProductCard(product, round + offset);
+      }).join("");
+    }
+
+    function nextPair() {
+      cursor += Math.min(2, available.length);
+      if (cursor >= available.length) {
+        cursor = 0;
+        round += 1;
+      }
+      renderPair();
+    }
+
+    function stop() {
+      if (timer !== null) window.clearInterval(timer);
+      timer = null;
+    }
+
+    function start() {
+      stop();
+      if (reducedMotion || available.length <= 2 || document.hidden) return;
+      timer = window.setInterval(nextPair, 4800);
+    }
+
+    container.addEventListener("mouseenter", stop);
+    container.addEventListener("mouseleave", start);
+    container.addEventListener("focusin", stop);
+    container.addEventListener("focusout", function (event) {
+      if (!container.contains(event.relatedTarget)) start();
+    });
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stop(); else start();
+    });
+    renderPair();
+    start();
+  }
+
   function setupAboutTabs() {
     const text = document.querySelector("[data-about-text]");
     const buttons = Array.from(document.querySelectorAll("[data-about-tab]"));
@@ -241,8 +462,8 @@
 
     const content = {
       quienes: '<span class="about-text__paragraph">En <strong>CWSS Ingeniería Ltda</strong>. contamos con más de 10 años de experiencia en el desarrollo e instalación de soluciones vidriadas para nuestros clientes, principalmente: arquitectos, inmobiliarias y empresas constructoras.</span><span class="about-text__paragraph">Nuestro principal valor es la experiencia y el profesionalismo de un equipo que participa activamente en cada etapa del proyecto, entregando asesoría especializada desde el diseño hasta la ingeniería de detalles, fabricación y montaje final del producto.</span><span class="about-text__paragraph">Trabajamos con un enfoque integral, buscando entregar soluciones que respondan a las necesidades técnicas y arquitectónicas de cada proyecto, asegurando una ejecución eficiente y de calidad.</span>',
-      mision: '<span class="about-text__paragraph">Nuestra misión es transformar espacios excepcionales mediante el diseño, fabricación y ejecución de cristales. Nos comprometemos a ofrecer calidad en cada proyecto y a buscar continuamente la satisfacción final del cliente como nuestro principal objetivo.</span>',
-      vision: '<span class="about-text__paragraph">En CWSS Ingeniería, aspiramos a expandir nuestra presencia, sumando constantemente nuevos clientes, manteniendo siempre los más altos estándares de calidad y satisfacción.</span>'
+      mision: '<span class="about-text__paragraph">En CWSS Ingeniería diseñamos, desarrollamos, fabricamos e instalamos soluciones vidriadas para proyectos arquitectónicos y constructivos, entregando asesoría especializada a arquitectos, inmobiliarias y empresas constructoras. Integramos experiencia técnica, ingeniería de detalle, fabricación y montaje para entregar soluciones eficientes, seguras y de alta calidad, adaptadas a los requerimientos de cada proyecto. Construimos relaciones de largo plazo basadas en el profesionalismo, la confianza, el cumplimiento y la excelencia.</span>',
+      vision: '<span class="about-text__paragraph">Ser una empresa referente en soluciones vidriadas para la arquitectura y construcción en Chile, reconocida por la calidad de sus proyectos, su capacidad técnica, el cumplimiento de sus compromisos y la confianza de sus clientes, consolidando un crecimiento sostenible y una participación cada vez más relevante en proyectos de alta exigencia.</span>'
     };
 
     function selectTab(button) {
@@ -749,9 +970,10 @@
   const projects = getProjects();
   const products = getProducts();
   renderProducts(products);
-  setupProductAccordions();
+  setupProductAccordions(products);
   setupAboutTabs();
   renderLatest(projects);
+  setupFeaturedProducts(products);
   renderAllProjects(projects);
   setupProjectsBackground();
   renderProjectDetail(projects);

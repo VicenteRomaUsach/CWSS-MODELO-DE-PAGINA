@@ -20,11 +20,11 @@ El código está escrito generalmente en inglés. Los ajustes estéticos princip
 
 La administración local fue retirada. El catálogo se actualiza editando los archivos del proyecto; no existe una conexión SQL o backend.
 
-La portada usa dos imágenes. La sección `Obras en instalación` muestra dos obras, sus fotografías cambian automáticamente y también se pueden recorrer con sus controles. Las galerías de las fichas avanzan automáticamente y conservan sus controles manuales. Cada obra admite varios productos y un máximo de 10 imágenes totales.
+La portada usa dos imágenes. La sección `Obras en instalación` muestra dos obras, sus fotografías cambian automáticamente y también se pueden recorrer con sus controles. El inicio incorpora además dos Productos destacados que cambian automáticamente sin repetir categorías. Las galerías de las fichas avanzan automáticamente y conservan sus controles manuales. Cada obra admite varios productos y un máximo de 10 imágenes totales.
 
 El bloque `Quiénes somos` incluye pestañas para alternar entre la presentación de la empresa, su misión y su visión sin cambiar de página.
 
-En `soluciones.html`, cada producto funciona como un botón desplegable. Solo puede permanecer uno abierto y contiene cuatro fotografías locales optimizadas en formato WebP.
+En `soluciones.html`, cada producto funciona como un botón desplegable. Solo puede permanecer uno abierto y contiene un carrusel 1:1 con cuatro fotografías WebP. El carrusel avanza automáticamente, acepta flechas y arrastre, y puede abrirse en una vista ampliada que muestra la imagen completa.
 
 El historial detallado de correcciones y actualizaciones está disponible en [`CHANGELOG.md`](CHANGELOG.md).
 

@@ -1,5 +1,34 @@
 # Historial de cambios de CWSS
 
+## Nombre de obra y legibilidad — 2026-09-09
+
+- La obra `Comisaría` ahora se presenta como `Primera Comisaría de Punta Arenas`, con año `2026`.
+- El texto de `Quiénes somos`, `Misión` y `Visión` mantiene palabras completas al cambiar de línea y evita la separación automática mediante guiones.
+
+## Contenido corporativo — 2026-09-09
+
+- Se actualizaron los textos de `Misión` y `Visión` con la nueva definición corporativa entregada por CWSS.
+- Se conservaron las correcciones de imágenes y todos los cambios anteriores del catálogo.
+
+## Mejoras de fotografías de Productos — 2026-09-09
+
+- Se revisaron las 32 posiciones del catálogo contra las obras locales, el respaldo `COSAS A BORRAR (R)` y `FOTOS PAGINA 2026` de Google Drive.
+- Se retiraron las dos primeras fotografías de Espejos retroiluminados porque mostraban espejos normales; quedan como espacios pendientes hasta contar con material correcto. Se conservaron las dos tomas iluminadas de Bustamante.
+- Se reemplazaron dos vistas generales de Pasamanos de acero inoxidable por tomas directas del pasamanos instalado en una escalera.
+- Se sustituyó una fotografía poco nítida de Tabiques vidriados por una toma recuperada de mejor calidad.
+- Las fotografías correctas de Barandas, Shower Door, Fachadas, Muros y chambranas, y Canopy y cubiertas se conservaron.
+
+## Carruseles de Productos — 2026-09-09
+
+- Cada categoría de Productos abre un carrusel 1:1 que muestra una fotografía a la vez.
+- Los carruseles avanzan automáticamente y admiten flechas, teclado y arrastre horizontal con mouse o pantalla táctil.
+- Se incorporó un botón de ampliación; la vista completa conserva el autoplay, las flechas, el teclado y el deslizamiento manual, mostrando la fotografía completa sin recorte.
+- Se centraron geométricamente los símbolos `+` y `×` de cada categoría.
+- El inicio incluye una sección `Productos`, con el mismo tamaño tipográfico de `Obras en instalación`, dos categorías distintas visibles y rotación automática sin duplicados.
+- Las tarjetas destacadas del inicio muestran únicamente el nombre del producto, sin el subtítulo tenue `Producto`.
+- La sección usa `FONDO PORYECTOS 2.png`, distinto del fondo de Obras, con un encuadre ampliado y atenuado.
+- Las pestañas `Quiénes somos`, `Misión` y `Visión` ahora forman un rectángulo redondeado.
+
 ## Catálogo completado desde proyectos y Drive — 2026-09-09
 
 - Se revisaron las fotografías de las obras, el respaldo recuperado de Documentos y sus copias repetidas.
