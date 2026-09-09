@@ -24,7 +24,7 @@ La portada usa dos imágenes. La sección `Obras en instalación` muestra dos ob
 
 El bloque `Quiénes somos` incluye pestañas para alternar entre la presentación de la empresa, su misión y su visión sin cambiar de página.
 
-En `soluciones.html`, cada producto funciona como un botón desplegable. Solo puede permanecer uno abierto y sus tres imágenes se cargan y aparecen de izquierda a derecha; cuando no existe una fotografía verificada se muestra un placeholder identificado.
+En `soluciones.html`, cada producto funciona como un botón desplegable. Solo puede permanecer uno abierto y contiene cuatro espacios de imagen. Actualmente todos se muestran como placeholders vacíos.
 
 El historial detallado de correcciones y actualizaciones está disponible en [`CHANGELOG.md`](CHANGELOG.md).
 

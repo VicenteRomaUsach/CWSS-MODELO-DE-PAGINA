@@ -1,7 +1,20 @@
 # Historial de cambios de CWSS
 
+## Cambios locales — 2026-09-09
+
+- Se agregó la obra **Comisaría** con Cliente, Año y Producto marcados como `N/A`.
+- Su carpeta de imágenes ahora se llama `N-A - COMISARIA` y conserva sus cuatro imágenes existentes.
+
+## Cambios locales — 2026-09-09
+
+- Se ajustaron los nombres del catálogo a las ocho categorías definitivas entregadas por el cliente.
+- Cada producto ahora contiene cuatro placeholders vacíos, para un total de 32 espacios de imagen.
+- La cuadrícula desplegable muestra cuatro espacios por fila en escritorio y conserva desplazamiento horizontal en pantallas pequeñas.
+
 ## Cambios locales posteriores a CWSS.CL3.1 — 2026-09-03
 
+- Se reemplazó por completo el catálogo de Productos por ocho categorías nuevas.
+- Se retiraron todas las fotografías asignadas a productos; cada categoría conserva tres placeholders vacíos.
 - La categoría visible Soluciones pasó a llamarse Productos en el menú, el encabezado de la página y sus mensajes, manteniendo la ruta existente.
 - El texto de Quiénes somos ahora resalta en negrita CWSS Ingeniería Ltda. e incorpora los ajustes de redacción solicitados.
 - Se reemplazó la presentación de Quiénes somos por el nuevo texto corporativo de CWSS Ingeniería Ltda., organizado en tres párrafos.

@@ -26,12 +26,15 @@
     { id: "data-center-scala-santa-teresa", name: "Data Center Scala Santa Teresa", contractor: "Puerto Octay", year: "2025", status: "", products: ["Panel compuesto de fachada"], imageFolder: "2025 - DATACENTER SCALA SANTA TERESA", imageBase: "DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA", imageCount: 4 },
     { id: "tavelli", name: "Tavelli", contractor: "Nahmias", year: "2025", status: "", products: ["Shower Door"], imageFolder: "2025 - TAVELLI", imageBase: "TAVELLI NAHMIAS 2025--TAVELLI", imageCount: 2 },
     { id: "apoquindo-los-militares", name: "Apoquindo Los Militares", contractor: "Echeverría Izquierdo", year: "2026", status: "En instalación", products: ["Barandas de cristal", "Separadores de cristal"], imageFolder: "2026 - APOQUINDO LOS MILITARES", imageBase: "APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO", imageCount: 4 },
-    { id: "el-sauce", name: "El Sauce 3", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas de cristal con balaustros"], imageFolder: "2026 - EL SAUCE", imageBase: "EL SAUCE POCURO 2026--EL-SAUCE", imageCount: 4 }
+    { id: "el-sauce", name: "El Sauce 3", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas de cristal con balaustros"], imageFolder: "2026 - EL SAUCE", imageBase: "EL SAUCE POCURO 2026--EL-SAUCE", imageCount: 4 },
+    { id: "comisaria", name: "Comisaría", contractor: "Bravo Izquierdo", year: "N/A", status: "", products: ["N/A"], imageFolder: "N-A - COMISARIA", imageFiles: ["COMISARIA 1.png", "comisaria 2.png", "comisaria 3.jpeg", "comisaria 4.jpeg"] }
   ];
 
   defaultProjects.forEach(function (project) {
     const imageSets = project.imageSets || [{ folder: project.imageFolder, base: project.imageBase, count: project.imageCount }];
-    const images = imageSets.flatMap(function (set) {
+    const images = Array.isArray(project.imageFiles)
+      ? project.imageFiles.map(function (file) { return PHOTO_ROOT + project.imageFolder + "/" + file; })
+      : imageSets.flatMap(function (set) {
       return Array.from({ length: set.count }, function (_, index) {
         const number = String(index + 1).padStart(2, "0");
         return PHOTO_ROOT + set.folder + "/" + set.base + "--" + number + ".webp";
@@ -46,77 +49,18 @@
     delete project.imageBase;
     delete project.imageCount;
     delete project.imageSets;
+    delete project.imageFiles;
   });
 
   const defaultProducts = [
-    {
-      id: "mamparas-cristal",
-      name: "Mamparas de cristal",
-      anchor: "vidriadas",
-      images: [
-        "imagenes-optimizadas/2022 - EDIFICIO EL ROBLE/EDIFICIO EL ROBLE NAHMIAS 2022--EL-ROBLE--03.webp",
-        "imagenes-optimizadas/2022 - EDIFICIO EL ROBLE/EDIFICIO EL ROBLE NAHMIAS 2022--EL-ROBLE--04.webp",
-        "imagenes-optimizadas/2018 - COMAPA PUNTA ARENAS/COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA--04.webp"
-      ]
-    },
-    { id: "puertas-protex", name: "Puertas Protex", images: [null, null, null] },
-    {
-      id: "barandas-cristal",
-      name: "Barandas de cristal",
-      anchor: "barandas",
-      images: [
-        "imagenes-optimizadas/2026 - APOQUINDO LOS MILITARES/APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO--01.webp",
-        "imagenes-optimizadas/2021 - PUERTO NUEVO ANTOFAGASTA/PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO--02.webp",
-        "imagenes-optimizadas/2021 - PUERTO NUEVO ANTOFAGASTA/PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO--03.webp"
-      ]
-    },
-    {
-      id: "shower-door",
-      name: "Shower Door",
-      images: [
-        "imagenes-optimizadas/2025 - TAVELLI/TAVELLI NAHMIAS 2025--TAVELLI--01.webp",
-        "imagenes-optimizadas/2025 - TAVELLI/TAVELLI NAHMIAS 2025--TAVELLI--02.webp",
-        "imagenes-optimizadas/2024 - PRINCIPE DE GALES/PRINCIPE DE GALES ECHEVERRIA IZQUIERDO 2024--PRINCIPE-DE-GALES--04.webp"
-      ]
-    },
-    {
-      id: "espejos",
-      name: "Espejos",
-      images: [
-        "imagenes-optimizadas/2025 - BURGOS/BURGOS TECTON 2025--BURGOS--01.webp",
-        "imagenes-optimizadas/2022 - CASA ITALIA/CASA ITALIA TECTON 2022--CASA-ITALIA--02.webp",
-        "imagenes-optimizadas/2024 - JOFRE/JOFRE NAHMIAS 2024--JOFRE--03.webp"
-      ]
-    },
-    {
-      id: "pasamanos-acero",
-      name: "Pasamanos de acero inoxidable",
-      images: [
-        "imagenes-optimizadas/2021 - PUERTO NUEVO ANTOFAGASTA/PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO--02.webp",
-        "imagenes-optimizadas/2021 - PUERTO NUEVO ANTOFAGASTA/PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO--03.webp",
-        "imagenes-optimizadas/2021 - PUERTO NUEVO ANTOFAGASTA/PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO--04.webp"
-      ]
-    },
-    { id: "revestimiento-chambranas", name: "Revestimiento y chambranas de acero inoxidable", anchor: "revestimientos", images: [null, null, null] },
-    {
-      id: "panel-compuesto-aluminio",
-      name: "Revestimientos en panel compuesto de aluminio",
-      images: [
-        "imagenes-optimizadas/2025 - DATACENTER SCALA SANTA TERESA/DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA--01.webp",
-        "imagenes-optimizadas/2025 - DATACENTER SCALA SANTA TERESA/DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA--02.webp",
-        "imagenes-optimizadas/2025 - DATACENTER SCALA SANTA TERESA/DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA--03.webp"
-      ]
-    },
-    { id: "ventanas-pvc", name: "Ventanas de PVC", images: [null, null, null] },
-    {
-      id: "lucarnas-cristal",
-      name: "Lucarnas de cristal",
-      images: [
-        "imagenes-optimizadas/2018 - COMAPA PUNTA ARENAS/COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA--01.webp",
-        "imagenes-optimizadas/2018 - COMAPA PUNTA ARENAS/COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA--02.webp",
-        "imagenes-optimizadas/2018 - COMAPA PUNTA ARENAS/COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA--03.webp"
-      ]
-    }
+    { id: "tabiques-vidriados", name: "Tabiques vidriados", anchor: "vidriadas", images: [null, null, null, null] },
+    { id: "barandas-cristal", name: "Barandas de cristal", anchor: "barandas", images: [null, null, null, null] },
+    { id: "shower-door", name: "Shower Door", images: [null, null, null, null] },
+    { id: "espejos-retroiluminados", name: "Espejos retroiluminados", images: [null, null, null, null] },
+    { id: "pasamanos-acero", name: "Pasamanos acero inoxidable", images: [null, null, null, null] },
+    { id: "revestimientos-muros-chambranas", name: "Revestimientos de muros y chambranas de ascensor inoxidable", anchor: "revestimientos", images: [null, null, null, null] },
+    { id: "fachadas-panel-aluminio", name: "Revestimientos de fachadas en panel de aluminio compuesto.", images: [null, null, null, null] },
+    { id: "canopy-cubiertas-cristal", name: "Canopy y cubiertas de cristal", images: [null, null, null, null] }
   ];
 
   function cloneDefaults() {
@@ -149,14 +93,12 @@
   }
 
   function productMedia(product) {
-    const images = Array.isArray(product.images) ? product.images.slice(0, 3) : [];
-    while (images.length < 3) images.push(null);
+    const images = Array.isArray(product.images) ? product.images.slice(0, 4) : [];
+    while (images.length < 4) images.push(null);
     return images.map(function (source, index) {
       const number = index + 1;
       if (!source) {
-        return `<figure class="product-card__media product-card__placeholder" data-product-media data-image-number="${number}" data-product-name="${escapeHtml(product.name)}">
-          <figcaption><span>Imagen ${number} del producto</span><strong>${escapeHtml(product.name)}</strong></figcaption>
-        </figure>`;
+        return `<figure class="product-card__media product-card__placeholder" data-product-media data-image-number="${number}" data-product-name="${escapeHtml(product.name)}" role="img" aria-label="Imagen ${number} pendiente de ${escapeHtml(product.name)}"></figure>`;
       }
       return `<figure class="product-card__media" data-product-media data-image-number="${number}" data-product-name="${escapeHtml(product.name)}">
         <img data-product-image="${escapeHtml(source)}" alt="Imagen ${number} de ${escapeHtml(product.name)}" decoding="async">
@@ -198,7 +140,9 @@
       const number = item.dataset.imageNumber || "";
       const productName = item.dataset.productName || "Producto";
       item.classList.add("product-card__placeholder");
-      item.innerHTML = `<figcaption><span>Imagen ${escapeHtml(number)} del producto</span><strong>${escapeHtml(productName)}</strong></figcaption>`;
+      item.replaceChildren();
+      item.setAttribute("role", "img");
+      item.setAttribute("aria-label", `Imagen ${escapeHtml(number)} pendiente de ${escapeHtml(productName)}`);
     }
 
     function loadImage(item) {
