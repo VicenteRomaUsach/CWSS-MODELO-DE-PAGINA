@@ -56,9 +56,9 @@
     { id: "tabiques-vidriados", name: "Tabiques vidriados", anchor: "vidriadas", images: [null, null, null, null] },
     { id: "barandas-cristal", name: "Barandas de cristal", anchor: "barandas", images: [null, null, null, null] },
     { id: "shower-door", name: "Shower Door", images: [null, null, null, null] },
-    { id: "espejos-retroiluminados", name: "Espejos retroiluminados", images: [null, null, null, null] },
+    { id: "espejos-retroiluminados", name: "Espejos retroiluminados", images: ["imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--01.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--02.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--03.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--04.webp"] },
     { id: "pasamanos-acero", name: "Pasamanos acero inoxidable", images: [null, null, null, null] },
-    { id: "revestimientos-muros-chambranas", name: "Revestimientos de muros y chambranas de ascensor inoxidable", anchor: "revestimientos", images: [null, null, null, null] },
+    { id: "revestimientos-muros-chambranas", name: "Revestimientos de muros y chambranas de ascensor inoxidable", anchor: "revestimientos", images: ["imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--01.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--02.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--03.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--04.webp"] },
     { id: "fachadas-panel-aluminio", name: "Revestimientos de fachadas en panel de aluminio compuesto.", images: [null, null, null, null] },
     { id: "canopy-cubiertas-cristal", name: "Canopy y cubiertas de cristal", images: [null, null, null, null] }
   ];

@@ -1,5 +1,10 @@
 # Historial de cambios de CWSS
 
+## Productos con fotografías — 2026-09-09
+
+- Se agregaron cuatro fotografías optimizadas a Revestimientos de muros y chambranas de ascensor inoxidable.
+- Se agregaron dos fotografías adjuntas y dos fotografías de la obra Bustamante a Espejos retroiluminados.
+
 ## Cambios locales — 2026-09-09
 
 - Se agregó la obra **Comisaría** con Cliente, Año y Producto marcados como `N/A`.
