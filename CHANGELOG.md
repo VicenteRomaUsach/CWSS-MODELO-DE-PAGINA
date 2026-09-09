@@ -1,5 +1,15 @@
 # Historial de cambios de CWSS
 
+## Catálogo completado desde proyectos y Drive — 2026-09-09
+
+- Se revisaron las fotografías de las obras, el respaldo recuperado de Documentos y sus copias repetidas.
+- Se reemplazaron los placeholders de Tabiques vidriados, Barandas de cristal, Shower Door, Pasamanos de acero inoxidable, Fachadas en panel de aluminio compuesto y Canopy y cubiertas de cristal por cuatro fotografías WebP verificadas en cada categoría.
+- Las ocho categorías de Productos quedan con cuatro fotografías locales cada una.
+- Se compararon las carpetas de `FOTOS PAGINA 2026` de Google Drive con el catálogo existente.
+- Se agregaron las obras Nueva Apoquindo (2014), Badajoz (2015), Edificio To-Be (2015), Guernica (2015), Hotel Plaza El Bosque (2016), Parque de los Reyes (2016), Hotel Icon (2018), Málaga (2018) y Nueva Manquehue (2019), con la constructora indicada en Drive.
+- Se agregó Papudo con año y cliente `N/A`, porque esos datos no aparecen en el nombre de su carpeta de Drive.
+- Las nuevas entradas no incorporan fotografías ni productos; las tarjetas muestran un estado visual neutro y sus fichas omiten la galería.
+
 ## Productos con fotografías — 2026-09-09
 
 - Se agregaron cuatro fotografías optimizadas a Revestimientos de muros y chambranas de ascensor inoxidable.

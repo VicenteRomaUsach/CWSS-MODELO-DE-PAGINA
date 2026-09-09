@@ -24,11 +24,11 @@ La portada usa dos imágenes. La sección `Obras en instalación` muestra dos ob
 
 El bloque `Quiénes somos` incluye pestañas para alternar entre la presentación de la empresa, su misión y su visión sin cambiar de página.
 
-En `soluciones.html`, cada producto funciona como un botón desplegable. Solo puede permanecer uno abierto y contiene cuatro espacios de imagen. Actualmente todos se muestran como placeholders vacíos.
+En `soluciones.html`, cada producto funciona como un botón desplegable. Solo puede permanecer uno abierto y contiene cuatro fotografías locales optimizadas en formato WebP.
 
 El historial detallado de correcciones y actualizaciones está disponible en [`CHANGELOG.md`](CHANGELOG.md).
 
-Cada ficha muestra nombre, cliente y año. La etiqueta de estado se muestra solamente en las obras que están en instalación. Las galerías se pueden recorrer con los controles visibles o con las flechas izquierda y derecha del teclado. Cuando el cliente no está informado se muestra `No indica`.
+Cada ficha muestra nombre, cliente y año. La etiqueta de estado se muestra solamente en las obras que están en instalación. Las galerías se pueden recorrer con los controles visibles o con las flechas izquierda y derecha del teclado. Las obras importadas desde Drive que todavía no tienen fotografías muestran una tarjeta neutra y omiten la galería. Cuando el cliente o el año no están informados se muestra `N/A`.
 
 ## Abrir el sitio
 

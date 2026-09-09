@@ -160,6 +160,8 @@ body[data-page="proyectos"] .projects-page { position: relative; z-index: 1; bac
 .project-card__link::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,9,15,.72), rgba(5,9,15,.08) 46%, rgba(5,9,15,.82)); transition: background .25s ease; }
 .project-card img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; transition: transform .55s ease; }
 .project-card__media { position: absolute; inset: 0; }
+.project-card__media--empty { display: grid; place-items: center; background: repeating-linear-gradient(135deg, #56606d, #56606d 22px, #616c79 22px, #616c79 44px); }
+.project-card__media--empty span { position: relative; z-index: 1; color: rgba(255,255,255,.82); font-size: .68rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .project-card__slide { opacity: 0; transition: opacity .85s ease, transform .55s ease !important; }
 .project-card__slide.is-active { opacity: 1; }
 .project-card:hover img { transform: scale(1.035); }
@@ -200,6 +202,7 @@ body[data-page="soluciones"] .site-footer { margin-top: 0; border-top: 0; }
 .empty-state { max-width: var(--max); margin: 0 auto; padding: 70px 20px; text-align: center; background: var(--quiet); color: var(--muted); }
 
 .project-detail__hero { min-height: 630px; padding: clamp(28px, 6vw, 90px); display: flex; align-items: flex-end; position: relative; color: #fff; background: #20252c center/cover no-repeat; }
+.project-detail__hero--empty { background-image: linear-gradient(135deg, #252d38, #53606f); }
 .project-detail__hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5,8,13,.82), rgba(5,8,13,.08) 70%); }
 .project-detail__title { max-width: 1050px; position: relative; z-index: 1; }
 .project-detail__navigation { margin: 0 0 22px; display: flex; align-items: center; gap: 12px; }

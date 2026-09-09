@@ -4,10 +4,19 @@
   const PHOTO_ROOT = "imagenes-optimizadas/";
   if (document.body) document.body.classList.add("page-transition");
   const defaultProjects = [
+    { id: "nueva-apoquindo", name: "Nueva Apoquindo", contractor: "Echeverría Izquierdo", year: "2014", status: "", products: [] },
+    { id: "badajoz", name: "Badajoz", contractor: "Nahmias", year: "2015", status: "", products: [] },
+    { id: "edificio-to-be", name: "Edificio To-Be", contractor: "Armas", year: "2015", status: "", products: [] },
+    { id: "guernica", name: "Guernica", contractor: "Echeverría Izquierdo", year: "2015", status: "", products: [] },
+    { id: "hotel-plaza-el-bosque", name: "Hotel Plaza El Bosque", contractor: "Echeverría Izquierdo", year: "2016", status: "", products: [] },
+    { id: "parque-de-los-reyes", name: "Parque de los Reyes", contractor: "Nahmias", year: "2016", status: "", products: [] },
     { id: "angamos", name: "Angamos", location: "Antofagasta", contractor: "BMI", year: "2018", status: "", products: ["Muro cortina"], imageFolder: "2018 - ANGAMOS", imageBase: "ANGAMOS BMI 2018--ANGAMOS", imageCount: 3 },
     { id: "comapa-punta-arenas", name: "Comapa", location: "Punta Arenas", contractor: "Bravo Izquierdo", year: "2018", status: "", products: ["Lucarnas de cristal", "Barandas de cristal"], imageFolder: "2018 - COMAPA PUNTA ARENAS", imageBase: "COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA", imageCount: 4 },
+    { id: "hotel-icon", name: "Hotel Icon", contractor: "Nahmias", year: "2018", status: "", products: [] },
+    { id: "malaga", name: "Málaga", contractor: "Mena y Ovalle", year: "2018", status: "", products: [] },
     { id: "puerta-del-sol", name: "Puerta del Sol", contractor: "Mena y Ovalle", year: "2018", status: "", products: ["Shower Door"], imageFolder: "2018 - PUERTA DEL SOL", imageBase: "PUERTA DEL SOL MENA Y OVALLE 2018--PUERTA-DEL-SOL", imageCount: 1 },
     { id: "torres-centenario-antofagasta", name: "Torres Centenario", location: "Antofagasta", contractor: "Mar Abierto", year: "2018", status: "", products: ["Muro cortina", "Panel compuesto de aluminio (ACM)"], imageFolder: "2018 - TORRES CENTENARIO ANTOFAGASTA", imageBase: "TORRES CENTENARIO ANTOFAGASTA MAR ABIERTO 2018--TORRES-CENTENARIO", imageCount: 4 },
+    { id: "nueva-manquehue", name: "Nueva Manquehue", contractor: "Echeverría Izquierdo", year: "2019", status: "", products: [] },
     { id: "club-de-campo-vitacura", name: "Club de Campo Vitacura", subtitle: "Boldo, Peumo y Quillai", contractor: "Nahmias", year: "2020", status: "", products: ["Barandas de cristal", "Separadores de cristal"], imageFolder: "2020 - CLUB DE CAMPO VITACURA", imageBase: "CLUB DE CAMPO VITACURA NAHMIAS 2020--CLUB-DE-CAMPO", imageCount: 9 },
     { id: "onofre-jarpa", name: "Condominio Onofre Jarpa", contractor: "Sur G", year: "2021", status: "", products: ["Barandas de cristal", "Shower Door"], imageFolder: "2021 - ONOFRE JARPA", imageBase: "ONOFRE JARPA SUR G 2021--ONOFRE-JARPA", imageCount: 3 },
     { id: "puerto-nuevo-antofagasta", name: "Puerto Nuevo", location: "Antofagasta", contractor: "Echeverría Izquierdo", year: "2021", status: "", products: ["Barandas de cristal", "Pasamanos de acero inoxidable"], imageFolder: "2021 - PUERTO NUEVO ANTOFAGASTA", imageBase: "PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO", imageCount: 4 },
@@ -27,24 +36,25 @@
     { id: "tavelli", name: "Tavelli", contractor: "Nahmias", year: "2025", status: "", products: ["Shower Door"], imageFolder: "2025 - TAVELLI", imageBase: "TAVELLI NAHMIAS 2025--TAVELLI", imageCount: 2 },
     { id: "apoquindo-los-militares", name: "Apoquindo Los Militares", contractor: "Echeverría Izquierdo", year: "2026", status: "En instalación", products: ["Barandas de cristal", "Separadores de cristal"], imageFolder: "2026 - APOQUINDO LOS MILITARES", imageBase: "APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO", imageCount: 4 },
     { id: "el-sauce", name: "El Sauce 3", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas de cristal con balaustros"], imageFolder: "2026 - EL SAUCE", imageBase: "EL SAUCE POCURO 2026--EL-SAUCE", imageCount: 4 },
-    { id: "comisaria", name: "Comisaría", contractor: "Bravo Izquierdo", year: "N/A", status: "", products: ["N/A"], imageFolder: "N-A - COMISARIA", imageFiles: ["COMISARIA 1.png", "comisaria 2.png", "comisaria 3.jpeg", "comisaria 4.jpeg"] }
+    { id: "comisaria", name: "Comisaría", contractor: "Bravo Izquierdo", year: "N/A", status: "", products: ["N/A"], imageFolder: "N-A - COMISARIA", imageFiles: ["COMISARIA 1.png", "comisaria 2.png", "comisaria 3.jpeg", "comisaria 4.jpeg"] },
+    { id: "papudo", name: "Papudo", contractor: "N/A", year: "N/A", status: "", products: [] }
   ];
 
   defaultProjects.forEach(function (project) {
-    const imageSets = project.imageSets || [{ folder: project.imageFolder, base: project.imageBase, count: project.imageCount }];
-    const images = Array.isArray(project.imageFiles)
+    const imageSets = project.imageSets || (project.imageFolder && project.imageBase
+      ? [{ folder: project.imageFolder, base: project.imageBase, count: project.imageCount }]
+      : []);
+    const images = Array.isArray(project.imageFiles) && project.imageFolder
       ? project.imageFiles.map(function (file) { return PHOTO_ROOT + project.imageFolder + "/" + file; })
       : imageSets.flatMap(function (set) {
-      return Array.from({ length: set.count }, function (_, index) {
+      return Array.from({ length: Number(set.count) || 0 }, function (_, index) {
         const number = String(index + 1).padStart(2, "0");
         return PHOTO_ROOT + set.folder + "/" + set.base + "--" + number + ".webp";
       });
     }).slice(0, 10);
     project.cover = images[0];
     project.gallery = images.slice(1);
-    project.products = Array.isArray(project.products) && project.products.length
-      ? project.products
-      : ["PLACEHOLDER #1", "PLACEHOLDER #2"];
+    project.products = Array.isArray(project.products) ? project.products : [];
     delete project.imageFolder;
     delete project.imageBase;
     delete project.imageCount;
@@ -53,14 +63,14 @@
   });
 
   const defaultProducts = [
-    { id: "tabiques-vidriados", name: "Tabiques vidriados", anchor: "vidriadas", images: [null, null, null, null] },
-    { id: "barandas-cristal", name: "Barandas de cristal", anchor: "barandas", images: [null, null, null, null] },
-    { id: "shower-door", name: "Shower Door", images: [null, null, null, null] },
+    { id: "tabiques-vidriados", name: "Tabiques vidriados", anchor: "vidriadas", images: ["imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--01.webp", "imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--02.webp", "imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--03.webp", "imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--04.webp"] },
+    { id: "barandas-cristal", name: "Barandas de cristal", anchor: "barandas", images: ["imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--01.webp", "imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--02.webp", "imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--03.webp", "imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--04.webp"] },
+    { id: "shower-door", name: "Shower Door", images: ["imagenes-productos/SHOWER DOOR/SHOWER-DOOR--01.webp", "imagenes-productos/SHOWER DOOR/SHOWER-DOOR--02.webp", "imagenes-productos/SHOWER DOOR/SHOWER-DOOR--03.webp", "imagenes-productos/SHOWER DOOR/SHOWER-DOOR--04.webp"] },
     { id: "espejos-retroiluminados", name: "Espejos retroiluminados", images: ["imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--01.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--02.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--03.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--04.webp"] },
-    { id: "pasamanos-acero", name: "Pasamanos acero inoxidable", images: [null, null, null, null] },
+    { id: "pasamanos-acero", name: "Pasamanos acero inoxidable", images: ["imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--01.webp", "imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--02.webp", "imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--03.webp", "imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--04.webp"] },
     { id: "revestimientos-muros-chambranas", name: "Revestimientos de muros y chambranas de ascensor inoxidable", anchor: "revestimientos", images: ["imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--01.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--02.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--03.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--04.webp"] },
-    { id: "fachadas-panel-aluminio", name: "Revestimientos de fachadas en panel de aluminio compuesto.", images: [null, null, null, null] },
-    { id: "canopy-cubiertas-cristal", name: "Canopy y cubiertas de cristal", images: [null, null, null, null] }
+    { id: "fachadas-panel-aluminio", name: "Revestimientos de fachadas en panel de aluminio compuesto.", images: ["imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--01.webp", "imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--02.webp", "imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--03.webp", "imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--04.webp"] },
+    { id: "canopy-cubiertas-cristal", name: "Canopy y cubiertas de cristal", images: ["imagenes-productos/CANOPY Y CUBIERTAS DE CRISTAL/CANOPY-CUBIERTAS-CRISTAL--01.webp", "imagenes-productos/CANOPY Y CUBIERTAS DE CRISTAL/CANOPY-CUBIERTAS-CRISTAL--02.webp", "imagenes-productos/CANOPY Y CUBIERTAS DE CRISTAL/CANOPY-CUBIERTAS-CRISTAL--03.webp", "imagenes-productos/CANOPY Y CUBIERTAS DE CRISTAL/CANOPY-CUBIERTAS-CRISTAL--04.webp"] }
   ];
 
   function cloneDefaults() {
@@ -274,7 +284,7 @@
   function projectProducts(project) {
     if (Array.isArray(project.products) && project.products.length) return project.products;
     if (project.product) return [String(project.product)];
-    return ["PLACEHOLDER #1", "PLACEHOLDER #2"];
+    return [];
   }
 
   function projectProductsMarkup(project) {
@@ -314,6 +324,7 @@
 
   function projectConstructor(project) {
     const contractor = project.contractor || "No indica";
+    if (contractor === "N/A") return contractor;
     return /^Constructora\s/i.test(contractor) ? contractor : "Constructora " + contractor;
   }
 
@@ -322,7 +333,13 @@
     const displayName = projectDisplayName(project);
     const subtitle = project.subtitle ? `<p class="project-card__subtitle">${escapeHtml(project.subtitle)}</p>` : "";
     const images = projectImages(project);
-    const media = autoplay
+    const productsMarkup = projectProductsMarkup(project);
+    const productsFact = productsMarkup
+      ? `<p><span>Productos</span><strong class="project-products">${productsMarkup}</strong></p>`
+      : "";
+    const media = !images.length
+      ? `<div class="project-card__media project-card__media--empty" role="img" aria-label="Imágenes pendientes de ${escapeHtml(displayName)}"><span>Imágenes próximamente</span></div>`
+      : autoplay
       ? `<div class="project-card__media" data-card-slideshow>${images.map(function (image, index) {
           return `<img class="project-card__slide${index === 0 ? " is-active" : ""}" src="${escapeHtml(image)}" alt="${index === 0 ? escapeHtml(displayName) : ""}" ${index === 0 ? "" : 'loading="lazy" '}decoding="async">`;
         }).join("")}</div>`
@@ -343,7 +360,7 @@
             <div class="project-card__facts">
               <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
               <p><span>Año</span><strong>${escapeHtml(project.year || "Por confirmar")}</strong></p>
-              <p><span>Productos</span><strong class="project-products">${projectProductsMarkup(project)}</strong></p>
+              ${productsFact}
             </div>
           </div>
           <span class="project-card__arrow" aria-hidden="true">↗</span>
@@ -438,20 +455,13 @@
     }).join("");
     const client = projectConstructor(project);
     const subtitle = project.subtitle ? `<p class="project-detail__subtitle">${escapeHtml(project.subtitle)}</p>` : "";
-    container.innerHTML = `
-      <section class="project-detail__hero" style="background-image:url('${escapeHtml(project.cover)}')">
-        <div class="project-detail__title">
-          ${projectNavigation}
-          <p class="project-detail__project">${escapeHtml(displayName)}</p>
-          ${subtitle}
-          <div class="project-detail__facts">
-            <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
-            <p><span>Año</span><strong>${escapeHtml(project.year || "Por confirmar")}</strong></p>
-            <p><span>Productos</span><strong class="project-products">${projectProductsMarkup(project)}</strong></p>
-          </div>
-        </div>
-      </section>
-      <section class="project-gallery" aria-label="Galería de ${escapeHtml(displayName)}" data-project-gallery tabindex="0">
+    const productsMarkup = projectProductsMarkup(project);
+    const productsFact = productsMarkup
+      ? `<p><span>Productos</span><strong class="project-products">${productsMarkup}</strong></p>`
+      : "";
+    const heroStyle = project.cover ? ` style="background-image:url('${escapeHtml(project.cover)}')"` : "";
+    const gallerySection = galleryImages.length
+      ? `<section class="project-gallery" aria-label="Galería de ${escapeHtml(displayName)}" data-project-gallery tabindex="0">
         <div class="project-gallery__viewport">
           <div class="project-gallery__track" data-gallery-track>${gallery}</div>
         </div>
@@ -466,7 +476,22 @@
         <button class="image-dialog__close" type="button" data-image-close aria-label="Cerrar imagen">×</button>
         <img data-image-dialog-src alt="">
         <p data-image-dialog-caption></p>
-      </dialog>`;
+      </dialog>`
+      : "";
+    container.innerHTML = `
+      <section class="project-detail__hero${project.cover ? "" : " project-detail__hero--empty"}"${heroStyle}>
+        <div class="project-detail__title">
+          ${projectNavigation}
+          <p class="project-detail__project">${escapeHtml(displayName)}</p>
+          ${subtitle}
+          <div class="project-detail__facts">
+            <p><span>Cliente</span><strong>${escapeHtml(client)}</strong></p>
+            <p><span>Año</span><strong>${escapeHtml(project.year || "Por confirmar")}</strong></p>
+            ${productsFact}
+          </div>
+        </div>
+      </section>
+      ${gallerySection}`;
   }
 
   function setupProjectGallery() {
