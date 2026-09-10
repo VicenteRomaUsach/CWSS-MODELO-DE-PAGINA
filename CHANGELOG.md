@@ -16,7 +16,7 @@
 - Se corrigió la ruta de las cuatro fotografías de `PRIMERA COMISARIA DE PUNTA ARENAS`, con año 2026, y se retiró Papudo del catálogo.
 - Los títulos `QUIENES SOMOS`, `MISION` y `VISION` cambian según la pestaña seleccionada y no llevan tildes. Sus cuerpos se muestran en minúsculas; `OBRAS EN INSTALACION` tampoco lleva tilde.
 - El inicio muestra cuatro mosaicos permanentes, con fotografías que rotan cada 2 segundos y nombres siempre visibles.
-- Espejos se llama `Espejos Dfroster Retroiluminados`; su galería contiene las dos imágenes retroiluminadas válidas, sin espacios pendientes.
+- Espejos se llama `Espejos D-FROSTER Retroiluminados`; su galería contiene las dos imágenes retroiluminadas válidas, sin espacios pendientes.
 - Se redujeron las galerías de productos y obras, así como la cabecera de cada obra, manteniendo la ampliación de las imágenes completas.
 - En productos, arriba/abajo seleccionan categorías e izquierda/derecha recorren imágenes, tanto en el catálogo como en la vista ampliada.
 - La vista completa de obras cambia la fotografía visible con izquierda/derecha y controles propios; el avance automático se pausa durante la ampliación.
