@@ -211,8 +211,11 @@ body[data-page="soluciones"] .site-footer { margin-top: 0; border-top: 0; }
 .footer-contact strong { font-weight: 600; }
 
 /* Clientes destacados en el pie del inicio */
-.footer-clients { grid-column: 1 / -1; margin-top: 2px; padding-top: 18px; display: flex; align-items: center; gap: clamp(18px, 2.5vw, 34px); position: relative; border-top: 0; }
-.footer-clients::before { content: ""; width: 100vw; position: absolute; top: 0; left: 50%; border-top: 1px solid rgba(255,255,255,.32); transform: translateX(-50%); }
+.footer-clients { grid-column: 1 / -1; margin-top: 2px; padding: 18px 0; display: flex; align-items: center; gap: clamp(18px, 2.5vw, 34px); position: relative; border-top: 0; }
+.footer-clients::before,
+.footer-clients::after { content: ""; width: 100vw; position: absolute; left: 50%; border-top: 1px solid rgba(255,255,255,.32); transform: translateX(-50%); pointer-events: none; }
+.footer-clients::before { top: 0; }
+.footer-clients::after { bottom: 0; }
 .footer-clients__title { margin: 0; flex: 0 0 auto; color: #fff; font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; white-space: nowrap; }
 .footer-clients__logos { min-width: 0; flex: 1; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px clamp(12px, 1.8vw, 28px); }
 .footer-clients__logo {
