@@ -1,5 +1,11 @@
 # Historial de cambios de CWSS
 
+## Carrusel de obras y pie de página — 2026-09-10
+
+- Las tres obras en instalación cambian sus fotografías en una ronda cada 6 segundos, de izquierda a derecha y con 1,5 segundos entre tarjetas.
+- La línea superior de `Nuestros clientes` se extiende hasta ambos bordes de la pantalla.
+- Se conserva el orden actualizado de los logos de clientes y se retiró un contenedor vacío duplicado del pie de página.
+
 ## Paso el Roble — 2026-09-10
 
 - Se agregó la obra `Paso el Roble`, de Constructora Pocuro, año 2026, con sus tres fotografías.

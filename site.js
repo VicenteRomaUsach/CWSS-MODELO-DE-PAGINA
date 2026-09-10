@@ -4,39 +4,39 @@
   const PHOTO_ROOT = "imagenes-optimizadas/";
   if (document.body) document.body.classList.add("page-transition");
   const defaultProjects = [
-    { id: "nueva-apoquindo", name: "Nueva Apoquindo", contractor: "Echeverría Izquierdo", year: "2014", status: "", products: [] },
-    { id: "badajoz", name: "Badajoz", contractor: "Nahmias", year: "2015", status: "", products: [] },
-    { id: "edificio-to-be", name: "Edificio To-Be", contractor: "Armas", year: "2015", status: "", products: [] },
-    { id: "guernica", name: "Guernica", contractor: "Echeverría Izquierdo", year: "2015", status: "", products: [] },
-    { id: "hotel-plaza-el-bosque", name: "Hotel Plaza El Bosque", contractor: "Echeverría Izquierdo", year: "2016", status: "", products: [] },
-    { id: "parque-de-los-reyes", name: "Parque de los Reyes", contractor: "Nahmias", year: "2016", status: "", products: [] },
+    { id: "nueva-apoquindo", name: "Nueva Apoquindo", contractor: "Echeverría Izquierdo", year: "2014", status: "", products: ["Barandas de cristal", "Pasamanos de acero inoxidable", "Accesos Vidriados"] },
+    { id: "badajoz", name: "Badajoz", contractor: "Nahmias", year: "2015", status: "", products: ["Puertas vidriadas con marcos de acero inoxidable"] },
+    { id: "edificio-to-be", name: "Edificio To-Be", contractor: "Armas", year: "2015", status: "", products: ["Lucarna Vidriada"] },
+    { id: "guernica", name: "Guernica", contractor: "Echeverría Izquierdo", year: "2015", status: "", products: ["Puertas Protex","Barandas de Cristal","Lucarnas"] },
+    { id: "hotel-plaza-el-bosque", name: "Hotel Plaza El Bosque", contractor: "Echeverría Izquierdo", year: "2016", status: "", products: ["Shower Door","Barandas de Cristal", "Recubrimiento de Panel Compuesto de Aluminio (ACM)","Espejos"] },
+    { id: "parque-de-los-reyes", name: "Parque de los Reyes", contractor: "Nahmias", year: "2016", status: "", products: ["Barandas de Cristal Empotradas","Badajoz "] },
     { id: "angamos", name: "Angamos", location: "Antofagasta", contractor: "BMI", year: "2018", status: "", products: ["Muro cortina"], imageFolder: "2018 - ANGAMOS", imageBase: "ANGAMOS BMI 2018--ANGAMOS", imageCount: 3 },
-    { id: "comapa-punta-arenas", name: "Comapa", location: "Punta Arenas", contractor: "Bravo Izquierdo", year: "2018", status: "", products: ["Lucarnas de cristal", "Barandas de cristal"], imageFolder: "2018 - COMAPA PUNTA ARENAS", imageBase: "COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA", imageCount: 4 },
-    { id: "hotel-icon", name: "Hotel Icon", contractor: "Nahmias", year: "2018", status: "", products: [] },
-    { id: "malaga", name: "Málaga", contractor: "Mena y Ovalle", year: "2018", status: "", products: [] },
+    { id: "comapa-punta-arenas", name: "Comapa", location: "Punta Arenas", contractor: "Bravo Izquierdo", year: "2018", status: "", products: ["Lucarnas", "Barandas de cristal","Tabiques Vidriados"], imageFolder: "2018 - COMAPA PUNTA ARENAS", imageBase: "COMAPA PUNTA ARENAS BRAVO IZQUIERDO 2018--COMAPA", imageCount: 4 },
+    { id: "hotel-icon", name: "Hotel Icon", contractor: "Nahmias", year: "2018", status: "", products: ["Shower Door","Tabiques Vidriados"] },
+    { id: "malaga", name: "Malaga", contractor: "Mena y Ovalle", year: "2018", status: "", products: ["Shower Door"] },
     { id: "puerta-del-sol", name: "Puerta del Sol", contractor: "Mena y Ovalle", year: "2018", status: "", products: ["Shower Door"], imageFolder: "2018 - PUERTA DEL SOL", imageBase: "PUERTA DEL SOL MENA Y OVALLE 2018--PUERTA-DEL-SOL", imageCount: 1 },
     { id: "torres-centenario-antofagasta", name: "Torres Centenario", location: "Antofagasta", contractor: "Mar Abierto", year: "2018", status: "", products: ["Muro cortina", "Panel compuesto de aluminio (ACM)"], imageFolder: "2018 - TORRES CENTENARIO ANTOFAGASTA", imageBase: "TORRES CENTENARIO ANTOFAGASTA MAR ABIERTO 2018--TORRES-CENTENARIO", imageCount: 4 },
-    { id: "nueva-manquehue", name: "Nueva Manquehue", contractor: "Echeverría Izquierdo", year: "2019", status: "", products: [] },
-    { id: "club-de-campo-vitacura", name: "Club de Campo Vitacura", subtitle: "Boldo, Peumo y Quillai", contractor: "Nahmias", year: "2020", status: "", products: ["Barandas de cristal", "Separadores de cristal"], imageFolder: "2020 - CLUB DE CAMPO VITACURA", imageBase: "CLUB DE CAMPO VITACURA NAHMIAS 2020--CLUB-DE-CAMPO", imageCount: 9 },
+    { id: "nueva-manquehue", name: "Nueva Manquehue", contractor: "Echeverría Izquierdo", year: "2019", status: "", products: ["Chambranas de ascensor de Acero Inoxidable"] },
+    { id: "club-de-campo-vitacura", name: "Club de Campo Vitacura", subtitle: "Edificios Boldo, Peumo y Quillay", contractor: "Nahmias", year: "2020", status: "", products: ["Barandas de cristal empotradas y con botones", "Separadores de cristal","Shower Door","Maparas Interiores","Espejos"], imageFolder: "2020 - CLUB DE CAMPO VITACURA", imageBase: "CLUB DE CAMPO VITACURA NAHMIAS 2020--CLUB-DE-CAMPO", imageCount: 9 },
     { id: "onofre-jarpa", name: "Condominio Onofre Jarpa", contractor: "Sur G", year: "2021", status: "", products: ["Barandas de cristal", "Shower Door"], imageFolder: "2021 - ONOFRE JARPA", imageBase: "ONOFRE JARPA SUR G 2021--ONOFRE-JARPA", imageCount: 3 },
     { id: "puerto-nuevo-antofagasta", name: "Puerto Nuevo", location: "Antofagasta", contractor: "Echeverría Izquierdo", year: "2021", status: "", products: ["Barandas de cristal", "Pasamanos de acero inoxidable 316"], imageFolder: "2021 - PUERTO NUEVO ANTOFAGASTA", imageBase: "PUERTO NUEVO ANTOFAGASTA ECHEVERRIA IZQUIERDO 2021--PUERTO-NUEVO", imageCount: 4 },
     { id: "casa-italia", name: "Casa Italia", contractor: "Tecton", year: "2022", status: "", products: ["Shower Door", "Espejos"], imageFolder: "2022 - CASA ITALIA", imageBase: "CASA ITALIA TECTON 2022--CASA-ITALIA", imageCount: 4 },
     { id: "edificio-el-roble", name: "Edificio El Roble", contractor: "Nahmias", year: "2022", status: "", products: ["Canopy de acceso", "Mamparas de oficina"], imageFolder: "2022 - EDIFICIO EL ROBLE", imageBase: "EDIFICIO EL ROBLE NAHMIAS 2022--EL-ROBLE", imageCount: 4 },
-    { id: "la-capitania", name: "La Capitanía", contractor: "Nahmias", year: "2022", status: "", products: ["Tabiques Vidriados", "Shower Door"], imageFolder: "2022 - LA CAPITANIA", imageBase: "LA CAPITANIA NAHMIAS 2022--LA-CAPITANIA", imageCount: 2 },
+    { id: "la-capitania", name: "La Capitania", contractor: "Nahmias", year: "2022", status: "", products: ["Tabiques Vidriados", "Shower Door"], imageFolder: "2022 - LA CAPITANIA", imageBase: "LA CAPITANIA NAHMIAS 2022--LA-CAPITANIA", imageCount: 2 },
     { id: "pedro-navia", name: "Pedro Navia", contractor: "Tecton", year: "2022", status: "", products: ["Barandas de cristal con herrajes", "Lucarnas"], imageFolder: "2022 - PEDRO NAVIA", imageBase: "PEDRO NAVIA TECTON 2022--PEDRO-NAVIA", imageCount: 3 },
     { id: "bustamante", name: "Bustamante", contractor: "Nahmias", year: "2024", status: "", products: ["Barandas de cristal con balaustros", "Shower Door", "Espejos"], imageSets: [{ folder: "2024 - BUSTAMANTE EXTERIOR", base: "BUSTAMANTE EXTERIOR NAHMIAS 2024--BUSTAMANTE-EXTERIOR", count: 4 }, { folder: "2024 - BUSTAMANTE INTERIOR", base: "BUSTAMANTE INTERIOR NAHMIAS 2024--BUSTAMANTE-INTERIOR", count: 4 }] },
     { id: "data-center-chile-3", name: "Data Center Chile 3", contractor: "Puerto Octay", year: "2024", status: "", products: ["Barandas de cristal", "Tabiques vidriados"], imageFolder: "2024 - DATA CENTER CHILE 3", imageBase: "DATA CENTER CHILE 3 PUERTO OCTAY 2024--DATA-CENTER-CHILE-3", imageCount: 4 },
     { id: "jofre", name: "Jofre", contractor: "Nahmias", year: "2024", status: "", products: ["Shower Door", "Espejos"], imageFolder: "2024 - JOFRE", imageBase: "JOFRE NAHMIAS 2024--JOFRE", imageCount: 4 },
-    { id: "jose-domingo-canas", name: "José Domingo Cañas Torre I y II", contractor: "Nahmias", year: "2024", status: "", products: ["Barandas de cristal empotradas", "Shower Door"], imageFolder: "2024 - JOSE DOMINGO CANAS", imageBase: "JOSE DOMINGO CANAS NAHMIAS 2024--JOSE-DOMINGO-CANAS", imageCount: 4 },
+    { id: "jose-domingo-canas", name: "Jose Domingo Cañas Torre I y II", contractor: "Nahmias", year: "2024", status: "", products: ["Barandas de cristal empotradas", "Shower Door"], imageFolder: "2024 - JOSE DOMINGO CANAS", imageBase: "JOSE DOMINGO CANAS NAHMIAS 2024--JOSE-DOMINGO-CANAS", imageCount: 4 },
     { id: "lote-19", name: "Lote 19", contractor: "Ignacio Hurtado", year: "2024", status: "", products: ["Shower Door", "Espejos"], imageFolder: "2024 - LOTE 19", imageBase: "LOTE 19 IGNACIO HURTADO 2024--LOTE-19", imageCount: 3 },
-    { id: "principe-de-gales", name: "Príncipe de Gales", contractor: "Echeverría Izquierdo", year: "2024", status: "", products: ["Mamparas de acceso", "Shower Door"], imageFolder: "2024 - PRINCIPE DE GALES", imageBase: "PRINCIPE DE GALES ECHEVERRIA IZQUIERDO 2024--PRINCIPE-DE-GALES", imageCount: 4 },
+    { id: "principe-de-gales", name: "Principe de Gales", contractor: "Echeverría Izquierdo", year: "2024", status: "", products: ["Mamparas de acceso", "Shower Door"], imageFolder: "2024 - PRINCIPE DE GALES", imageBase: "PRINCIPE DE GALES ECHEVERRIA IZQUIERDO 2024--PRINCIPE-DE-GALES", imageCount: 4 },
     { id: "angamos-nahmias", name: "Angamos", contractor: "Nahmias", year: "2025", status: "", products: ["Shower Door", "Espejos"], imageFolder: "2025 - ANGAMOS", imageBase: "ANGAMOS NAHMIAS 2025--ANGAMOS", imageCount: 4 },
     { id: "burgos", name: "Burgos", contractor: "Tecton", year: "2025", status: "", products: ["Espejos"], imageFolder: "2025 - BURGOS", imageBase: "BURGOS TECTON 2025--BURGOS", imageCount: 4 },
     { id: "data-center-scala-santa-teresa", name: "Data Center Scala Santa Teresa", contractor: "Puerto Octay", year: "2025", status: "", products: ["Recubrimiento de fachada con panel compuesto"], imageFolder: "2025 - DATACENTER SCALA SANTA TERESA", imageBase: "DATACENTER SCALA SANTA TERESA 2025--DATACENTER-SCALA", imageCount: 4 },
     { id: "tavelli", name: "Tavelli", contractor: "Nahmias", year: "2025", status: "", products: ["Shower Door"], imageFolder: "2025 - TAVELLI", imageBase: "TAVELLI NAHMIAS 2025--TAVELLI", imageCount: 2 },
-    { id: "apoquindo-los-militares", name: "Apoquindo Los Militares", contractor: "Echeverría Izquierdo", year: "2026", status: "En instalación", products: ["Barandas con botones y Separadores de cristal", "Separadores de cristal"], imageFolder: "2026 - APOQUINDO LOS MILITARES", imageBase: "APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO", imageCount: 4 },
+    { id: "apoquindo-los-militares", name: "Apoquindo Los Militares", contractor: "Echeverría Izquierdo", year: "2026", status: "En instalación", products: ["Barandas con botones","Separadores de cristal", "Separadores de cristal"], imageFolder: "2026 - APOQUINDO LOS MILITARES", imageBase: "APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO", imageCount: 4 },
     { id: "el-sauce", name: "El Sauce 3", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas de cristal con mini balaustros"], imageFolder: "2026 - EL SAUCE", imageBase: "EL SAUCE POCURO 2026--EL-SAUCE", imageCount: 4 },
-    { id: "paso-el-roble", name: "Paso el Roble", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas con balustros, Separadores de Cristal"], imageFolder: "2026 - PASO EL ROBLE", imageBase: "PASO EL ROBLE POCURO 2026--PASO-EL-ROBLE", imageCount: 3 },
+    { id: "paso-el-roble", name: "Paso el Roble", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas con balustros", "Separadores de Cristal"], imageFolder: "2026 - PASO EL ROBLE", imageBase: "PASO EL ROBLE POCURO 2026--PASO-EL-ROBLE", imageCount: 3 },
     { id: "comisaria", name: "PRIMERA COMISARIA DE PUNTA ARENAS", contractor: "Bravo Izquierdo", year: "2026", status: "", products: ["Baranda de cristral con botones"], imageFolder: "2026 - PRIMERA COMISARIA DE PUNTA ARENAS", imageFiles: ["COMISARIA 1.png", "comisaria 2.png", "comisaria 3.jpeg", "comisaria 4.jpeg"] }
   ];
 
@@ -854,6 +854,10 @@
 
   function setupProjectCardSlides() {
     const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const controllers = [];
+    let roundTimer = null;
+    let pendingChanges = [];
+
     document.querySelectorAll("[data-card-slideshow]").forEach(function (media) {
       const slides = Array.from(media.querySelectorAll(".project-card__slide"));
       const card = media.closest(".project-card");
@@ -862,7 +866,7 @@
       const currentLabel = card && card.querySelector("[data-card-current]");
       if (!card || slides.length <= 1) return;
       let current = 0;
-      let timer = null;
+      let paused = false;
 
       function show(index) {
         slides[current].classList.remove("is-active");
@@ -871,34 +875,44 @@
         if (currentLabel) currentLabel.textContent = String(current + 1);
       }
 
-      function showNext() {
-        show(current + 1);
-      }
-
-      function stop() {
-        if (timer !== null) window.clearInterval(timer);
-        timer = null;
-      }
-
-      function start() {
-        stop();
-        if (reducedMotion || document.hidden) return;
-        timer = window.setInterval(showNext, 3900);
-      }
-
-      if (previous) previous.addEventListener("click", function () { show(current - 1); start(); });
-      if (next) next.addEventListener("click", function () { show(current + 1); start(); });
-      card.addEventListener("mouseenter", stop);
-      card.addEventListener("mouseleave", start);
-      card.addEventListener("focusin", stop);
+      if (previous) previous.addEventListener("click", function () { show(current - 1); });
+      if (next) next.addEventListener("click", function () { show(current + 1); });
+      card.addEventListener("mouseenter", function () { paused = true; });
+      card.addEventListener("mouseleave", function () { paused = false; });
+      card.addEventListener("focusin", function () { paused = true; });
       card.addEventListener("focusout", function (event) {
-        if (!card.contains(event.relatedTarget)) start();
+        if (!card.contains(event.relatedTarget)) paused = false;
       });
-      document.addEventListener("visibilitychange", function () {
-        if (document.hidden) stop(); else start();
+      controllers.push({
+        advance: function () { if (!paused) show(current + 1); }
       });
-      start();
     });
+
+    function stopRounds() {
+      if (roundTimer !== null) window.clearInterval(roundTimer);
+      roundTimer = null;
+      pendingChanges.forEach(function (timeout) { window.clearTimeout(timeout); });
+      pendingChanges = [];
+    }
+
+    function runRound() {
+      pendingChanges = [];
+      controllers.forEach(function (controller, index) {
+        if (index === 0) controller.advance();
+        else pendingChanges.push(window.setTimeout(controller.advance, index * 1500));
+      });
+    }
+
+    function startRounds() {
+      stopRounds();
+      if (reducedMotion || document.hidden || controllers.length === 0) return;
+      roundTimer = window.setInterval(runRound, 6000);
+    }
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) stopRounds(); else startRounds();
+    });
+    startRounds();
   }
 
   function setupNavigation() {
