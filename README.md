@@ -20,11 +20,13 @@ El código está escrito generalmente en inglés. Los ajustes estéticos princip
 
 La administración local fue retirada. El catálogo se actualiza editando los archivos del proyecto; no existe una conexión SQL o backend.
 
-La portada usa dos imágenes. La sección `Obras en instalación` muestra dos obras, sus fotografías cambian automáticamente y también se pueden recorrer con sus controles. El inicio incorpora además dos Productos destacados que cambian automáticamente sin repetir categorías. Las galerías de las fichas avanzan automáticamente y conservan sus controles manuales. Cada obra admite varios productos y un máximo de 10 imágenes totales.
+La portada usa dos imágenes. La sección `OBRAS EN INSTALACION` muestra dos obras, sus fotografías cambian automáticamente y también se pueden recorrer con sus controles. El inicio incorpora cuatro mosaicos fijos: Tabiques vidriados, Barandas de cristal, Shower Door y Espejos Dfroster Retroiluminados. Las fotografías cambian con un fundido de 0,85 segundos: cada 6 segundos comienza una ronda de los cuatro mosaicos, de izquierda a derecha: Tabiques al inicio, Barandas 1 segundo después, Shower a los 2 segundos y Espejos a los 3 segundos. Se conservan el título y el enlace de cada producto. La rotación se pausa al interactuar con los mosaicos, al ocultar la página o si se ha solicitado movimiento reducido. Cada obra admite varios productos y un máximo de 10 imágenes totales.
 
-El bloque `Quiénes somos` incluye pestañas para alternar entre la presentación de la empresa, su misión y su visión sin cambiar de página.
+El bloque `QUIENES SOMOS` incluye pestañas para alternar entre la presentación de la empresa, su misión y su visión sin cambiar de página. El título cambia a `QUIENES SOMOS`, `MISION` o `VISION`, sin tildes; el cuerpo conserva las mayúsculas de inicio de oración y de los nombres propios.
 
-En `soluciones.html`, cada producto funciona como un botón desplegable. Solo puede permanecer uno abierto y contiene un carrusel 1:1 con cuatro fotografías WebP. El carrusel avanza automáticamente, acepta flechas y arrastre, y puede abrirse en una vista ampliada que muestra la imagen completa.
+En `soluciones.html`, cada producto funciona como un botón desplegable. Solo puede permanecer uno abierto; el primero se abre inicialmente o se selecciona el indicado en el enlace. Cada galería compacta muestra las fotografías disponibles sin espacios vacíos. Las flechas arriba/abajo seleccionan el producto anterior/siguiente; izquierda/derecha cambian su fotografía. Los mismos controles funcionan en la vista ampliada, que conserva el título y pausa el avance automático. Al cerrar se mantiene la última fotografía seleccionada. Los espejos utilizan las dos fotografías retroiluminadas válidas.
+
+Las fichas de obras tienen una cabecera y una galería más pequeñas. `Ver imagen completa` abre la fotografía sin recorte y permite cambiarla con botones o con izquierda/derecha, sincronizando la imagen ampliada. Se incluyen ajustes adaptables a 720, 736 y 1080 píxeles de ancho y a pantallas de poca altura.
 
 El historial detallado de correcciones y actualizaciones está disponible en [`CHANGELOG.md`](CHANGELOG.md).
 

@@ -36,8 +36,7 @@
     { id: "tavelli", name: "Tavelli", contractor: "Nahmias", year: "2025", status: "", products: ["Shower Door"], imageFolder: "2025 - TAVELLI", imageBase: "TAVELLI NAHMIAS 2025--TAVELLI", imageCount: 2 },
     { id: "apoquindo-los-militares", name: "Apoquindo Los Militares", contractor: "Echeverría Izquierdo", year: "2026", status: "En instalación", products: ["Barandas de cristal", "Separadores de cristal"], imageFolder: "2026 - APOQUINDO LOS MILITARES", imageBase: "APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO", imageCount: 4 },
     { id: "el-sauce", name: "El Sauce 3", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas de cristal con balaustros"], imageFolder: "2026 - EL SAUCE", imageBase: "EL SAUCE POCURO 2026--EL-SAUCE", imageCount: 4 },
-    { id: "comisaria", name: "Primera Comisaría de Punta Arenas", contractor: "Bravo Izquierdo", year: "2026", status: "", products: ["N/A"], imageFolder: "N-A - COMISARIA", imageFiles: ["COMISARIA 1.png", "comisaria 2.png", "comisaria 3.jpeg", "comisaria 4.jpeg"] },
-    { id: "papudo", name: "Papudo", contractor: "N/A", year: "N/A", status: "", products: [] }
+    { id: "comisaria", name: "PRIMERA COMISARIA DE PUNTA ARENAS", contractor: "Bravo Izquierdo", year: "2026", status: "", products: ["N/A"], imageFolder: "2026 - PRIMERA COMISARIA DE PUNTA ARENAS", imageFiles: ["COMISARIA 1.png", "comisaria 2.png", "comisaria 3.jpeg", "comisaria 4.jpeg"] }
   ];
 
   defaultProjects.forEach(function (project) {
@@ -66,7 +65,7 @@
     { id: "tabiques-vidriados", name: "Tabiques vidriados", anchor: "vidriadas", images: ["imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--01.webp", "imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--02.webp", "imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--03.webp", "imagenes-productos/TABIQUES VIDRIADOS/TABIQUES-VIDRIADOS--04.webp"] },
     { id: "barandas-cristal", name: "Barandas de cristal", anchor: "barandas", images: ["imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--01.webp", "imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--02.webp", "imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--03.webp", "imagenes-productos/BARANDAS DE CRISTAL/BARANDAS-CRISTAL--04.webp"] },
     { id: "shower-door", name: "Shower Door", images: ["imagenes-productos/SHOWER DOOR/SHOWER-DOOR--01.webp", "imagenes-productos/SHOWER DOOR/SHOWER-DOOR--02.webp", "imagenes-productos/SHOWER DOOR/SHOWER-DOOR--03.webp", "imagenes-productos/SHOWER DOOR/SHOWER-DOOR--04.webp"] },
-    { id: "espejos-retroiluminados", name: "Espejos retroiluminados", images: ["", "", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--03.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--04.webp"] },
+    { id: "espejos-retroiluminados", name: "Espejos Dfroster Retroiluminados", images: ["imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--03.webp", "imagenes-productos/ESPEJOS RETROILUMINADOS/ESPEJOS-RETROILUMINADOS--04.webp"] },
     { id: "pasamanos-acero", name: "Pasamanos acero inoxidable", images: ["imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--01.webp", "imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--02.webp", "imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--03.webp", "imagenes-productos/PASAMANOS ACERO INOXIDABLE/PASAMANOS-ACERO-INOXIDABLE--04.webp"] },
     { id: "revestimientos-muros-chambranas", name: "Revestimientos de muros y chambranas de ascensor inoxidable", anchor: "revestimientos", images: ["imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--01.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--02.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--03.webp", "imagenes-productos/REVESTIMIENTOS DE MUROS Y CHAMBRANAS DE ASCENSOR INOXIDABLE/REVESTIMIENTOS-MUROS-CHAMBRANAS--04.webp"] },
     { id: "fachadas-panel-aluminio", name: "Revestimientos de fachadas en panel de aluminio compuesto.", images: ["imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--01.webp", "imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--02.webp", "imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--03.webp", "imagenes-productos/REVESTIMIENTOS DE FACHADAS EN PANEL DE ALUMINIO COMPUESTO/FACHADAS-PANEL-ALUMINIO--04.webp"] },
@@ -103,8 +102,7 @@
   }
 
   function productSlides(product) {
-    const images = Array.isArray(product.images) ? product.images.slice(0, 4) : [];
-    while (images.length < 4) images.push(null);
+    const images = Array.isArray(product.images) ? product.images.filter(Boolean).slice(0, 4) : [];
     return images.map(function (source, index) {
       const number = index + 1;
       if (!source) {
@@ -282,6 +280,8 @@
     document.body.appendChild(dialog);
 
     function openFullscreen(card, product, controller) {
+      if (fullscreenController && fullscreenSource) fullscreenSource.show(fullscreenController.getIndex(), false);
+      if (fullscreenController) fullscreenController.destroy();
       controller.stop();
       activeProduct = product;
       fullscreenSource = controller;
@@ -300,10 +300,9 @@
       fullscreenController = createProductSlider(fullscreenRoot, {
         initialIndex: controller.getIndex(),
         interval: 4600,
-        shouldAutoplay: function () { return dialog.open; }
+        shouldAutoplay: function () { return false; }
       });
-      dialog.showModal();
-      fullscreenController.start();
+      if (!dialog.open) dialog.showModal();
     }
 
     function cleanupFullscreen() {
@@ -321,17 +320,31 @@
     dialog.addEventListener("click", function (event) {
       if (event.target === dialog) dialog.close();
     });
-    dialog.addEventListener("keydown", function (event) {
-      if (!fullscreenController || !activeProduct) return;
-      if (event.key === "ArrowLeft") {
-        event.preventDefault();
-        fullscreenController.show(fullscreenController.getIndex() - 1);
-        fullscreenController.start();
+    document.addEventListener("keydown", function (event) {
+      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+          event.target.closest('input, textarea, select, [contenteditable="true"]')) return;
+      if (!["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)) return;
+      event.preventDefault();
+      const selected = cards.find(function (card) { return card.classList.contains("is-open"); });
+      if (event.key === "ArrowUp" || event.key === "ArrowDown") {
+        const direction = event.key === "ArrowDown" ? 1 : -1;
+        const index = selected ? cards.indexOf(selected) : (direction === 1 ? -1 : 0);
+        const card = cards[(index + direction + cards.length) % cards.length];
+        openCard(card);
+        if (dialog.open) {
+          openFullscreen(card, products[Number(card.dataset.productIndex)], controllers.get(card));
+        } else {
+          card.querySelector("[data-product-toggle]").focus({ preventScroll: true });
+          card.scrollIntoView({ block: "start", behavior: "auto" });
+        }
+        return;
       }
-      if (event.key === "ArrowRight") {
-        event.preventDefault();
-        fullscreenController.show(fullscreenController.getIndex() + 1);
-        fullscreenController.start();
+      const card = selected || cards[0];
+      if (!selected) openCard(card);
+      const controller = dialog.open ? fullscreenController : controllers.get(card);
+      if (controller) {
+        controller.stop();
+        controller.show(controller.getIndex() + (event.key === "ArrowRight" ? 1 : -1));
       }
     });
 
@@ -379,19 +392,24 @@
       });
     });
 
-    if (window.location.hash) {
-      const target = document.querySelector(window.location.hash);
-      if (target && target.matches("[data-product-card]")) openCard(target);
+    function openHashProduct() {
+      const target = cards.find(function (card) { return "#" + card.id === window.location.hash; });
+      openCard(target || cards[0]);
     }
+    openHashProduct();
+    window.addEventListener("hashchange", openHashProduct);
   }
 
   function featuredProductCard(product, imageIndex) {
     const images = (product.images || []).filter(Boolean);
-    const source = images[imageIndex % images.length];
+    const slides = images.map(function (source, index) {
+      const active = index === imageIndex % images.length;
+      return `<img class="featured-product-card__image${active ? " is-active" : ""}" src="${escapeHtml(source)}" alt="${escapeHtml(product.name)}" aria-hidden="${!active}" loading="lazy" decoding="async">`;
+    }).join("");
     const target = product.anchor || product.id;
     return `<article class="featured-product-card">
       <a href="soluciones.html#${encodeURIComponent(target)}" aria-label="Ver producto ${escapeHtml(product.name)}">
-        <img src="${escapeHtml(source)}" alt="${escapeHtml(product.name)}" loading="lazy" decoding="async">
+        ${slides}
         <div class="featured-product-card__content">
           <h3>${escapeHtml(product.name)}</h3>
         </div>
@@ -403,43 +421,50 @@
   function setupFeaturedProducts(products) {
     const container = document.querySelector("[data-featured-products]");
     if (!container) return;
-    const available = products.filter(function (product) {
-      return Array.isArray(product.images) && product.images.some(Boolean);
-    });
+    const featuredIds = ["tabiques-vidriados", "barandas-cristal", "shower-door", "espejos-retroiluminados"];
+    const available = featuredIds.map(function (id) {
+      return products.find(function (product) { return product.id === id; });
+    }).filter(function (product) { return product && product.images.some(Boolean); });
     if (!available.length) return;
     const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let cursor = 0;
-    let round = 0;
+    let pendingChanges = [];
     let timer = null;
+    container.innerHTML = available.map(function (product) { return featuredProductCard(product, 0); }).join("");
+    const cards = Array.from(container.querySelectorAll(".featured-product-card")).map(function (card) {
+      return { images: Array.from(card.querySelectorAll(".featured-product-card__image")), current: 0 };
+    });
 
-    function renderPair() {
-      const count = Math.min(2, available.length);
-      const pair = Array.from({ length: count }, function (_, offset) {
-        return available[(cursor + offset) % available.length];
+    function advanceCard(card) {
+      const next = (card.current + 1) % card.images.length;
+      const incoming = card.images[next];
+      if (!incoming.complete || !incoming.naturalWidth) return;
+      card.current = next;
+      card.images.forEach(function (image, index) {
+        const active = index === card.current;
+        image.classList.toggle("is-active", active);
+        image.setAttribute("aria-hidden", String(!active));
       });
-      container.innerHTML = pair.map(function (product, offset) {
-        return featuredProductCard(product, round + offset);
-      }).join("");
     }
 
-    function nextPair() {
-      cursor += Math.min(2, available.length);
-      if (cursor >= available.length) {
-        cursor = 0;
-        round += 1;
-      }
-      renderPair();
+    function nextImages() {
+      pendingChanges = [];
+      cards.forEach(function (card, index) {
+        if (index === 0) advanceCard(card);
+        else pendingChanges.push(window.setTimeout(function () { advanceCard(card); }, index * 1000));
+      });
     }
 
     function stop() {
       if (timer !== null) window.clearInterval(timer);
       timer = null;
+      pendingChanges.forEach(function (timeout) { window.clearTimeout(timeout); });
+      pendingChanges = [];
     }
 
     function start() {
       stop();
-      if (reducedMotion || available.length <= 2 || document.hidden) return;
-      timer = window.setInterval(nextPair, 4800);
+      if (reducedMotion || document.hidden) return;
+      timer = window.setInterval(nextImages, 6000);
     }
 
     container.addEventListener("mouseenter", stop);
@@ -451,7 +476,6 @@
     document.addEventListener("visibilitychange", function () {
       if (document.hidden) stop(); else start();
     });
-    renderPair();
     start();
   }
 
@@ -461,8 +485,8 @@
     if (!text || !buttons.length) return;
 
     const content = {
-      quienes: '<span class="about-text__paragraph">En <strong>CWSS Ingeniería Ltda</strong>. contamos con más de 10 años de experiencia en el desarrollo e instalación de soluciones vidriadas para nuestros clientes, principalmente: arquitectos, inmobiliarias y empresas constructoras.</span><span class="about-text__paragraph">Nuestro principal valor es la experiencia y el profesionalismo de un equipo que participa activamente en cada etapa del proyecto, entregando asesoría especializada desde el diseño hasta la ingeniería de detalles, fabricación y montaje final del producto.</span><span class="about-text__paragraph">Trabajamos con un enfoque integral, buscando entregar soluciones que respondan a las necesidades técnicas y arquitectónicas de cada proyecto, asegurando una ejecución eficiente y de calidad.</span>',
-      mision: '<span class="about-text__paragraph">En CWSS Ingeniería diseñamos, desarrollamos, fabricamos e instalamos soluciones vidriadas para proyectos arquitectónicos y constructivos, entregando asesoría especializada a arquitectos, inmobiliarias y empresas constructoras. Integramos experiencia técnica, ingeniería de detalle, fabricación y montaje para entregar soluciones eficientes, seguras y de alta calidad, adaptadas a los requerimientos de cada proyecto. Construimos relaciones de largo plazo basadas en el profesionalismo, la confianza, el cumplimiento y la excelencia.</span>',
+      quienes: '<span class="about-text__paragraph">En <strong>CWSS Ingeniería Ltda.</strong> contamos con más de 10 años de experiencia en el desarrollo e instalación de soluciones vidriadas para nuestros clientes, principalmente: arquitectos, inmobiliarias y empresas constructoras.</span><span class="about-text__paragraph">Nuestro principal valor es la experiencia y el profesionalismo de un equipo que participa activamente en cada etapa del proyecto, entregando asesoría especializada desde el diseño hasta la ingeniería de detalles, fabricación y montaje final del producto.</span><span class="about-text__paragraph">Trabajamos con un enfoque integral, buscando entregar soluciones que respondan a las necesidades técnicas y arquitectónicas de cada proyecto, asegurando una ejecución eficiente y de calidad.</span>',
+      mision: '<span class="about-text__paragraph">En CWSS Ingeniería Ltda. diseñamos, desarrollamos, fabricamos e instalamos soluciones vidriadas para proyectos arquitectónicos y constructivos, entregando asesoría especializada a arquitectos, inmobiliarias y empresas constructoras. Integramos experiencia técnica, ingeniería de detalle, fabricación y montaje para entregar soluciones eficientes, seguras y de alta calidad, adaptadas a los requerimientos de cada proyecto. Construimos relaciones de largo plazo basadas en el profesionalismo, la confianza, el cumplimiento y la excelencia.</span>',
       vision: '<span class="about-text__paragraph">Ser una empresa referente en soluciones vidriadas para la arquitectura y construcción en Chile, reconocida por la calidad de sus proyectos, su capacidad técnica, el cumplimiento de sus compromisos y la confianza de sus clientes, consolidando un crecimiento sostenible y una participación cada vez más relevante en proyectos de alta exigencia.</span>'
     };
 
@@ -476,6 +500,8 @@
         item.tabIndex = selected ? 0 : -1;
       });
       text.innerHTML = content[key];
+      const title = document.querySelector("[data-about-title]");
+      if (title) title.textContent = { quienes: "QUIENES SOMOS", mision: "MISION", vision: "VISION" }[key];
       text.setAttribute("aria-labelledby", button.id);
       text.classList.remove("is-switching");
       void text.offsetWidth;
@@ -496,6 +522,7 @@
         selectTab(buttons[nextIndex]);
       });
     });
+    selectTab(buttons.find(function (button) { return button.classList.contains("is-active"); }) || buttons[0]);
   }
 
   function projectImages(project) {
@@ -697,6 +724,11 @@
         <button class="image-dialog__close" type="button" data-image-close aria-label="Cerrar imagen">×</button>
         <img data-image-dialog-src alt="">
         <p data-image-dialog-caption></p>
+        <div class="image-dialog__controls" ${galleryImages.length <= 1 ? "hidden" : ""}>
+          <button type="button" data-image-previous aria-label="Imagen anterior">←</button>
+          <span data-image-counter aria-live="polite"></span>
+          <button type="button" data-image-next aria-label="Imagen siguiente">→</button>
+        </div>
       </dialog>`
       : "";
     container.innerHTML = `
@@ -724,6 +756,7 @@
     const currentLabel = gallery.querySelector("[data-gallery-current]");
     const previous = gallery.querySelector("[data-gallery-previous]");
     const next = gallery.querySelector("[data-gallery-next]");
+    const dialog = document.querySelector("[data-image-dialog]");
     const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let current = 0;
     let autoplayTimer = null;
@@ -743,6 +776,16 @@
         thumb.setAttribute("aria-current", String(active));
       });
       if (currentLabel) currentLabel.textContent = String(current + 1);
+      if (dialog && dialog.open) updateFullImage();
+    }
+
+    function updateFullImage() {
+      const source = slides[current].querySelector("img");
+      const image = dialog.querySelector("[data-image-dialog-src]");
+      image.src = source.getAttribute("src");
+      image.alt = source.alt;
+      dialog.querySelector("[data-image-dialog-caption]").textContent = source.alt;
+      dialog.querySelector("[data-image-counter]").textContent = (current + 1) + " / " + slides.length;
     }
 
     function stopAutoplay() {
@@ -752,13 +795,29 @@
 
     function startAutoplay() {
       stopAutoplay();
-      if (reducedMotion || slides.length <= 1 || document.hidden) return;
+      if (reducedMotion || slides.length <= 1 || document.hidden || (dialog && dialog.open)) return;
       autoplayTimer = window.setInterval(function () { showSlide(current + 1); }, 4800);
     }
 
     function selectSlide(index) {
       showSlide(index);
-      startAutoplay();
+      stopAutoplay();
+    }
+
+    if (dialog) {
+      slides.forEach(function (slide, index) {
+        slide.querySelector("[data-full-image]").addEventListener("click", function () {
+          stopAutoplay();
+          showSlide(index);
+          updateFullImage();
+          dialog.showModal();
+        });
+      });
+      dialog.querySelector("[data-image-previous]").addEventListener("click", function () { selectSlide(current - 1); });
+      dialog.querySelector("[data-image-next]").addEventListener("click", function () { selectSlide(current + 1); });
+      dialog.querySelector("[data-image-close]").addEventListener("click", function () { dialog.close(); });
+      dialog.addEventListener("click", function (event) { if (event.target === dialog) dialog.close(); });
+      dialog.addEventListener("close", function () { gallery.focus({ preventScroll: true }); });
     }
 
     thumbnails.forEach(function (thumb) {
@@ -838,26 +897,6 @@
         if (document.hidden) stop(); else start();
       });
       start();
-    });
-  }
-
-  function setupImageDialog() {
-    const dialog = document.querySelector("[data-image-dialog]");
-    if (!dialog || typeof dialog.showModal !== "function") return;
-    const fullImage = dialog.querySelector("[data-image-dialog-src]");
-    const caption = dialog.querySelector("[data-image-dialog-caption]");
-    document.querySelectorAll("[data-full-image]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        const source = button.closest(".project-gallery__slide").querySelector("img");
-        fullImage.src = source.getAttribute("src");
-        fullImage.alt = source.alt;
-        caption.textContent = source.alt;
-        dialog.showModal();
-      });
-    });
-    dialog.querySelector("[data-image-close]").addEventListener("click", function () { dialog.close(); });
-    dialog.addEventListener("click", function (event) {
-      if (event.target === dialog) dialog.close();
     });
   }
 
@@ -979,7 +1018,6 @@
   renderProjectDetail(projects);
   setupProjectCardSlides();
   setupProjectGallery();
-  setupImageDialog();
   setupNavigation();
   setupPageTransitions();
   setupRevealAnimations();

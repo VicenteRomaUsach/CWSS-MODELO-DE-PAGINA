@@ -1,5 +1,23 @@
 # Historial de cambios de CWSS
 
+## Mayúsculas en textos corporativos — 2026-09-10
+
+- Se restauraron las mayúsculas al inicio de las oraciones y en los nombres propios en quienes somos, misión y visión.
+- Se unificó el nombre `CWSS Ingeniería Ltda.`, incluyendo el punto de la abreviatura dentro del nombre resaltado.
+- Los títulos dinámicos se mantienen en mayúsculas y sin tildes.
+
+## Galerías compactas y correcciones de contenido — 2026-09-10
+
+- Se corrigió la ruta de las cuatro fotografías de `PRIMERA COMISARIA DE PUNTA ARENAS`, con año 2026, y se retiró Papudo del catálogo.
+- Los títulos `QUIENES SOMOS`, `MISION` y `VISION` cambian según la pestaña seleccionada y no llevan tildes. Sus cuerpos se muestran en minúsculas; `OBRAS EN INSTALACION` tampoco lleva tilde.
+- El inicio muestra cuatro mosaicos permanentes, con fotografías que rotan cada 2 segundos y nombres siempre visibles.
+- Espejos se llama `Espejos Dfroster Retroiluminados`; su galería contiene las dos imágenes retroiluminadas válidas, sin espacios pendientes.
+- Se redujeron las galerías de productos y obras, así como la cabecera de cada obra, manteniendo la ampliación de las imágenes completas.
+- En productos, arriba/abajo seleccionan categorías e izquierda/derecha recorren imágenes, tanto en el catálogo como en la vista ampliada.
+- La vista completa de obras cambia la fotografía visible con izquierda/derecha y controles propios; el avance automático se pausa durante la ampliación.
+- Se añadieron ajustes para 720, 736 y 1080 píxeles, además de pantallas de poca altura.
+- Se verificaron las rutas de todas las imágenes del catálogo, la sintaxis JS/CSS y cinco pruebas de comportamiento sin navegador.
+
 ## Nombre de obra y legibilidad — 2026-09-09
 
 - La obra `Comisaría` ahora se presenta como `Primera Comisaría de Punta Arenas`, con año `2026`.
