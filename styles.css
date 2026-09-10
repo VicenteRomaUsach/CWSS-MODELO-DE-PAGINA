@@ -107,7 +107,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .visual-strip figure:first-child img { object-position: 58% center; }
 .visual-strip figure:hover img { transform: scale(1.025); }
 
-.about { display: grid; grid-template-columns: minmax(280px, .76fr) minmax(480px, 1.24fr); min-height: 440px; position: relative; border-top-width: var(--about-border-size); border-top-color: var(--about-border-color); background-color: #fff; background-image: linear-gradient(rgba(255,255,255,.82), rgba(255,255,255,.92)), url("FONDO SOLUCIONES.png"); background-position: center; background-size: cover; }
+.about { display: grid; grid-template-columns: minmax(280px, .76fr) minmax(480px, 1.24fr); min-height: 440px; position: relative; border-top-width: var(--about-border-size); border-top-color: var(--about-border-color); background-color: #fff; background-image: linear-gradient(rgba(255,255,255,.82), rgba(255,255,255,.92)), url("Fondos/FONDO SOLUCIONES.png"); background-position: center; background-size: cover; }
 .about-visual { padding: clamp(18px, 3vw, 38px); display: grid; place-items: center; border-right: 0; }
 .about-copy { padding: clamp(38px, 5vw, 70px) clamp(104px, 9vw, 132px) clamp(22px, 2.5vw, 34px) clamp(24px, 3.5vw, 46px); display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
 .about-logo--full {
@@ -139,10 +139,10 @@ h2 { font-size: clamp(2rem, 3.4vw, 4rem); }
 .text-link { display: inline-flex; align-items: center; gap: 14px; border-bottom: 1px solid var(--ink); padding-bottom: 5px; font-size: .82rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .text-link:hover { color: var(--blue); border-color: var(--blue); }
 
-.latest { padding: clamp(42px, 5vw, 72px) clamp(22px, 5vw, 76px); border-top: 10px solid var(--blue); background-color: #fff; background-image: linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)), url("FONDO PROYECTOS.png"); background-position: center 32%; background-repeat: no-repeat; background-size: cover; }
+.latest { padding: clamp(42px, 5vw, 72px) clamp(22px, 5vw, 76px); border-top: 10px solid var(--blue); background-color: #fff; background-image: linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)), url("Fondos/FONDO PROYECTOS.png"); background-position: center 32%; background-repeat: no-repeat; background-size: cover; }
 .latest #latest-title { font-size: calc(1rem + var(--about-title-extra)); }
 .featured-products { position: relative; isolation: isolate; overflow: hidden; background: #eef2f6; }
-.featured-products::before { content: ""; position: absolute; inset: -8%; z-index: -1; background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.82)), url("FONDO PORYECTOS 2.png"); background-position: center 46%; background-repeat: no-repeat; background-size: cover; transform: scale(1.16); }
+.featured-products::before { content: ""; position: absolute; inset: -8%; z-index: -1; background-image: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.82)), url("Fondos/FONDO PORYECTOS 2.png"); background-position: center 46%; background-repeat: no-repeat; background-size: cover; transform: scale(1.16); }
 .featured-products #featured-products-title { font-size: calc(1rem + var(--about-title-extra)); }
 .featured-products__grid { width: 100%; max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(12px, 1.5vw, 22px); }
 .featured-product-card { aspect-ratio: 4 / 3; overflow: hidden; position: relative; border-radius: 18px; background: var(--quiet); color: #fff; animation: featured-product-in .64s cubic-bezier(.22,1,.36,1); }
@@ -161,8 +161,8 @@ body[data-page="proyectos"] main { position: relative; isolation: isolate; overf
 body[data-page="proyectos"] .projects-page { position: relative; z-index: 1; background: transparent; }
 .projects-background { position: absolute; inset: 0; z-index: 0; display: flex; flex-direction: column; overflow: hidden; pointer-events: none; }
 .projects-background__panel { width: 100%; flex: 0 0 auto; background-position: center; background-repeat: no-repeat; background-size: cover; }
-.projects-background__panel--solutions { aspect-ratio: 16 / 9; background-image: linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)), url("FONDO SOLUCIONES.png"); }
-.projects-background__panel--projects { aspect-ratio: 9 / 16; background-image: linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)), url("FONDO PROYECTOS.png"); }
+.projects-background__panel--solutions { aspect-ratio: 16 / 9; background-image: linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)), url("Fondos/FONDO SOLUCIONES.png"); }
+.projects-background__panel--projects { aspect-ratio: 9 / 16; background-image: linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)), url("Fondos/FONDO PROYECTOS.png"); }
 .section-heading { max-width: var(--max); margin: 0 auto 32px; display: flex; align-items: end; justify-content: space-between; gap: 30px; }
 .latest .section-heading,
 .latest .project-grid { width: 100%; max-width: var(--max); margin-left: auto; margin-right: auto; }
@@ -209,6 +209,22 @@ body[data-page="soluciones"] .site-footer { margin-top: 0; border-top: 0; }
 .footer-contact span { color: rgba(255,255,255,.68); }
 .footer-contact .footer-icon { color: #fff; }
 .footer-contact strong { font-weight: 600; }
+
+/* Clientes destacados en el pie del inicio */
+.footer-clients { grid-column: 1 / -1; margin-top: 2px; padding-top: 18px; display: flex; align-items: center; gap: clamp(18px, 2.5vw, 34px); border-top: 1px solid rgba(255,255,255,.32); }
+.footer-clients__title { margin: 0; flex: 0 0 auto; color: #fff; font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; white-space: nowrap; }
+.footer-clients__logos { display: flex; align-items: center; gap: 55px; }
+.footer-clients__logo {
+    width: auto;
+    height: 50px;
+    max-width: none;
+    display: block;
+    object-fit: contain;
+    filter: none;
+    opacity: .92;
+}
+.footer-clients__logo--wide { max-width: 145px; }
+.footer-clients__logo--square { height: clamp(34px, 3.4vw, 48px); }
 .footer-bottom { grid-column: 1 / -1; margin-top: 12px; padding-top: 14px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid rgba(255,255,255,.32); }
 .copyright { margin: 0; color: rgba(255,255,255,.7); font-size: .74rem; letter-spacing: .04em; }
 .page-intro { padding: clamp(30px, 4vw, 52px) clamp(22px, 7vw, 110px) clamp(22px, 3vw, 38px); }
@@ -237,9 +253,9 @@ body[data-page="soluciones"] .site-footer { margin-top: 0; border-top: 0; }
 .project-detail__description { max-width: none; margin: 0; color: var(--muted); font-size: 1.1rem; line-height: 1.8; text-align: justify; text-align-last: left; white-space: pre-line; hyphens: auto; }
 .project-gallery { padding: clamp(42px, 6vw, 78px) clamp(22px, 5vw, 76px); border-top: 3px solid var(--line); background: var(--quiet); }
 body[data-page="detalle"][data-project-background="solutions"] .project-detail__body,
-body[data-page="detalle"][data-project-background="solutions"] .project-gallery { background-color: #fff; background-image: linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)), url("FONDO SOLUCIONES.png"); background-position: center; background-repeat: no-repeat; background-size: cover; }
+body[data-page="detalle"][data-project-background="solutions"] .project-gallery { background-color: #fff; background-image: linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)), url("Fondos/FONDO SOLUCIONES.png"); background-position: center; background-repeat: no-repeat; background-size: cover; }
 body[data-page="detalle"][data-project-background="projects"] .project-detail__body,
-body[data-page="detalle"][data-project-background="projects"] .project-gallery { background-color: #fff; background-image: linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)), url("FONDO PROYECTOS.png"); background-position: center; background-repeat: no-repeat; background-size: cover; }
+body[data-page="detalle"][data-project-background="projects"] .project-gallery { background-color: #fff; background-image: linear-gradient(rgba(255,255,255,.68), rgba(255,255,255,.78)), url("Fondos/FONDO PROYECTOS.png"); background-position: center; background-repeat: no-repeat; background-size: cover; }
 .project-gallery__viewport { max-width: 860px; margin: 0 auto; overflow: hidden; border-radius: 16px; background: #e4e7eb; }
 .project-gallery__track { display: flex; transition: transform .45s ease; }
 .project-gallery__slide { min-width: 100%; aspect-ratio: 16 / 9; margin: 0; overflow: hidden; position: relative; }
@@ -263,7 +279,7 @@ body[data-page="detalle"][data-project-background="projects"] .project-gallery {
 .placeholder-frame span { color: var(--muted); font-size: .8rem; letter-spacing: .15em; text-transform: uppercase; }
 .placeholder-frame strong { font-size: clamp(1.7rem, 4vw, 3.8rem); font-weight: 500; }
 .anchor-target { display: block; }
-.products-page { min-height: calc(100vh - 82px); margin: 0; padding: clamp(68px, 8vw, 112px) clamp(22px, 5vw, 76px) clamp(140px, 14vw, 220px); background-color: #fff; background-image: linear-gradient(rgba(255,255,255,.82), rgba(255,255,255,.92)), url("FONDO SOLUCIONES.png"); background-position: center; background-size: cover; }
+.products-page { min-height: calc(100vh - 82px); margin: 0; padding: clamp(68px, 8vw, 112px) clamp(22px, 5vw, 76px) clamp(140px, 14vw, 220px); background-color: #fff; background-image: linear-gradient(rgba(255,255,255,.82), rgba(255,255,255,.92)), url("Fondos/FONDO SOLUCIONES.png"); background-position: center; background-size: cover; }
 .products-page > .eyebrow,
 .products-page > h1 { max-width: var(--max); margin-left: auto; margin-right: auto; }
 .products-page > h1 { font-size: var(--solutions-title-size); }
@@ -395,6 +411,12 @@ body[data-page="detalle"][data-project-background="projects"] .project-gallery {
   .footer-contact { min-width: 0; }
   .footer-contact a { grid-template-columns: 30px 66px 1fr; gap: 10px; font-size: .78rem; }
   .footer-bottom { grid-column: 1; }
+
+  .footer-clients { align-items: flex-start; flex-direction: column; gap: 14px; }
+  .footer-clients__logos { width: 100%; justify-content: flex-start; gap: 18px 24px; }
+  .footer-clients__logo { height: 30px; max-width: 100px; }
+  .footer-clients__logo--wide { max-width: 125px; }
+  .footer-clients__logo--square { height: 36px; }
   .project-detail__hero { min-height: 500px; }
   .project-gallery__viewport { border-radius: 12px; }
   .product-grid { grid-template-columns: 1fr; }
