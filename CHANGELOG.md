@@ -1,5 +1,10 @@
 # Historial de cambios de CWSS
 
+## Paso el Roble — 2026-09-10
+
+- Se agregó la obra `Paso el Roble`, de Constructora Pocuro, año 2026, con sus tres fotografías.
+- Se marcó como `En instalación` y el inicio ahora muestra las tres obras que tienen ese estado.
+
 ## Mayúsculas en textos corporativos — 2026-09-10
 
 - Se restauraron las mayúsculas al inicio de las oraciones y en los nombres propios en quienes somos, misión y visión.

@@ -36,6 +36,7 @@
     { id: "tavelli", name: "Tavelli", contractor: "Nahmias", year: "2025", status: "", products: ["Shower Door"], imageFolder: "2025 - TAVELLI", imageBase: "TAVELLI NAHMIAS 2025--TAVELLI", imageCount: 2 },
     { id: "apoquindo-los-militares", name: "Apoquindo Los Militares", contractor: "Echeverría Izquierdo", year: "2026", status: "En instalación", products: ["Barandas de cristal", "Separadores de cristal"], imageFolder: "2026 - APOQUINDO LOS MILITARES", imageBase: "APOQUINDO LOS MILITARES ECHEVERRIA IZQUIERDO 2026--APOQUINDO", imageCount: 4 },
     { id: "el-sauce", name: "El Sauce 3", contractor: "Pocuro", year: "2026", status: "En instalación", products: ["Barandas de cristal con balaustros"], imageFolder: "2026 - EL SAUCE", imageBase: "EL SAUCE POCURO 2026--EL-SAUCE", imageCount: 4 },
+    { id: "paso-el-roble", name: "Paso el Roble", contractor: "Pocuro", year: "2026", status: "En instalación", products: [], imageFolder: "2026 - PASO EL ROBLE", imageBase: "PASO EL ROBLE POCURO 2026--PASO-EL-ROBLE", imageCount: 3 },
     { id: "comisaria", name: "PRIMERA COMISARIA DE PUNTA ARENAS", contractor: "Bravo Izquierdo", year: "2026", status: "", products: ["N/A"], imageFolder: "2026 - PRIMERA COMISARIA DE PUNTA ARENAS", imageFiles: ["COMISARIA 1.png", "comisaria 2.png", "comisaria 3.jpeg", "comisaria 4.jpeg"] }
   ];
 
@@ -628,7 +629,7 @@
     const container = document.querySelector("[data-latest-projects]");
     if (!container) return;
     const inProgress = projects.filter(function (project) { return project.status === "En instalación"; }).sort(compareProjectsByYearAndName);
-    container.innerHTML = inProgress.slice(0, 2).map(function (project) { return projectCard(project, true); }).join("");
+    container.innerHTML = inProgress.slice(0, 3).map(function (project) { return projectCard(project, true); }).join("");
   }
 
   function renderAllProjects(projects) {
