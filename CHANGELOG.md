@@ -1,5 +1,13 @@
 # Historial de cambios de CWSS
 
+## Selección de cinco fotografías por obra — 2026-11-02
+
+- Se seleccionaron visualmente las cinco mejores imágenes de las 28 obras que superaban esa cantidad, priorizando nitidez, variedad y acabados.
+- Las obras que tenían entre una y cinco fotografías conservan todas las disponibles. El catálogo pasa de 733 a 200 fotografías visibles en 45 obras.
+- La primera fotografía seleccionada se usa como portada de cada obra.
+- Se restableció el máximo de seguridad de 10 imágenes tanto al cargar el catálogo como al generar las galerías.
+- Todas las fotografías y los respaldos anteriores se conservan.
+
 ## Retiro de Obras destacadas en Productos — 2026-11-02
 
 - Se retiró la sección `Obras destacadas` de `soluciones.html` y sus estilos exclusivos.
