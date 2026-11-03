@@ -1,5 +1,14 @@
 # Historial de cambios de CWSS
 
+## Selección desde las subcarpetas Fotos Página — 2026-11-02
+
+- Se confirmó en Chrome la carpeta de Drive `FOTOS PARA PAGINA FINAL` como fuente.
+- Se revisaron las 20 obras que antes superaban 10 imágenes. Quince tienen subcarpeta `Fotos Página`; se corrigieron ocho selecciones que mezclaban fotos de la raíz con las de esa subcarpeta.
+- Se ajustaron Nueva Apoquindo, Badajoz, To-Be, Guernica, Hotel Plaza El Bosque, Parque de los Reyes, Apoquindo Los Militares y El Sauce 3 usando únicamente las candidatas de `Fotos Página`.
+- To-Be conserva las cuatro imágenes disponibles en esa selección. El catálogo completo muestra 199 fotografías en 45 obras, con cinco o menos por obra.
+- Club de Campo Vitacura, Bustamante, Data Center Chile 3, Paso el Roble y Centenario no tienen esa subcarpeta y mantienen sus cinco fotos anteriores.
+- Se mantiene el límite de seguridad de 10 imágenes y se conservan todos los originales y respaldos.
+
 ## Selección de cinco fotografías por obra — 2026-11-02
 
 - Se seleccionaron visualmente las cinco mejores imágenes de las 28 obras que superaban esa cantidad, priorizando nitidez, variedad y acabados.
