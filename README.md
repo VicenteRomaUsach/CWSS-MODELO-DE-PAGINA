@@ -4,7 +4,7 @@
 
 Se revisaron las 764 imágenes de la carpeta compartida `FOTOS PAGINA 2026 / FOTOS PARA PAGINA FINAL`. El sitio conserva las 34 obras anteriores y agrega 11 obras, para un total de 45. Las nueve obras que antes no tenían imágenes ahora incluyen sus fotografías.
 
-Las galerías incorporan 725 fotografías de obras optimizadas desde 761 archivos fuente; las copias con píxeles idénticos dentro de una misma obra se muestran una sola vez. Se conservan además las ocho imágenes de las tres obras que no estaban en esa carpeta de Drive. Las tres fotografías de portada se pueden ver completas al final de Productos. Las copias web usan WebP de hasta 1920 px y las tres imágenes de lado de Hotel Plaza El Bosque fueron corregidas.
+Las galerías incorporan 725 fotografías de obras optimizadas desde 761 archivos fuente; las copias con píxeles idénticos dentro de una misma obra se muestran una sola vez. Se conservan además las ocho imágenes de las tres obras que no estaban en esa carpeta de Drive. Las tres fotografías de portada se conservan como archivos y en el respaldo local. Las copias web usan WebP de hasta 1920 px y las tres imágenes de lado de Hotel Plaza El Bosque fueron corregidas.
 
 Las galerías ya no tienen límite de 10 fotos. Sus miniaturas tienen desplazamiento vertical en escritorio y horizontal en móvil. Los nombres, clientes y años existentes se conservan; los datos de las obras nuevas provienen del nombre de su carpeta. No se asignaron productos sin información confirmada.
 

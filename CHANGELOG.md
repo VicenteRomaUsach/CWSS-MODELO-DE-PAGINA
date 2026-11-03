@@ -1,5 +1,10 @@
 # Historial de cambios de CWSS
 
+## Retiro de Obras destacadas en Productos — 2026-11-02
+
+- Se retiró la sección `Obras destacadas` de `soluciones.html` y sus estilos exclusivos.
+- Las fotografías permanecen guardadas en los archivos del sitio y en el respaldo local.
+
 ## Fotografías de Drive y respaldo local — 2026-11-02
 
 - Se revisaron 764 imágenes de las 44 carpetas de obras y las portadas de Drive.
