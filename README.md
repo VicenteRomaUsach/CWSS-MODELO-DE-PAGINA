@@ -1,5 +1,15 @@
 # Sitio web CWSS — CWSS.CL3.1
 
+## Fotografías actualizadas — 2026-11-02
+
+Se revisaron las 764 imágenes de la carpeta compartida `FOTOS PAGINA 2026 / FOTOS PARA PAGINA FINAL`. El sitio conserva las 34 obras anteriores y agrega 11 obras, para un total de 45. Las nueve obras que antes no tenían imágenes ahora incluyen sus fotografías.
+
+Las galerías incorporan 725 fotografías de obras optimizadas desde 761 archivos fuente; las copias con píxeles idénticos dentro de una misma obra se muestran una sola vez. Se conservan además las ocho imágenes de las tres obras que no estaban en esa carpeta de Drive. Las tres fotografías de portada se pueden ver completas al final de Productos. Las copias web usan WebP de hasta 1920 px y las tres imágenes de lado de Hotel Plaza El Bosque fueron corregidas.
+
+Las galerías ya no tienen límite de 10 fotos. Sus miniaturas tienen desplazamiento vertical en escritorio y horizontal en móvil. Los nombres, clientes y años existentes se conservan; los datos de las obras nuevas provienen del nombre de su carpeta. No se asignaron productos sin información confirmada.
+
+Los originales y los respaldos completos se guardan fuera del repositorio, en `respaldos-locales` dentro del proyecto local. El inventario y la procedencia de cada imagen están en `_image-audit/2026-11-02`.
+
 La página tiene tres categorías principales:
 
 - Índice: `index.html`.
@@ -20,7 +30,7 @@ El código está escrito generalmente en inglés. Los ajustes estéticos princip
 
 La administración local fue retirada. El catálogo se actualiza editando los archivos del proyecto; no existe una conexión SQL o backend.
 
-La portada usa dos imágenes. La sección `OBRAS EN INSTALACION` muestra tres obras, sus fotografías cambian automáticamente y también se pueden recorrer con sus controles. Cada 6 segundos comienza una ronda de izquierda a derecha, con 1,5 segundos entre cada obra. El inicio incorpora cuatro mosaicos fijos: Tabiques vidriados, Barandas de cristal, Shower Door y Espejos D-FROSTER Retroiluminados. Las fotografías cambian con un fundido de 0,85 segundos: cada 6 segundos comienza una ronda de los cuatro mosaicos, de izquierda a derecha: Tabiques al inicio, Barandas 1 segundo después, Shower a los 2 segundos y Espejos a los 3 segundos. Se conservan el título y el enlace de cada producto. La rotación se pausa al interactuar con los mosaicos, al ocultar la página o si se ha solicitado movimiento reducido. Cada obra admite varios productos y un máximo de 10 imágenes totales.
+La portada usa dos imágenes. La sección `OBRAS EN INSTALACION` muestra tres obras, sus fotografías cambian automáticamente y también se pueden recorrer con sus controles. Cada 6 segundos comienza una ronda de izquierda a derecha, con 1,5 segundos entre cada obra. El inicio incorpora cuatro mosaicos fijos: Tabiques vidriados, Barandas de cristal, Shower Door y Espejos D-FROSTER Retroiluminados. Las fotografías cambian con un fundido de 0,85 segundos: cada 6 segundos comienza una ronda de los cuatro mosaicos, de izquierda a derecha: Tabiques al inicio, Barandas 1 segundo después, Shower a los 2 segundos y Espejos a los 3 segundos. Se conservan el título y el enlace de cada producto. La rotación se pausa al interactuar con los mosaicos, al ocultar la página o si se ha solicitado movimiento reducido. Cada obra admite varios productos y una galería completa sin límite de 10 imágenes.
 
 El bloque `QUIENES SOMOS` incluye pestañas para alternar entre la presentación de la empresa, su misión y su visión sin cambiar de página. El título cambia a `QUIENES SOMOS`, `MISION` o `VISION`, sin tildes; el cuerpo conserva las mayúsculas de inicio de oración y de los nombres propios.
 

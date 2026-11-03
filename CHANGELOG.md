@@ -1,5 +1,16 @@
 # Historial de cambios de CWSS
 
+## Fotografías de Drive y respaldo local — 2026-11-02
+
+- Se revisaron 764 imágenes de las 44 carpetas de obras y las portadas de Drive.
+- Se incorporaron 725 imágenes de obras optimizadas desde 761 fuentes y las tres portadas, sin repetir copias idénticas dentro de cada obra.
+- Se completaron las nueve obras sin fotografías y se agregaron Indumotora, Norambuena, Manquehue FFV, Alto Parque, Nativo Riesco, Parque Los Alerces, La Cámara, Ilanes, Don Pedro, Centenario y Casas La Rábida. El catálogo llega a 45 obras.
+- Se conservaron las ocho imágenes de Lote 19, Puerta del Sol y Primera Comisaría de Punta Arenas, ausentes de la carpeta actual de Drive.
+- Se corrigió la orientación de tres fotos de Hotel Plaza El Bosque y se conservaron los originales sin cambios en el respaldo local.
+- Se retiró el límite de 10 imágenes y se adaptaron las miniaturas para galerías extensas, con desplazamiento interno.
+- Las carpetas Fotos Página aparecen primero en cada galería; se conservan también las tomas de montaje y detalle técnico solicitadas.
+- Se verificó el respaldo de los 839 archivos de Drive y se guardó un ZIP de la versión anterior del sitio.
+
 ## Carrusel de obras y pie de página — 2026-09-10
 
 - Las tres obras en instalación cambian sus fotografías en una ronda cada 6 segundos, de izquierda a derecha y con 1,5 segundos entre tarjetas.
