@@ -1,5 +1,14 @@
 # Historial de cambios de CWSS
 
+## Revisión completa y regla de procedencia — 2026-11-03
+
+- Se revisaron todas las candidatas de las 22 subcarpetas `Fotos Página` y las fotos disponibles de las otras 23 obras.
+- Las obras con `Fotos Página` usan solo esa fuente. Para las obras sin esa subcarpeta, el usuario autorizó seleccionar igualmente las mejores fotos de la obra; tres obras ausentes de Drive conservan fotos anteriores revisadas.
+- El catálogo de 45 obras muestra 113 fotos, con un máximo de 10 por obra, sin completar cupos con vistas repetidas. Se priorizan los productos instalados y terminados.
+- Apoquindo Los Militares muestra escalera, separador y baranda de terraza terminados; se excluyeron las vistas del edificio en construcción.
+- Se agregó un manifiesto de procedencia, instrucciones persistentes y un validador para impedir duplicados, fuentes incorrectas y selecciones de más de 10.
+- Se mantienen todos los originales y assets, además de un nuevo respaldo local completo del sitio.
+
 ## Selección desde las subcarpetas Fotos Página — 2026-11-02
 
 - Se confirmó en Chrome la carpeta de Drive `FOTOS PARA PAGINA FINAL` como fuente.

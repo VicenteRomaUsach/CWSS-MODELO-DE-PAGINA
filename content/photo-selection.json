@@ -1,0 +1,1585 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-03",
+  "sourceRoot": {
+    "id": "1Nb_yXEAJm5vIs5vBG4rN3nZa8STMJ3mE",
+    "name": "FOTOS PARA PAGINA FINAL",
+    "url": "https://drive.google.com/drive/folders/1Nb_yXEAJm5vIs5vBG4rN3nZa8STMJ3mE"
+  },
+  "maxImagesPerProject": 10,
+  "selectionPolicy": "Fotos Página exclusivamente cuando existe; si falta, mejores fotos de la carpeta de la obra por autorización explícita del usuario. Hasta 10 distintas, sin rellenar cupos; priorizar instalaciones terminadas.",
+  "missingPhotoFolderAuthorization": {
+    "date": "2026-11-03",
+    "userReply": "mejores 10 igual"
+  },
+  "projects": [
+    {
+      "id": "nueva-apoquindo",
+      "name": "Nueva Apoquindo",
+      "selectionReason": "Revisión visual de las 18 candidatas de Fotos Pagina. Portada: baranda interior terminada. Se añaden baranda curva exterior y puerta acristalada de emergencia, productos y lugares distintos. Se excluyen OSB, cadenas provisionales, maquinaria cubierta, cruces de cinta, cables, puertas de control con piso sucio y los encuadres repetidos. La 17 tiene un residuo pequeño en el borde inferior, pero la instalación exterior está terminada y evita la obra vecina prominente de 15/18.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1mxu7USHRdjfElCtxPOvFdRWPoIqIJ8DO",
+          "path": "NUEVA APOQUINDO CONSTRUCTORA ECHEVERRIA IZQUIERDO 2014/Fotos Pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/nueva-apoquindo/f45948cc71639e93e22d.webp",
+          "sourcePath": "NUEVA APOQUINDO CONSTRUCTORA ECHEVERRIA IZQUIERDO 2014/Fotos Pagina/IMG_6544.JPG",
+          "driveFileId": "1FygQ4_HAJdyS9-uBxy7iOYPw5Bh0vToq",
+          "driveFolderId": "1mxu7USHRdjfElCtxPOvFdRWPoIqIJ8DO",
+          "sha256": "7a9824adb79d3986bf1171b8e83beca36a8ce9946784ec3b72144e6cb5dd3f03",
+          "pixelSha256": "f45948cc71639e93e22df58836363d58b82bfda55177f40672fa44f9fa5be218"
+        },
+        {
+          "asset": "imagenes-drive/nueva-apoquindo/382a6bf7c7dc555987ec.webp",
+          "sourcePath": "NUEVA APOQUINDO CONSTRUCTORA ECHEVERRIA IZQUIERDO 2014/Fotos Pagina/IMG_6515.JPG",
+          "driveFileId": "1N71w-bgnlIZapvz5rUdGbPUzXrKYn6dv",
+          "driveFolderId": "1mxu7USHRdjfElCtxPOvFdRWPoIqIJ8DO",
+          "sha256": "501162b139ce5df8789160a973c56099b82ee3f836b7600814d51313e4af51af",
+          "pixelSha256": "382a6bf7c7dc555987ec9d2817ce137a0e5358a865aa0fe4a3e552951ac83071"
+        },
+        {
+          "asset": "imagenes-drive/nueva-apoquindo/987d4429afd48dbcdecc.webp",
+          "sourcePath": "NUEVA APOQUINDO CONSTRUCTORA ECHEVERRIA IZQUIERDO 2014/Fotos Pagina/IMG_6779.JPG",
+          "driveFileId": "1KnkfCSVpeFVvkYdZ48Upks8ouFz3f1Us",
+          "driveFolderId": "1mxu7USHRdjfElCtxPOvFdRWPoIqIJ8DO",
+          "sha256": "24660d44ed50f330e065ac1cc05a840c3076df3c427bd232464d346dd43a161d",
+          "pixelSha256": "987d4429afd48dbcdeccd974bdcba5f58bc01313133ea9806a8116fe04d4fbbd"
+        }
+      ]
+    },
+    {
+      "id": "badajoz",
+      "name": "Badajoz",
+      "selectionReason": "Revisión visual de las 6 candidatas de Fotos Pagina. Una vista completa y luminosa del acceso acristalado terminado y un detalle de cerraduras/herrajes. Se eliminan cuatro ángulos muy parecidos de la misma puerta, incluido el que muestra tubos, banco y botella.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1hXHfZYXSPPRmmbXsm2uvNYj8KlWIAahB",
+          "path": "BADAJOZ CONSTRUCTORA NHAMIAS 2015/Fotos Pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/badajoz/33ff45b1380b5f62d3dc.webp",
+          "sourcePath": "BADAJOZ CONSTRUCTORA NHAMIAS 2015/Fotos Pagina/IMG_0548.JPG",
+          "driveFileId": "1kHFtp4D680nC73lxqxw_wmfteIhNxKl2",
+          "driveFolderId": "1hXHfZYXSPPRmmbXsm2uvNYj8KlWIAahB",
+          "sha256": "2b2f0e1a25ec280d1fd431f254bdb8f6aa88939a6e0a49db38e808fc0d4dd4ae",
+          "pixelSha256": "33ff45b1380b5f62d3dc9689b353de76cdbe6155b4dc5542ccca63402a087bac"
+        },
+        {
+          "asset": "imagenes-drive/badajoz/4c0cab77be06ed6b1e76.webp",
+          "sourcePath": "BADAJOZ CONSTRUCTORA NHAMIAS 2015/Fotos Pagina/4.JPG",
+          "driveFileId": "1fEO-HutzymXsrI3JVk0O9Ua43f823phk",
+          "driveFolderId": "1hXHfZYXSPPRmmbXsm2uvNYj8KlWIAahB",
+          "sha256": "810ad479697115419abe95dcab96b39b350ffa4b8f33d7b28e49a90f5ad6d112",
+          "pixelSha256": "4c0cab77be06ed6b1e768d5489d26ba7c2ae63fcff9d427effa6070018f841b0"
+        }
+      ]
+    },
+    {
+      "id": "edificio-to-be",
+      "name": "Edificio To-Be",
+      "selectionReason": "Las cuatro candidatas muestran la misma cubierta vidriada. Se publica una sola vista amplia y clara, sin repetir ángulos del mismo motivo.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "18kT68RXN0-flpnj3dE8l3bqGXBNZNLyS",
+          "path": "TO-BE CONSTRUCTORA ARMAS 2015/Fotos Pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/edificio-to-be/80e57d71645032beac2f.webp",
+          "sourcePath": "TO-BE CONSTRUCTORA ARMAS 2015/Fotos Pagina/IMG_20150218_125619.jpg",
+          "driveFileId": "13OYZ1tuD8y0VSa8lDZq_TM_0GLuBsuVD",
+          "driveFolderId": "18kT68RXN0-flpnj3dE8l3bqGXBNZNLyS",
+          "sha256": "5fe22279556ffaf7147a8289959ec1dc122204932fe15720c54c0dbd7d5d66a3",
+          "pixelSha256": "80e57d71645032beac2fd10d091a3b5551b56219aee1545ebea28c0c5584d9f4"
+        }
+      ]
+    },
+    {
+      "id": "guernica",
+      "name": "Guernica",
+      "selectionReason": "Revisadas las 45 candidatas de las dos hojas actuales. Portada 1: acceso acristalado terminado. Luego una sola vista de baranda exterior (40), puerta terminada (5), cerramiento rojo del estacionamiento (34), ventanal de oficina en uso (31), divisiones sanitarias (9) y espejo instalado (2). Se descartan las numerosas repeticiones de acceso, terraza y cerramiento rojo; también interiores sin terminar 13-16 y fotos generales de ascensores sin protagonismo del vidrio.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1KZTMeLE5NAtYNy6UFEJaMt7R3jItqm_o",
+          "path": "GUERNICA CONSTRUCTORA ECHEVERRIA IZQUIERDO 2015/Fotos Finales/FOTOS PAGINA"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/guernica/bdfbbfee734c32234cdf.webp",
+          "sourcePath": "GUERNICA CONSTRUCTORA ECHEVERRIA IZQUIERDO 2015/Fotos Finales/FOTOS PAGINA/20170205_121435.jpg",
+          "driveFileId": "1BmXfqItuykR_amrDZJwE8dRQokXied-v",
+          "driveFolderId": "1KZTMeLE5NAtYNy6UFEJaMt7R3jItqm_o",
+          "sha256": "9293ebe7cef5333716e560a1b2865a1f09c2cdc01140735e444cd20225db6239",
+          "pixelSha256": "bdfbbfee734c32234cdf83df78c095d137c1068c3f95aa7130a3efcca2157047"
+        },
+        {
+          "asset": "imagenes-drive/guernica/0ab02d649d145523abe4.webp",
+          "sourcePath": "GUERNICA CONSTRUCTORA ECHEVERRIA IZQUIERDO 2015/Fotos Finales/FOTOS PAGINA/IMG_9008.JPG",
+          "driveFileId": "1UqQvFeQsxwqBnU1PJ6PUaU0JP6IJZTuf",
+          "driveFolderId": "1KZTMeLE5NAtYNy6UFEJaMt7R3jItqm_o",
+          "sha256": "b0a175f3ab983fa18daae14dd8efc463cd4aa7143e027f7a69a49a6d106b81e7",
+          "pixelSha256": "0ab02d649d145523abe482b57bc31d4bd0dc5ddfde9aa85c49274aeed71554a8"
+        },
+        {
+          "asset": "imagenes-drive/guernica/a9b2a3973e238540d040.webp",
+          "sourcePath": "GUERNICA CONSTRUCTORA ECHEVERRIA IZQUIERDO 2015/Fotos Finales/FOTOS PAGINA/IMG_9050.JPG",
+          "driveFileId": "1VDG4aC8rBsI88402QH8TOTqvoBhep2HJ",
+          "driveFolderId": "1KZTMeLE5NAtYNy6UFEJaMt7R3jItqm_o",
+          "sha256": "6225bc534170fa30c556d1dfd13d3c3f3a8f36962cf6c7321129ff76473ff9b9",
+          "pixelSha256": "a9b2a3973e238540d040a9ca192b375c32647cf7d706c6b658b37cd76ef20553"
+        },
+        {
+          "asset": "imagenes-drive/guernica/04b3ba22208286dbcc98.webp",
+          "sourcePath": "GUERNICA CONSTRUCTORA ECHEVERRIA IZQUIERDO 2015/Fotos Finales/FOTOS PAGINA/IMG_9030.JPG",
+          "driveFileId": "1BlXFoRoebhX8M1dZOhdYlgBhfkUiSC-a",
+          "driveFolderId": "1KZTMeLE5NAtYNy6UFEJaMt7R3jItqm_o",
+          "sha256": "197ad2014a0f6eb91e051f074c414db892bdc78a02b741400c14855e3de7353c",
+          "pixelSha256": "04b3ba22208286dbcc98ba42db86fc3c728e5c955f2e2effac79e98fb620e0bb"
+        },
+        {
+          "asset": "imagenes-drive/guernica/3268c8e1dd957a21a211.webp",
+          "sourcePath": "GUERNICA CONSTRUCTORA ECHEVERRIA IZQUIERDO 2015/Fotos Finales/FOTOS PAGINA/IMG_9045.JPG",
+          "driveFileId": "1vsiCx4RK7ojUfLna5VBUyy3XSSAJol8_",
+          "driveFolderId": "1KZTMeLE5NAtYNy6UFEJaMt7R3jItqm_o",
+          "sha256": "019308cf4b2850bf910aa6d9c4f4246723b17d1f29a033b7a2744afe4b0ec6de",
+          "pixelSha256": "3268c8e1dd957a21a21152047a9a6ad962a8573ff64163a2b47702d927eb98d9"
+        },
+        {
+          "asset": "imagenes-drive/guernica/1b47735492ccf82a989c.webp",
+          "sourcePath": "GUERNICA CONSTRUCTORA ECHEVERRIA IZQUIERDO 2015/Fotos Finales/FOTOS PAGINA/IMG_9039.JPG",
+          "driveFileId": "12yPwSLxnDmlEs-ThedBAlk_vy9uN8Q4H",
+          "driveFolderId": "1KZTMeLE5NAtYNy6UFEJaMt7R3jItqm_o",
+          "sha256": "00035cee8a0efb6a279b3b1c6c9892647adc12c86261d1414941063249655c6f",
+          "pixelSha256": "1b47735492ccf82a989c0857ebc13e17d05f7dd3a3a0c7147ca58dd14c0e7de6"
+        },
+        {
+          "asset": "imagenes-drive/guernica/a65f0c42c40b4126ff55.webp",
+          "sourcePath": "GUERNICA CONSTRUCTORA ECHEVERRIA IZQUIERDO 2015/Fotos Finales/FOTOS PAGINA/IMG_9067.JPG",
+          "driveFileId": "1RLeAR8zYicCXlmkCIw35js391dIIF6Xe",
+          "driveFolderId": "1KZTMeLE5NAtYNy6UFEJaMt7R3jItqm_o",
+          "sha256": "b93c93cda4ad79fc955bc62185c142133de1094418b352dba6ce26688b4df0d3",
+          "pixelSha256": "a65f0c42c40b4126ff55a17d825fccb54821b92ba0610e605097fb3bb7e22dc9"
+        }
+      ]
+    },
+    {
+      "id": "hotel-plaza-el-bosque",
+      "name": "Hotel Plaza El Bosque",
+      "selectionReason": "Revisadas las 8 candidatas y ampliadas las dudosas. Portada 7: escalera con barandas de vidrio ya instaladas y terminadas. 1 muestra cierre de baño y espejo; 3 los paños traslucidos decorativos del pasillo; 5 las ventanas de piscina. Se omiten 6 por repetir la misma escalera/baranda y 8 por repetir el baño con peor exposición; 2 y 4 tienen encuadres de puertas menos claros. La persona al exterior de 7 es incidental, el motivo principal es la escalera terminada, sin montaje ni herramientas en el primer plano.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1CsomSwpgMg8FYcszmCN7R3iTcqlc4RI5",
+          "path": "HOTEL PLAZA EL BOSQUE CONSTRUCTORA  ECHEVERRIA IZQUIERDO 2013/FOTOS PAGINA"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/hotel-plaza-el-bosque/70c694671fa4352840d8.webp",
+          "sourcePath": "HOTEL PLAZA EL BOSQUE CONSTRUCTORA  ECHEVERRIA IZQUIERDO 2013/FOTOS PAGINA/IMG_5999.JPG",
+          "driveFileId": "1bIpxCfaGD8-sPvoxG2EN49f2u_xHYx6_",
+          "driveFolderId": "1CsomSwpgMg8FYcszmCN7R3iTcqlc4RI5",
+          "sha256": "b90baeb392e84e58af8d07d1e17841fbf3aad868d37429948491f68f42bc45f6",
+          "pixelSha256": "70c694671fa4352840d89350df444b577786d72e1a55e3da08c51a5569f63862"
+        },
+        {
+          "asset": "imagenes-drive/hotel-plaza-el-bosque/bd6893472085d7eeffc0.webp",
+          "sourcePath": "HOTEL PLAZA EL BOSQUE CONSTRUCTORA  ECHEVERRIA IZQUIERDO 2013/FOTOS PAGINA/IMG_6103.jpg",
+          "driveFileId": "1qDQWGn6Rwdfqu_COoxxSLX8GekPr4diy",
+          "driveFolderId": "1CsomSwpgMg8FYcszmCN7R3iTcqlc4RI5",
+          "sha256": "97027054ebf72cfe9e50139138ae50d156d36f510f5132fa4fc8b5ed15b10f8b",
+          "pixelSha256": "bd6893472085d7eeffc0de767d1d27c83842ae5eff90a15fd5c7048b3cf39c4e"
+        },
+        {
+          "asset": "imagenes-drive/hotel-plaza-el-bosque/732099b33e9c5ee609f1.webp",
+          "sourcePath": "HOTEL PLAZA EL BOSQUE CONSTRUCTORA  ECHEVERRIA IZQUIERDO 2013/FOTOS PAGINA/IMG_00000151.jpg",
+          "driveFileId": "1xKK0JtUjmaOGdO6IIj2P3c6OgDXfoWv5",
+          "driveFolderId": "1CsomSwpgMg8FYcszmCN7R3iTcqlc4RI5",
+          "sha256": "50e836e670c58051bf3eab407f7b486a5dbd057f6c5177a7c4bafb39b67451b2",
+          "pixelSha256": "732099b33e9c5ee609f1f90b85427c2640ae254f1efc921974f4f3c5baf803bd"
+        },
+        {
+          "asset": "imagenes-drive/hotel-plaza-el-bosque/7516a53870bb52854f0a.webp",
+          "sourcePath": "HOTEL PLAZA EL BOSQUE CONSTRUCTORA  ECHEVERRIA IZQUIERDO 2013/FOTOS PAGINA/IMG_00000161.jpg",
+          "driveFileId": "1n5QsYJJPKBf6z5zXKbDak8EDfcvcjqjB",
+          "driveFolderId": "1CsomSwpgMg8FYcszmCN7R3iTcqlc4RI5",
+          "sha256": "edc91edcfcd4c6987754f3687bf753c434d34b26543a6736bf668379337ad91f",
+          "pixelSha256": "7516a53870bb52854f0a7ae5ffb8c0607be6560fb2f84abba546f77ede13e752"
+        }
+      ]
+    },
+    {
+      "id": "parque-de-los-reyes",
+      "name": "Parque de los Reyes",
+      "selectionReason": "Separador esmerilado terminado. Se excluyen fachadas en construcción, película protectora y cinta; también la imagen 166.jpeg, de atribución ambigua con Bustamante.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1-qJ_9Epnfs_GnyQLZsrc3qfv1_2VIh3P",
+          "path": "PARQUE DE LOS REYES CONSTRUCTORA NAHMIAS 2016/Fotos Pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/parque-de-los-reyes/3b16fb2b11c903ccdac0.webp",
+          "sourcePath": "PARQUE DE LOS REYES CONSTRUCTORA NAHMIAS 2016/Fotos Pagina/165.jpeg",
+          "driveFileId": "1LOkbvIWM-pi41ANrGQu6ruA1YjVhPZmj",
+          "driveFolderId": "1-qJ_9Epnfs_GnyQLZsrc3qfv1_2VIh3P",
+          "sha256": "beab236d229f0c75fcb809540816c4c18db868fdd90109ddadeae916eb7d8a5b",
+          "pixelSha256": "3b16fb2b11c903ccdac0a58f7590997712db9234fbaf015c80cfacbdb9b8471b"
+        }
+      ]
+    },
+    {
+      "id": "angamos",
+      "name": "Angamos",
+      "selectionReason": "Una sola vista frontal completa de la fachada vidriada; las otras dos repiten el mismo edificio.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1gtDCBRp6hhAQRPMggqcweT2HKasTHkSQ",
+          "path": "STRIP CENTER ANGAMOS CONSTRUCTORA BMI (ANTOFAGASTA) 2018"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/angamos/dcc7ad37d7543cc78576.webp",
+          "sourcePath": "STRIP CENTER ANGAMOS CONSTRUCTORA BMI (ANTOFAGASTA) 2018/ANGAMOS-03.png",
+          "driveFileId": "1n5ZwrHrLHprXON5qNoASWiTicInSXupJ",
+          "driveFolderId": "1gtDCBRp6hhAQRPMggqcweT2HKasTHkSQ",
+          "sha256": "aff7d9b0c65a7fa1034b40e6262a6119610538c975458d92db6bbe44343128d4",
+          "pixelSha256": "dcc7ad37d7543cc785762bcd7167bcfa00a44bcee1fd10967ada98006277e6d9"
+        }
+      ]
+    },
+    {
+      "id": "comapa-punta-arenas",
+      "name": "Comapa",
+      "selectionReason": "Una vista completa de la cubierta vidriada, acceso exterior y puerta interior. La otra vista de cubierta repite el motivo.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1OjC_LBmxSKEwW0krzfFT2YC8BAJZMrWx",
+          "path": "COMAPA CONSTRUCTORA BRAVO IZQUIERDO (PUNTA ARENAS) 2018"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/comapa-punta-arenas/72955d310c4d28bd2e6d.webp",
+          "sourcePath": "COMAPA CONSTRUCTORA BRAVO IZQUIERDO (PUNTA ARENAS) 2018/COMAPA-2.jpg",
+          "driveFileId": "1x_7v43-dK4btp0i7nZ8-NxdyHl963NZi",
+          "driveFolderId": "1OjC_LBmxSKEwW0krzfFT2YC8BAJZMrWx",
+          "sha256": "c3b00af76ff90cfc7623204adf4f1e1540ddfd8dadbf08b355cb1b67271ef591",
+          "pixelSha256": "72955d310c4d28bd2e6d2ff82615166b30d1e0f8b0f93f30196eda5a29307525"
+        },
+        {
+          "asset": "imagenes-drive/comapa-punta-arenas/a90c0b26f84e9f9d23bd.webp",
+          "sourcePath": "COMAPA CONSTRUCTORA BRAVO IZQUIERDO (PUNTA ARENAS) 2018/COMAPA-3.jpg",
+          "driveFileId": "1g2ajaWkuQFpi9-6HBSOhyxAkmWqKGEvs",
+          "driveFolderId": "1OjC_LBmxSKEwW0krzfFT2YC8BAJZMrWx",
+          "sha256": "29b112f0e667eeadae29bb79ec19bb55257b5ccb31708cea2e7cd705a83e078a",
+          "pixelSha256": "a90c0b26f84e9f9d23bd23ada38cdca7b7a032fcdf85dfe9a959db1723d5636a"
+        },
+        {
+          "asset": "imagenes-drive/comapa-punta-arenas/a4fbd50e767c07977394.webp",
+          "sourcePath": "COMAPA CONSTRUCTORA BRAVO IZQUIERDO (PUNTA ARENAS) 2018/COMAPA-4.jpeg",
+          "driveFileId": "1qm9zV8xg9qEn0vIAchl2W2sVVDW1kJlD",
+          "driveFolderId": "1OjC_LBmxSKEwW0krzfFT2YC8BAJZMrWx",
+          "sha256": "677c443d2c96fb19eb94885b0c48b668c4d892f82a539f731a3ade8734802cef",
+          "pixelSha256": "a4fbd50e767c079773941a7976a1056a8b488db2a8a8e4fafd0ba17a9333ed0a"
+        }
+      ]
+    },
+    {
+      "id": "hotel-icon",
+      "name": "Hotel Icon",
+      "selectionReason": "Revisadas las 10 candidatas y ampliadas las dudosas. Portada 2: recepción terminada, con vidrio de marca. 7 muestra una sola vista limpia de piscina exterior y pasamanos; 4 el panel decorativo esmerilado; 9 el cierre de vidrio terminado del spa. Se descartan 5, 6 y 8 por repetir la piscina; 1 por repetir el vidrio de recepción, 3 por persona movida y menor claridad, y 10 por el aspecto polvoriento de escalera durante entrega/terminaciones.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1OTvfQ8_aAz2aLao5_e_6HY0kLLKFFG0j",
+          "path": "HOTEL ICON CONSTRUCTORA NAHMIAS 2018/Fotos Pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/hotel-icon/17d4b4f53119052613ad.webp",
+          "sourcePath": "HOTEL ICON CONSTRUCTORA NAHMIAS 2018/Fotos Pagina/WhatsApp Image 2026-09-03 at 13.37.32 (3).jpeg",
+          "driveFileId": "1J1N9YNgW5cKip5EefuPsXh0njwA-A6b7",
+          "driveFolderId": "1OTvfQ8_aAz2aLao5_e_6HY0kLLKFFG0j",
+          "sha256": "949c1bea13f7871e81e67d9a6052f741a2aa4898891eb59f495547a3fdc04c02",
+          "pixelSha256": "17d4b4f53119052613ad04e054aa40a39bb3bd1b5f19e2d22946da1db99fc23b"
+        },
+        {
+          "asset": "imagenes-drive/hotel-icon/3f4ae085277fe696a08d.webp",
+          "sourcePath": "HOTEL ICON CONSTRUCTORA NAHMIAS 2018/Fotos Pagina/20180412_130504.jpg",
+          "driveFileId": "1Xo_n-vqZYhZ3EXWY431zTSp8qHTRRxQ2",
+          "driveFolderId": "1OTvfQ8_aAz2aLao5_e_6HY0kLLKFFG0j",
+          "sha256": "01f97e7a394289ac1ce90a8f40845eab703d72612517c42b24b772843504a939",
+          "pixelSha256": "3f4ae085277fe696a08d008aebd26ba4c44e34e00e9c50a50eb74cebde2d0773"
+        },
+        {
+          "asset": "imagenes-drive/hotel-icon/f45105b231de36d79cb4.webp",
+          "sourcePath": "HOTEL ICON CONSTRUCTORA NAHMIAS 2018/Fotos Pagina/WhatsApp Image 2026-09-03 at 13.38.12.jpeg",
+          "driveFileId": "1wioCuf9blX0c0sI2lFahPckP56_PKe7T",
+          "driveFolderId": "1OTvfQ8_aAz2aLao5_e_6HY0kLLKFFG0j",
+          "sha256": "0f0b3c50d153d519780685afab540920f47080888154f6c53ea4748c3852d34a",
+          "pixelSha256": "f45105b231de36d79cb476c9d4afdfb0e8e116156eaa067cccc1fed5331e727f"
+        },
+        {
+          "asset": "imagenes-drive/hotel-icon/af434355dd6223777911.webp",
+          "sourcePath": "HOTEL ICON CONSTRUCTORA NAHMIAS 2018/Fotos Pagina/20180103_130857.jpg",
+          "driveFileId": "17Oi5PP2nmB8qkpXd_vWAPsqHWjKCB-WD",
+          "driveFolderId": "1OTvfQ8_aAz2aLao5_e_6HY0kLLKFFG0j",
+          "sha256": "f8d349a5a7644bd2b94535c3225a5856cd923112d6829ad7138bc9a660ba42b3",
+          "pixelSha256": "af434355dd62237779113a6445b3dc494be7b9b16b0198fd65ec20bc655d450b"
+        }
+      ]
+    },
+    {
+      "id": "malaga",
+      "name": "Malaga",
+      "selectionReason": "Revisión visual de las 8 candidatas de Fotos Pagina. Solo la fachada final de mejor calidad: 8 repite el edificio con peor ángulo y cableado prominente. Las fotos de duchas incluyen etiquetas y separadores de montaje, sanitario aún protegido, polvo o residuos en el piso; no se rellena la galería con esas tomas.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1Ux1a0hvrc7yFhlUJt4p8xC6FtHWi2b3H",
+          "path": "MALAGA 79  CONSTRUCTORA MENA Y OVALLE 2018/Fotos Pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/malaga/19f30b8e5fe489006ec0.webp",
+          "sourcePath": "MALAGA 79  CONSTRUCTORA MENA Y OVALLE 2018/Fotos Pagina/20260902_133331.jpg",
+          "driveFileId": "1yNZ0PvpDilD2DZEUrRC3eBxLnBLNoiou",
+          "driveFolderId": "1Ux1a0hvrc7yFhlUJt4p8xC6FtHWi2b3H",
+          "sha256": "2868510967104f2f9deaa99ce156ae6b60273edda4f9c523d6a173331c2117de",
+          "pixelSha256": "19f30b8e5fe489006ec0ab3b195919783be9161d0f5f95ebb9a7c113cab0aefe"
+        }
+      ]
+    },
+    {
+      "id": "puerta-del-sol",
+      "name": "Puerta del Sol",
+      "selectionReason": "Obra ausente de la carpeta Drive actual; selección visual sobre fotografías conservadas del sitio anterior. Única vista disponible de la fachada terminada.",
+      "status": "legacy-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "legacy-site",
+          "path": "legacy-site"
+        }
+      ],
+      "rootSourceUnavailable": true,
+      "images": [
+        {
+          "asset": "imagenes-optimizadas/2018 - PUERTA DEL SOL/PUERTA DEL SOL MENA Y OVALLE 2018--PUERTA-DEL-SOL--01.webp",
+          "sourcePath": "legacy-site/imagenes-optimizadas/2018 - PUERTA DEL SOL/PUERTA DEL SOL MENA Y OVALLE 2018--PUERTA-DEL-SOL--01.webp",
+          "driveFileId": "legacy-bcce04903efde79aa125",
+          "driveFolderId": "legacy-site",
+          "sha256": "7d1228f4bb3c5fc1d4fb3ad65f44d0b62014c13094bbffd0578287f1d868d2d9",
+          "pixelSha256": "bcce04903efde79aa12549b7a3166bea3536cb104916a495596615a8d1e7515b"
+        }
+      ]
+    },
+    {
+      "id": "torres-centenario-antofagasta",
+      "name": "Torres Centenario",
+      "selectionReason": "Revisadas las 10 candidatas. Edificio terminado como portada, cerramientos de vidrio de patio y vista complementaria de barandas y puertas del nivel superior. Se descartan la segunda toma de la misma fachada y las imágenes con revestimiento aún protegido, residuos de obra o pisos sin terminar.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1oCHwO7z6L5_zCbXsC758HALsRXy48Ch9",
+          "path": "TORRES CENTENARIO  CONSTRUCTORA MAR ABIERTO (ANTOFAGASTA) 2018"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/torres-centenario-antofagasta/d3838a0438c6da396f84.webp",
+          "sourcePath": "TORRES CENTENARIO  CONSTRUCTORA MAR ABIERTO (ANTOFAGASTA) 2018/CENTENARIO-01.jpg",
+          "driveFileId": "1BfqLnfQ11KCVenxFTPHgYGxJQnS-cn2G",
+          "driveFolderId": "1oCHwO7z6L5_zCbXsC758HALsRXy48Ch9",
+          "sha256": "a1f70a23a0d1687f00edfaffe15b117d0217e15df07775cd6813d6f906ff215a",
+          "pixelSha256": "d3838a0438c6da396f847a5d29dad4d033135799364668f4ecd43913b163572a"
+        },
+        {
+          "asset": "imagenes-drive/torres-centenario-antofagasta/5e0cf658ac0e9609c19d.webp",
+          "sourcePath": "TORRES CENTENARIO  CONSTRUCTORA MAR ABIERTO (ANTOFAGASTA) 2018/CENTENARIO-02.png",
+          "driveFileId": "1sHHvjfbjkGs7ZN7qBdfF0k6O00cBUH18",
+          "driveFolderId": "1oCHwO7z6L5_zCbXsC758HALsRXy48Ch9",
+          "sha256": "514e51f7a30fa94dbe6234fcf92fe373bcfbd1e6f12626ceec928f6f92071502",
+          "pixelSha256": "5e0cf658ac0e9609c19dc8c1a8272b65137e397b89edb6155b663a823ad49e29"
+        },
+        {
+          "asset": "imagenes-drive/torres-centenario-antofagasta/938714efff221a97ee13.webp",
+          "sourcePath": "TORRES CENTENARIO  CONSTRUCTORA MAR ABIERTO (ANTOFAGASTA) 2018/CENTENARIO-03.png",
+          "driveFileId": "1IPu2qgYzAloZw0CspAXwEpFkiTFGokZi",
+          "driveFolderId": "1oCHwO7z6L5_zCbXsC758HALsRXy48Ch9",
+          "sha256": "76a85ab30b386f5bc7857eb54aa200270efb4ff2e26891de28c3adbac1315973",
+          "pixelSha256": "938714efff221a97ee13321ec9c5ce343899654c5134bbf01c256d7d3b8981b0"
+        }
+      ]
+    },
+    {
+      "id": "nueva-manquehue",
+      "name": "Nueva Manquehue",
+      "selectionReason": "Revisión visual de las 8 candidatas de Fotos Pagina. Fachada terminada como portada y una vista amplia de los revestimientos de ascensores terminados. Se excluyen las botoneras provisionales con cinta de 2/5/6/8, el recorte repetido 3 y la puerta abierta sin contexto 7.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "12jnEcRWBSSzdxpe6MA5HN7jW1YMdSNA_",
+          "path": "NUEVA MANQUEHUE CONSTRUCTORA  ECHEVERRIA IZQUIERDO 2019/fotos pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/nueva-manquehue/0b6415d2dae3bd22bd65.webp",
+          "sourcePath": "NUEVA MANQUEHUE CONSTRUCTORA  ECHEVERRIA IZQUIERDO 2019/fotos pagina/20170205_105708 - copia.jpg",
+          "driveFileId": "1Sk_LxNDur7XUkmCz5JxvFOMeZvkifWgd",
+          "driveFolderId": "12jnEcRWBSSzdxpe6MA5HN7jW1YMdSNA_",
+          "sha256": "41be193daac04fa35f016940ec58052d6b44a823dfa2d83d59b26533f968732c",
+          "pixelSha256": "0b6415d2dae3bd22bd65888ea627dc02a2e6aebf0dba133feb501c33644ada60"
+        },
+        {
+          "asset": "imagenes-drive/nueva-manquehue/615be862cc4d0d1a1446.webp",
+          "sourcePath": "NUEVA MANQUEHUE CONSTRUCTORA  ECHEVERRIA IZQUIERDO 2019/fotos pagina/20170807_131722.jpg",
+          "driveFileId": "1fE9F4OBYmZsAMzlUhGUrRJSwWO3fqeYb",
+          "driveFolderId": "12jnEcRWBSSzdxpe6MA5HN7jW1YMdSNA_",
+          "sha256": "8067939b97c968a2d35d044a73cfdffc5dafcdbc6bed9460a17706bb5e5c71d1",
+          "pixelSha256": "615be862cc4d0d1a1446064669826a8687546df5e4a091e806c7c4d3b10fcddf"
+        }
+      ]
+    },
+    {
+      "id": "club-de-campo-vitacura",
+      "name": "Club de Campo Vitacura",
+      "selectionReason": "Revisadas las 22 candidatas de ambas hojas. Portada de edificio terminado; un detalle al atardecer de las barandas curvas; terraza amoblada; espejo iluminado; mampara de bañera; mampara de ducha a piso. Se descartan los otros nueve encuadres repetidos de fachada y balcón, las dos tomas del mismo separador y los duplicados de baños y espejos.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1U4Hjlh-1kWBdYUKLx30qYblk3NvWe-yO",
+          "path": "CLUB DE CAMPO CONSTRUCTORA NAHMIAS 2020 (EXTERIOR)"
+        },
+        {
+          "id": "1vW9Rl1wCttM0S5Vr2cf4erWw29XRr4e5",
+          "path": "CLUB DE CAMPO CONSTRUCTORA NAHMIAS 2020 (INTERIOR)"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/club-de-campo-vitacura/b31a5b5395f6f68afa9a.webp",
+          "sourcePath": "CLUB DE CAMPO CONSTRUCTORA NAHMIAS 2020 (EXTERIOR)/WhatsApp Image 2026-10-29 at 16.18.13 (1).jpeg",
+          "driveFileId": "1vRxCkbOxIdwWuR2G6E80udfYDI-JSHMg",
+          "driveFolderId": "1U4Hjlh-1kWBdYUKLx30qYblk3NvWe-yO",
+          "sha256": "848b9f633855f4ff4010c1ac956bbc9dfbf2ca34088968514849ccf916aca366",
+          "pixelSha256": "b31a5b5395f6f68afa9aa5ae091a4492fceb463422705b68257c0fab65447330"
+        },
+        {
+          "asset": "imagenes-drive/club-de-campo-vitacura/9652a5e4072749a9111a.webp",
+          "sourcePath": "CLUB DE CAMPO CONSTRUCTORA NAHMIAS 2020 (EXTERIOR)/CLUB-06.png",
+          "driveFileId": "1ylP4Mspd-j2pVqGzZbWe4IcqYeTLYDwg",
+          "driveFolderId": "1U4Hjlh-1kWBdYUKLx30qYblk3NvWe-yO",
+          "sha256": "dcab409a349e5be59badf7bf52f16d3cb53294169999b6bd1f579b3c89591a2b",
+          "pixelSha256": "9652a5e4072749a9111a12e24b65be6b89a81bc743537457779cf44e5ea7177a"
+        },
+        {
+          "asset": "imagenes-drive/club-de-campo-vitacura/827c6ae8a7fff21c07f1.webp",
+          "sourcePath": "CLUB DE CAMPO CONSTRUCTORA NAHMIAS 2020 (INTERIOR)/WhatsApp Image 2026-10-29 at 16.02.28.jpeg",
+          "driveFileId": "1Alh4EZ5EllQwstsCDjzpsrfmWrZwqomj",
+          "driveFolderId": "1vW9Rl1wCttM0S5Vr2cf4erWw29XRr4e5",
+          "sha256": "287fd1993efa087be3c083ad1bcb886a7c647805a08f5e7f99cc5f8181d7eb1b",
+          "pixelSha256": "827c6ae8a7fff21c07f13cefa3ddfd23c62175ab94ab810ad53d5f77720e30f0"
+        },
+        {
+          "asset": "imagenes-drive/club-de-campo-vitacura/6326e145fe4142ab6d22.webp",
+          "sourcePath": "CLUB DE CAMPO CONSTRUCTORA NAHMIAS 2020 (INTERIOR)/WhatsApp Image 2026-10-29 at 16.03.44.jpeg",
+          "driveFileId": "1n2i76ZqLPxWhT4Htbw-7JngN2NGYyFuX",
+          "driveFolderId": "1vW9Rl1wCttM0S5Vr2cf4erWw29XRr4e5",
+          "sha256": "f152752a7d8628a75ee7fc4aa5151686f89038a8fb68393b60abf2ac195ffc3f",
+          "pixelSha256": "6326e145fe4142ab6d22a495edae322e22328d5b72bd9ce34f99dc130eb07b90"
+        },
+        {
+          "asset": "imagenes-drive/club-de-campo-vitacura/7b2ed19e3d8adcfe9134.webp",
+          "sourcePath": "CLUB DE CAMPO CONSTRUCTORA NAHMIAS 2020 (INTERIOR)/CLUBIN-01.jpg",
+          "driveFileId": "1MerTf_18B0KORQNebzi_wyY144MMgkLD",
+          "driveFolderId": "1vW9Rl1wCttM0S5Vr2cf4erWw29XRr4e5",
+          "sha256": "c754a7ea70d39758acf65f094cd4e1b2049700d56104ce1d5a8fff2a7f8f6206",
+          "pixelSha256": "7b2ed19e3d8adcfe9134af2d30548f2477ded9cd6a044c5cc2949ec0cd9f1a9e"
+        },
+        {
+          "asset": "imagenes-drive/club-de-campo-vitacura/326a38bf1c1c45c78a1a.webp",
+          "sourcePath": "CLUB DE CAMPO CONSTRUCTORA NAHMIAS 2020 (INTERIOR)/WhatsApp Image 2026-10-29 at 16.03.45 (1).jpeg",
+          "driveFileId": "1w50RTy7g4puLBCtfEtdx2Dhr5d8E7j6I",
+          "driveFolderId": "1vW9Rl1wCttM0S5Vr2cf4erWw29XRr4e5",
+          "sha256": "f092045e253e214d3709a972ee19183ea2e90fe668c4c2a9c784c9810d83fc5c",
+          "pixelSha256": "326a38bf1c1c45c78a1ac889546e7bed709036abf6cdaab5a910a635120aec7b"
+        }
+      ]
+    },
+    {
+      "id": "onofre-jarpa",
+      "name": "Condominio Onofre Jarpa",
+      "selectionReason": "Baranda de escalera terminada y mampara de baño; se descarta la segunda vista de la misma escalera.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1V5KpjDx2j8ErqPWq-EHLnOr6iRJjw5Io",
+          "path": "CONDOMINIO ONOFRE JARPA CONSTRUCTORA SUR G 2021"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/onofre-jarpa/cec6a91684232a2b42de.webp",
+          "sourcePath": "CONDOMINIO ONOFRE JARPA CONSTRUCTORA SUR G 2021/ONOFRE-01.png",
+          "driveFileId": "1VzoHmNuPU0PkL7MLcXNLh24vhZliPRGU",
+          "driveFolderId": "1V5KpjDx2j8ErqPWq-EHLnOr6iRJjw5Io",
+          "sha256": "b2c601d532ed1434fba923914941124792f8f3b23ce18b8c9e6bc9b91d054fc5",
+          "pixelSha256": "cec6a91684232a2b42deadc96632761e0b868aac46d36b34992a7c6463554c5a"
+        },
+        {
+          "asset": "imagenes-drive/onofre-jarpa/6e426609ed7929a15f76.webp",
+          "sourcePath": "CONDOMINIO ONOFRE JARPA CONSTRUCTORA SUR G 2021/ONOFRE-3.jpeg",
+          "driveFileId": "1afBse5dBpjdib1xRZ121SP3pllWBqsyy",
+          "driveFolderId": "1V5KpjDx2j8ErqPWq-EHLnOr6iRJjw5Io",
+          "sha256": "0efdd8d2bf65bee790e03cb57806f46d1a346838226473ad9eafb1f0f7b5f2f3",
+          "pixelSha256": "6e426609ed7929a15f76d367be293a1dd8f6430dceac4015ceccd55f623ec718"
+        }
+      ]
+    },
+    {
+      "id": "puerto-nuevo-antofagasta",
+      "name": "Puerto Nuevo",
+      "selectionReason": "Revisadas las 8 candidatas. Vista clara del ascensor y plataformas acristaladas, escalera con baranda de vidrio y detalle complementario de anclajes de la plataforma. Se descartan otra toma del mismo ascensor, vista oscura desde su interior, los dos balcones en montaje y el pasillo con tableros y residuos.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1KZVQgZAje-mMuiJbGDJGXbv8uJRnzgJA",
+          "path": "PUERTO NUEVO CONSTRUCTORA  ECHEVERRIA IZQUIERDO (ANTOFAGASTA) 2021"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/puerto-nuevo-antofagasta/58ac04f91619cac0059c.webp",
+          "sourcePath": "PUERTO NUEVO CONSTRUCTORA  ECHEVERRIA IZQUIERDO (ANTOFAGASTA) 2021/PUERTO NUEVO 1.jpg",
+          "driveFileId": "1uS9rNuBi6w5fCWrH6PfJtYA3oWLLGnuv",
+          "driveFolderId": "1KZVQgZAje-mMuiJbGDJGXbv8uJRnzgJA",
+          "sha256": "0e1b01002d38362e81d18e3b728be65579bda3f1713ee5f0b2b3b43a524a783e",
+          "pixelSha256": "58ac04f91619cac0059cee463c1025d1a8106b246dee709cef4c9ddeef986940"
+        },
+        {
+          "asset": "imagenes-drive/puerto-nuevo-antofagasta/099a002a7267ab28d402.webp",
+          "sourcePath": "PUERTO NUEVO CONSTRUCTORA  ECHEVERRIA IZQUIERDO (ANTOFAGASTA) 2021/IMG_20190613_153814.jpg",
+          "driveFileId": "110g6kdLDLm_o5CQ6EWUY7GgGtt1xXOm_",
+          "driveFolderId": "1KZVQgZAje-mMuiJbGDJGXbv8uJRnzgJA",
+          "sha256": "1a9d09922d2257c83cd9b4698813a67e2acf5291baf60c58ab91c5841171acf8",
+          "pixelSha256": "099a002a7267ab28d40287d74b33107dff0b98444a98ff11c0e0d920e397a64a"
+        },
+        {
+          "asset": "imagenes-drive/puerto-nuevo-antofagasta/9b1339e4e8fab680d306.webp",
+          "sourcePath": "PUERTO NUEVO CONSTRUCTORA  ECHEVERRIA IZQUIERDO (ANTOFAGASTA) 2021/PUERTO NUEVO 2.jpg",
+          "driveFileId": "1nvpBcjnOyfcHrn4fyu8ALPeY_vNRNTLy",
+          "driveFolderId": "1KZVQgZAje-mMuiJbGDJGXbv8uJRnzgJA",
+          "sha256": "e6473e572c7dc0c9ed8c9962d16874dee9b570e6b6373657a9590ec250332e2e",
+          "pixelSha256": "9b1339e4e8fab680d306e99bf355a97aaa986d40bc39f0d99121d85d7ce4dea4"
+        }
+      ]
+    },
+    {
+      "id": "casa-italia",
+      "name": "Casa Italia",
+      "selectionReason": "Fachada terminada con ventanales y espejo de baño. Se excluye el acceso de ducha oscuro con piso aparentemente protegido.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1wJUOTRiia4Zs41KxRvpNtW88AnfVF9do",
+          "path": "CASA ITALIA CONSTRUCTORA TECTON 2022"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/casa-italia/7f815feacb1913cf4eab.webp",
+          "sourcePath": "CASA ITALIA CONSTRUCTORA TECTON 2022/CasaItalia-04.png",
+          "driveFileId": "1HlG54AVM1jCtG_dB9xRnsqRf4IsqmwRE",
+          "driveFolderId": "1wJUOTRiia4Zs41KxRvpNtW88AnfVF9do",
+          "sha256": "33fe80ab92b5e04549424cfdbeabae2174c5ace3d5f1b196ee7376a38c7ef5e4",
+          "pixelSha256": "7f815feacb1913cf4eabe34fff9b92dbd6f13872325bf8e121aa8f96a37ad31f"
+        },
+        {
+          "asset": "imagenes-drive/casa-italia/aec403daceb564ef11a5.webp",
+          "sourcePath": "CASA ITALIA CONSTRUCTORA TECTON 2022/CasaItalia-02.png",
+          "driveFileId": "1_QUcH5FtfVur2N0GA9bNm1oe3f7zcMoM",
+          "driveFolderId": "1wJUOTRiia4Zs41KxRvpNtW88AnfVF9do",
+          "sha256": "12b6fead64284a142cc419cbbc2bf4559d2bf9fe2cbcf71a16784c86b84249da",
+          "pixelSha256": "aec403daceb564ef11a56a0b4c864d8103175b68899e3fae5dcc0416099e62bd"
+        }
+      ]
+    },
+    {
+      "id": "edificio-el-roble",
+      "name": "Edificio El Roble",
+      "selectionReason": "Revisión visual de las 11 candidatas de fotos pagina. Marquesina y fachada exterior terminadas, más vista interior amplia de las divisiones de oficina en uso. Se excluyen controles de acceso con piso sucio, primeros planos parciales y nuevas vistas de la misma división que no agregan un producto distinto.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1aavk7pMW-EVd7lOlIqf41MH6pDb4h0V6",
+          "path": "EL ROBLE CONSTRUCTORA NAHMIAS 2021/fotos pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/edificio-el-roble/e6700eb79def5eb92694.webp",
+          "sourcePath": "EL ROBLE CONSTRUCTORA NAHMIAS 2021/fotos pagina/1502.jpeg",
+          "driveFileId": "1iHo1YIHeMuvuvUa6OtVdu4t_IoUx1-2F",
+          "driveFolderId": "1aavk7pMW-EVd7lOlIqf41MH6pDb4h0V6",
+          "sha256": "d101922bee03086c71c8559469c6380c0677557d3bdb9e8b570f8d66b75feb6f",
+          "pixelSha256": "e6700eb79def5eb9269417fc16d347a279c4e08010a1406cc37faea836d36f6f"
+        },
+        {
+          "asset": "imagenes-drive/edificio-el-roble/70b2bfa4df1eeb688de3.webp",
+          "sourcePath": "EL ROBLE CONSTRUCTORA NAHMIAS 2021/fotos pagina/1505.jpg",
+          "driveFileId": "1k3zdozcqe8sNDgIfKwvx0hzphE-OQxZO",
+          "driveFolderId": "1aavk7pMW-EVd7lOlIqf41MH6pDb4h0V6",
+          "sha256": "e15dd624602e1706a63f57c9c60fc314f66b79e1545c9b92691ae281d1f19fd5",
+          "pixelSha256": "70b2bfa4df1eeb688de30d75ef4f4825710ee9a9808e969736d0ad061ccc6142"
+        }
+      ]
+    },
+    {
+      "id": "la-capitania",
+      "name": "La Capitania",
+      "selectionReason": "Revisión visual de las 9 candidatas de FOTOS PAGINA. Puerta de oficina ya instalada, espejo de baño y mampara de ducha: tres productos distintos. Se excluyen la oficina con balde y sopapas, reflejos de limpieza en la cocina, los ángulos casi idénticos 8/9, el recorte de perfil 4 y el paño parcial 1.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "12C9fvQ9Bn_mEEGskIPOoXDNGsjEIsOTl",
+          "path": "LA CAPITANIA CONSTRUCTORA NAHMIAS 2018/FOTOS PAGINA"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/la-capitania/f105332d7ad01db3fe6f.webp",
+          "sourcePath": "LA CAPITANIA CONSTRUCTORA NAHMIAS 2018/FOTOS PAGINA/20190618_143744.jpg",
+          "driveFileId": "1iKSgKKcTmKT4w6Het9p9OqrsU4LQMoxG",
+          "driveFolderId": "12C9fvQ9Bn_mEEGskIPOoXDNGsjEIsOTl",
+          "sha256": "70a6791dfa2e6662960fd5e59c2a55c6e891bf08cffe5ebf4830a22b5e077ced",
+          "pixelSha256": "f105332d7ad01db3fe6fba3475e1757207d9a36d203c26afc208e096f2a7d509"
+        },
+        {
+          "asset": "imagenes-drive/la-capitania/e3ef9b3a0f052bbfccb6.webp",
+          "sourcePath": "LA CAPITANIA CONSTRUCTORA NAHMIAS 2018/FOTOS PAGINA/20190618_144252.jpg",
+          "driveFileId": "1RbcgQDeil6mw1Wv7tMqW4KIPKab6ZfqZ",
+          "driveFolderId": "12C9fvQ9Bn_mEEGskIPOoXDNGsjEIsOTl",
+          "sha256": "100040e5254bc113d87c3cb8dfdbaeaab8a35937657f692ebcd92ddd9178fc6d",
+          "pixelSha256": "e3ef9b3a0f052bbfccb68a18fabb1808334fd7d81d219112331dea2f1c9866f7"
+        },
+        {
+          "asset": "imagenes-drive/la-capitania/1c315345f4f159567234.webp",
+          "sourcePath": "LA CAPITANIA CONSTRUCTORA NAHMIAS 2018/FOTOS PAGINA/20190618_144247.jpg",
+          "driveFileId": "1W0jMn0cJi-sBkX1efBHg50KjblR_gJk-",
+          "driveFolderId": "12C9fvQ9Bn_mEEGskIPOoXDNGsjEIsOTl",
+          "sha256": "0115288eda4d14e68fb4b9f31becbadea48525293a45b415e3fcf541bec38e92",
+          "pixelSha256": "1c315345f4f15956723400e3c2c84222170e369f798fdb112c50ae91a54346a5"
+        }
+      ]
+    },
+    {
+      "id": "pedro-navia",
+      "name": "Pedro Navia",
+      "selectionReason": "Una vista limpia y frontal de la lucarna terminada, más baranda interior. Se descarta el segundo ángulo de la lucarna.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1ybUAKEe8vyHVov9uQLYXMBJX5VzB8dwV",
+          "path": "PEDRO NAVIA CONSTRUCTORA TECTON 2022"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/pedro-navia/da475090aa68be5ab56d.webp",
+          "sourcePath": "PEDRO NAVIA CONSTRUCTORA TECTON 2022/PEDRO-03.png",
+          "driveFileId": "1YZP1nXNlHtO3WpbByQDiOr2tS7HYj3Wc",
+          "driveFolderId": "1ybUAKEe8vyHVov9uQLYXMBJX5VzB8dwV",
+          "sha256": "2856443102cb996a534448af40058d000ed780df7beb6e38bc3b7183f3875c00",
+          "pixelSha256": "da475090aa68be5ab56d373400d6bf31c8791fefa199fc76ae93caa9fca303a4"
+        },
+        {
+          "asset": "imagenes-drive/pedro-navia/c75e3eb43b18ff9079e0.webp",
+          "sourcePath": "PEDRO NAVIA CONSTRUCTORA TECTON 2022/PEDRO-01.png",
+          "driveFileId": "1uh9BkFObLTWzHqBaWXiyZb2NuSS3ewA9",
+          "driveFolderId": "1ybUAKEe8vyHVov9uQLYXMBJX5VzB8dwV",
+          "sha256": "31b43ff64f5f008e323f7f8dadc33ee4cf5c47fab616a91c5707e9aaddd8e923",
+          "pixelSha256": "c75e3eb43b18ff9079e01a2a65523e8e35720c173fbbaaa02e3490176853a0b8"
+        }
+      ]
+    },
+    {
+      "id": "bustamante",
+      "name": "Bustamante",
+      "selectionReason": "Revisadas las 13 candidatas. Se conserva la mejor fachada amplia, una vista complementaria del patio con sus balcones, un espejo de baño terminado y el espejo integrado al mobiliario del hall. Se excluyen fachada con protecciones de obra, tomas repetidas, el pasillo con cable temporal y marcas de instalación, y la baranda interior con plásticos. Se excluye #9, idéntica a Parque de los Reyes #2, por atribución ambigua.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1QYfOyI5gkDBRCu6juHyYfHOojjLtRxVR",
+          "path": "BUSTAMANTE CONSTRUCTORA NAHMIAS 2024 (EXTERIOR)"
+        },
+        {
+          "id": "1c-jQ-Ww0TXwK8PG6tSPGWsjRxw-bWTvh",
+          "path": "BUSTAMANTE CONSTRUCTORA NAHMIAS 2024 (INTERIOR)"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/bustamante/1e472b0146c13d0f991d.webp",
+          "sourcePath": "BUSTAMANTE CONSTRUCTORA NAHMIAS 2024 (EXTERIOR)/Bustamante-01.png",
+          "driveFileId": "1VZlYZ2di0aU2WmYJRsneT5KZopPNW7Pp",
+          "driveFolderId": "1QYfOyI5gkDBRCu6juHyYfHOojjLtRxVR",
+          "sha256": "094367a83af42234e340d595eb25fb3e88286faf792a296179de14e06d90ed92",
+          "pixelSha256": "1e472b0146c13d0f991d7dd9aaeffa56d9548b0821c375644a7a1baf343daff7"
+        },
+        {
+          "asset": "imagenes-drive/bustamante/05e463420bc9377be957.webp",
+          "sourcePath": "BUSTAMANTE CONSTRUCTORA NAHMIAS 2024 (EXTERIOR)/Bustamante-03.png",
+          "driveFileId": "1SpKm7s4UHB0aBNOI0JYFKHL_TwsWptqT",
+          "driveFolderId": "1QYfOyI5gkDBRCu6juHyYfHOojjLtRxVR",
+          "sha256": "0a807957985b5fe8856033f62242d2311e96f502d28cab41f55735ca6dee6963",
+          "pixelSha256": "05e463420bc9377be9573a3c341d875b665ee728a6eea43287ea5e03a947058e"
+        },
+        {
+          "asset": "imagenes-drive/bustamante/7223cf3d81431c416361.webp",
+          "sourcePath": "BUSTAMANTE CONSTRUCTORA NAHMIAS 2024 (INTERIOR)/BUSTAMANTEIN-1.jpg",
+          "driveFileId": "1PEZu6hLlGcwDFgZ69Wda_PVRvghnljAU",
+          "driveFolderId": "1c-jQ-Ww0TXwK8PG6tSPGWsjRxw-bWTvh",
+          "sha256": "331382bdb12599b31e8b836788b20b377ccc307cc75e8ecfe433c0fbb7435ae6",
+          "pixelSha256": "7223cf3d81431c41636198f919b91b96421b4fe504254ee28121b3105ea880a9"
+        },
+        {
+          "asset": "imagenes-drive/bustamante/20e1869552219ab27b62.webp",
+          "sourcePath": "BUSTAMANTE CONSTRUCTORA NAHMIAS 2024 (INTERIOR)/BUSTAMANTEIN-4.png",
+          "driveFileId": "1zV7PZhvxbwffcmUzrOST0wSfElRZBqPd",
+          "driveFolderId": "1c-jQ-Ww0TXwK8PG6tSPGWsjRxw-bWTvh",
+          "sha256": "68026d687f9e95e6df642e6db8a9e511c1acecf15739c313439edcd8f3b3aeb4",
+          "pixelSha256": "20e1869552219ab27b62ef31a48cccfbf12576ee005cea3d64ace2f164b567e2"
+        }
+      ]
+    },
+    {
+      "id": "data-center-chile-3",
+      "name": "Data Center Chile 3",
+      "selectionReason": "Revisadas visualmente las 12 candidatas de la carpeta de obra. Portada de puerta doble de cristal terminada; baranda inoxidable de circulación; acceso de oficina con marco; baranda de cristal con pasamanos en escalera. Son cuatro aplicaciones diferentes. Se excluyen adhesivos de montaje, escalera de mano, techos abiertos, operarios, conos y ángulos repetidos de la misma baranda. La 1 muestra la instalación terminada y un envase pequeño de sellante en el piso; se mantiene al final para documentar esa aplicación única, sin usarla de portada.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1fnbBeqr7_eq0vFNq5q5OeOVkHCIFoCy5",
+          "path": "DATA-CENTER CHILE III CONSTRUCTORA PUERTO OCTAY 2024"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/data-center-chile-3/8a29aa3537387da2db88.webp",
+          "sourcePath": "DATA-CENTER CHILE III CONSTRUCTORA PUERTO OCTAY 2024/DATA-3.jpg",
+          "driveFileId": "1zBqUrWfBqyp5N-kwfifizZBKBqiP4kOk",
+          "driveFolderId": "1fnbBeqr7_eq0vFNq5q5OeOVkHCIFoCy5",
+          "sha256": "e146860778edbd4c09c1661899bef8568faae3b32a0eb72196c4ac5f20a57da4",
+          "pixelSha256": "8a29aa3537387da2db886d368a3040ec62c427ba33ae288ebd52f240fc5e9100"
+        },
+        {
+          "asset": "imagenes-drive/data-center-chile-3/0ebc572c527ebd36b20b.webp",
+          "sourcePath": "DATA-CENTER CHILE III CONSTRUCTORA PUERTO OCTAY 2024/DATA-2.jpg",
+          "driveFileId": "1s0iuwo7KxQ-o2JIxFAwLwPLObuny2S6J",
+          "driveFolderId": "1fnbBeqr7_eq0vFNq5q5OeOVkHCIFoCy5",
+          "sha256": "55f329add464d08a3cd05eb602c1dad864e43aba847755588f51edabe6beb11c",
+          "pixelSha256": "0ebc572c527ebd36b20b2402d2cf26b06ceb3c6896f7a6a7c371adbeaa3cc80a"
+        },
+        {
+          "asset": "imagenes-drive/data-center-chile-3/15261e9da8ca04f7e32e.webp",
+          "sourcePath": "DATA-CENTER CHILE III CONSTRUCTORA PUERTO OCTAY 2024/DATA-4.jpg",
+          "driveFileId": "1YY6GD-pCsudmgChO68f8RILY6Ucb1Ept",
+          "driveFolderId": "1fnbBeqr7_eq0vFNq5q5OeOVkHCIFoCy5",
+          "sha256": "6607d4104e45807ca0233574db02286eec8c6d4ef8f8d78b0d511faad9129b64",
+          "pixelSha256": "15261e9da8ca04f7e32e348a937ae1df64ff145c2a8e21e64a3f0cd422332b46"
+        },
+        {
+          "asset": "imagenes-drive/data-center-chile-3/d2e0529a99e9f5f378d8.webp",
+          "sourcePath": "DATA-CENTER CHILE III CONSTRUCTORA PUERTO OCTAY 2024/DATA-1.jpg",
+          "driveFileId": "1EqY8hEPBwAJaV_akVtju8Wqx5djGHAM6",
+          "driveFolderId": "1fnbBeqr7_eq0vFNq5q5OeOVkHCIFoCy5",
+          "sha256": "910bb467174fee6787b8ff4823bdaabd681e1ea8eb388627c470bd631d6f1fe6",
+          "pixelSha256": "d2e0529a99e9f5f378d8a2008a32bf13dc67b5a9ef6581ddc8471f61a09be6fb"
+        }
+      ]
+    },
+    {
+      "id": "jofre",
+      "name": "Jofre",
+      "selectionReason": "Espejos de sala y espejo de baño, dos aplicaciones distintas disponibles.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1zW742iRZJTZJSZmXQna0FKO6qdKaCPK_",
+          "path": "JOFRE CONSTRUCTORA  NAHMIAS 2024"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/jofre/a99454d6f3aa8a46c90e.webp",
+          "sourcePath": "JOFRE CONSTRUCTORA  NAHMIAS 2024/JOFRE-3.jpg",
+          "driveFileId": "1gueE39-nnNFpwXT9KgPWxtoi1n-_JeuU",
+          "driveFolderId": "1zW742iRZJTZJSZmXQna0FKO6qdKaCPK_",
+          "sha256": "2e5c50e3b1db7e7014c81470f956eedef56c26e9dcddad316e3690a94c01c37d",
+          "pixelSha256": "a99454d6f3aa8a46c90e3697dffa4d3b9734f25620ef2d8c2977de671bca781d"
+        },
+        {
+          "asset": "imagenes-drive/jofre/1d226ecf8619655328f2.webp",
+          "sourcePath": "JOFRE CONSTRUCTORA  NAHMIAS 2024/JOFRE-4.jpg",
+          "driveFileId": "1VXJ8N0NmEcJEtWAlGiPCBJhFcxP4mWyu",
+          "driveFolderId": "1zW742iRZJTZJSZmXQna0FKO6qdKaCPK_",
+          "sha256": "cefe64ae3f951b90f619b6ec2558e15a6bfd18512260d877d62440472acd1435",
+          "pixelSha256": "1d226ecf8619655328f2f69804a202caf0d094c9151d95139071c676d4d0e41d"
+        }
+      ]
+    },
+    {
+      "id": "jose-domingo-canas",
+      "name": "Jose Domingo Cañas Torre I y II",
+      "selectionReason": "Piscina terminada con pasamanos, fachada del edificio y detalle de baranda y pasamanos de la terraza. Cada vista documenta una aplicación o escala distinta.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1XZoAGt2-6FDXc7Zvuo-Eevr0mBb4i_DG",
+          "path": "JOSE DOMINGO CAÑAS CONSTRUCTORA NAHMIAS 2024"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/jose-domingo-canas/c157b1f9411c97c02a89.webp",
+          "sourcePath": "JOSE DOMINGO CAÑAS CONSTRUCTORA NAHMIAS 2024/JOSE-01.png",
+          "driveFileId": "1XzuLRy9ilS2cXrQYuepS-9sRyvkZsNbL",
+          "driveFolderId": "1XZoAGt2-6FDXc7Zvuo-Eevr0mBb4i_DG",
+          "sha256": "631213e06d7095e7f10007903ceb352b2090ecbb07cced4361c7ccff061fd083",
+          "pixelSha256": "c157b1f9411c97c02a89cdc5c496667c7a1cb9ca2a607ee9091a591fa1a76480"
+        },
+        {
+          "asset": "imagenes-drive/jose-domingo-canas/8d396415a35cb0aaec9b.webp",
+          "sourcePath": "JOSE DOMINGO CAÑAS CONSTRUCTORA NAHMIAS 2024/JOSE-2.jpg",
+          "driveFileId": "1Jdp6yP1RQC_QtGiLSxBpWya7qQBuyc_d",
+          "driveFolderId": "1XZoAGt2-6FDXc7Zvuo-Eevr0mBb4i_DG",
+          "sha256": "a6ab853a325493dcaf3bb2480f245ce6fe00a7fabdaec6f8a87fc1bdcc465069",
+          "pixelSha256": "8d396415a35cb0aaec9b6e13d19b5395d8d3f5af2cfaa0765ba9baedd90c9117"
+        },
+        {
+          "asset": "imagenes-drive/jose-domingo-canas/eee465afdc3bb3f766d8.webp",
+          "sourcePath": "JOSE DOMINGO CAÑAS CONSTRUCTORA NAHMIAS 2024/JOSE-4.jpg",
+          "driveFileId": "1SK58KD-bHArYG2a23hgmMqu8Uw2s59tx",
+          "driveFolderId": "1XZoAGt2-6FDXc7Zvuo-Eevr0mBb4i_DG",
+          "sha256": "0c47b7232a8417a5659a808f1f1e3a8706e19609f307cecb2d591a8d3cc6170b",
+          "pixelSha256": "eee465afdc3bb3f766d868eddfb3c938ef9f00da883df4a62ce2d7295f4dd586"
+        }
+      ]
+    },
+    {
+      "id": "lote-19",
+      "name": "Lote 19",
+      "selectionReason": "Obra ausente de la carpeta Drive actual; selección visual sobre fotografías conservadas del sitio anterior. Espejo del gimnasio y espejo de baño; se omite el segundo ángulo del gimnasio.",
+      "status": "legacy-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "legacy-site",
+          "path": "legacy-site"
+        }
+      ],
+      "rootSourceUnavailable": true,
+      "images": [
+        {
+          "asset": "imagenes-optimizadas/2024 - LOTE 19/LOTE 19 IGNACIO HURTADO 2024--LOTE-19--02.webp",
+          "sourcePath": "legacy-site/imagenes-optimizadas/2024 - LOTE 19/LOTE 19 IGNACIO HURTADO 2024--LOTE-19--02.webp",
+          "driveFileId": "legacy-b0d58b7c13bd3e5e231b",
+          "driveFolderId": "legacy-site",
+          "sha256": "7920f4c19fde7c5ade22f77a43e4ffde9ec556ac2c9fdc2a957f93e3e0ef7c71",
+          "pixelSha256": "b0d58b7c13bd3e5e231bf967273fc2a6f3a3892ef93f5911840bc8a14415c346"
+        },
+        {
+          "asset": "imagenes-optimizadas/2024 - LOTE 19/LOTE 19 IGNACIO HURTADO 2024--LOTE-19--03.webp",
+          "sourcePath": "legacy-site/imagenes-optimizadas/2024 - LOTE 19/LOTE 19 IGNACIO HURTADO 2024--LOTE-19--03.webp",
+          "driveFileId": "legacy-6e65b756e5922c743d0a",
+          "driveFolderId": "legacy-site",
+          "sha256": "cc46367223e7b270ef55caac2d42fbb9f0c857a426f6c363b012410287128a26",
+          "pixelSha256": "6e65b756e5922c743d0a370a073fc575c7f32485c2d2c63a92abcb5f89daa112"
+        }
+      ]
+    },
+    {
+      "id": "principe-de-gales",
+      "name": "Principe de Gales",
+      "selectionReason": "Escalera con barandas, terraza terminada y puertas esmeriladas. Se omite la puerta aislada oscura con poco contexto.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1BwfBtdl_F638TlM_KGz9gOgXlDAm_-i2",
+          "path": "PRINCIPE DE GALES CONSTRUCTORA ECHEVERRIA IZQUIERDO 2024"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/principe-de-gales/7f33dbd39b69caf18080.webp",
+          "sourcePath": "PRINCIPE DE GALES CONSTRUCTORA ECHEVERRIA IZQUIERDO 2024/GALES-02.jpg",
+          "driveFileId": "1PB5FJuteTPeIqMJQOWR6cGkw4cdBjMdk",
+          "driveFolderId": "1BwfBtdl_F638TlM_KGz9gOgXlDAm_-i2",
+          "sha256": "4d67573fb5dd64c3d27d1f9bce2fd8e553b4c9ff4a944ad2280ea8571d043d13",
+          "pixelSha256": "7f33dbd39b69caf18080520b30115f8dbe45d58cd5592c815d3396ba3b8678b3"
+        },
+        {
+          "asset": "imagenes-drive/principe-de-gales/e5c055f633b805b05829.webp",
+          "sourcePath": "PRINCIPE DE GALES CONSTRUCTORA ECHEVERRIA IZQUIERDO 2024/GALES-03.jpg",
+          "driveFileId": "1J1Yh1z6D-aMHcbDFoNxB-_r4TVG8Vf5e",
+          "driveFolderId": "1BwfBtdl_F638TlM_KGz9gOgXlDAm_-i2",
+          "sha256": "be11b8698b83523fd50a5105bf12f2397ec10cfa7a41e3fe743e3169b2f5402e",
+          "pixelSha256": "e5c055f633b805b05829988457ec474c2bf0561dd13cc391a7998c4af4576057"
+        },
+        {
+          "asset": "imagenes-drive/principe-de-gales/7bc09a72908312031e83.webp",
+          "sourcePath": "PRINCIPE DE GALES CONSTRUCTORA ECHEVERRIA IZQUIERDO 2024/GALES-04.jpg",
+          "driveFileId": "1dA-17AW4liHCWVVznyoRRfX-Sk1WgwJU",
+          "driveFolderId": "1BwfBtdl_F638TlM_KGz9gOgXlDAm_-i2",
+          "sha256": "37f2ae7c71ce6ec0ba21f8bbcc2b8f863063e34821f2837653a7698c51eb41ef",
+          "pixelSha256": "7bc09a72908312031e832d3f2ce9e7a617140cdc5fb81dae576ab2c61b92c485"
+        }
+      ]
+    },
+    {
+      "id": "angamos-nahmias",
+      "name": "Angamos",
+      "selectionReason": "Espejo amplio del recinto común y espejo de baño terminado. Se omiten las vistas repetidas del baño y la cortina con utensilios de limpieza.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1ompChNaehmgM9kQaXYd1cp-zAvb0XV1L",
+          "path": "ANGAMOS CONSTRUCTORA NAHMIAS 2025"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/angamos-nahmias/d309bd49e3a289c1b1c5.webp",
+          "sourcePath": "ANGAMOS CONSTRUCTORA NAHMIAS 2025/ANGAMOSNAMIAS-3.png",
+          "driveFileId": "1h6L5LzzFhNQNZBAKtw8lR-VOCtC3Hxtw",
+          "driveFolderId": "1ompChNaehmgM9kQaXYd1cp-zAvb0XV1L",
+          "sha256": "bc8e10b12d41d1a87de3ab83d5ebdb081519750144e6b9eff7029572eb921626",
+          "pixelSha256": "d309bd49e3a289c1b1c53826202c33dc564121bf987171052127cd805178a223"
+        },
+        {
+          "asset": "imagenes-drive/angamos-nahmias/4f07665489625ed7d3fa.webp",
+          "sourcePath": "ANGAMOS CONSTRUCTORA NAHMIAS 2025/ANGAMOSNAMIAS-4.jpg",
+          "driveFileId": "1Ps73h2VPsYXcqgnxIjKKAWoRrY_Vg04d",
+          "driveFolderId": "1ompChNaehmgM9kQaXYd1cp-zAvb0XV1L",
+          "sha256": "ebbff6e6157a46d3b96f00eba8aad88c334ccff02ef048e6180742228533de3f",
+          "pixelSha256": "4f07665489625ed7d3faeb6ef8aa6e15e4159a7dd5349b06bf68774d25096fcb"
+        }
+      ]
+    },
+    {
+      "id": "burgos",
+      "name": "Burgos",
+      "selectionReason": "Mampara completa y espejo amplio del lavamanos doble. Se omiten un detalle repetido de la mampara y el segundo espejo con menor contexto.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "11-yvfswSs3uHZIzaH68MhBTccGETnLZa",
+          "path": "BURGOS CONSTRUCTORA TECTON 2025"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/burgos/1521cfdbf5f7478d9018.webp",
+          "sourcePath": "BURGOS CONSTRUCTORA TECTON 2025/BURGOS-2.jpg",
+          "driveFileId": "1Xra0t6N-MVI0pNp9UL7pLuiHKcN6brn1",
+          "driveFolderId": "11-yvfswSs3uHZIzaH68MhBTccGETnLZa",
+          "sha256": "990b1bd5a2b43167e3a1300e2a6e5676cf622ae0eaf7512687005893aef267bb",
+          "pixelSha256": "1521cfdbf5f7478d901866f6d8d1b21f4381e8855aaceffff11372c3a3d9905e"
+        },
+        {
+          "asset": "imagenes-drive/burgos/c2d662f9e7d4d373cb1f.webp",
+          "sourcePath": "BURGOS CONSTRUCTORA TECTON 2025/BURGOS-4.jpg",
+          "driveFileId": "1k2pBE_Cih4giSYZq_km5mvoGcBfiAE8E",
+          "driveFolderId": "11-yvfswSs3uHZIzaH68MhBTccGETnLZa",
+          "sha256": "d00791e60bb03950ebd8469ee98f37bd1f911b7d98b06a725842e6b354c9cc67",
+          "pixelSha256": "c2d662f9e7d4d373cb1fc1b0111d74d3a3628ccf3a876897cfcd0c5f217e0c5b"
+        }
+      ]
+    },
+    {
+      "id": "data-center-scala-santa-teresa",
+      "name": "Data Center Scala Santa Teresa",
+      "selectionReason": "Revisadas visualmente las 6 candidatas de la carpeta de obra. Vista general final del acceso, fachada y barandas, más detalle del revestimiento inferior del canopy terminado. Se omiten nuevas tomas del mismo letrero, la fachada distante con materiales delante y la zona de carga con una abertura de muro aún sin terminar.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1-Hp4Zcu8rgehPAmLRUK4QUicY8v7SP03",
+          "path": "DATA-CENTER SCALA CONSTRUCTORA PUERTO OCTAY 2025"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/data-center-scala-santa-teresa/89cdbff818a7492ee1ce.webp",
+          "sourcePath": "DATA-CENTER SCALA CONSTRUCTORA PUERTO OCTAY 2025/SCALA-2.png",
+          "driveFileId": "1R0UolKZ8RJMabU8TfzVrJbmtoyXhSYAH",
+          "driveFolderId": "1-Hp4Zcu8rgehPAmLRUK4QUicY8v7SP03",
+          "sha256": "b9d6656917174e9f23b57ee1f1373e2792b85232a59263bc6a4bf3a81c67972f",
+          "pixelSha256": "89cdbff818a7492ee1ce3231ebdbd2bce2aad07bfc00b64545122a814d6ff614"
+        },
+        {
+          "asset": "imagenes-drive/data-center-scala-santa-teresa/49442526083df4a7228f.webp",
+          "sourcePath": "DATA-CENTER SCALA CONSTRUCTORA PUERTO OCTAY 2025/SCALA-3.jpg",
+          "driveFileId": "1NczGAr0Udi4WsUP6oKnhzEXhsD51Eq51",
+          "driveFolderId": "1-Hp4Zcu8rgehPAmLRUK4QUicY8v7SP03",
+          "sha256": "f045ccfac7470b056d7628e8ed1ff1d96883984b502ad398e64d3488ee395d85",
+          "pixelSha256": "49442526083df4a7228f655f8b0a31fdbf0501cce9fbf9ec02e699dd73c8182e"
+        }
+      ]
+    },
+    {
+      "id": "tavelli",
+      "name": "Tavelli",
+      "selectionReason": "Revisadas las 5 candidatas. Todas muestran la misma mampara de ducha; se conserva una única vista general terminada, sin el reflejo de una persona ni los protectores de instalación de las variantes.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "162ksNrpPL431oZuvi3VeCuiOw9vQQ_76",
+          "path": "TAVELLI CONSTRUCTORA NHAMIAS 2025"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/tavelli/cd5587d59a98ab3fc84d.webp",
+          "sourcePath": "TAVELLI CONSTRUCTORA NHAMIAS 2025/Tavelli-01.png",
+          "driveFileId": "1WitLhiYRk5sAqUpdslxwYBG_huaktGn0",
+          "driveFolderId": "162ksNrpPL431oZuvi3VeCuiOw9vQQ_76",
+          "sha256": "90d518e0708c0809b1c2970e28b527619c3e040c35f67cd899bca4c0f97dcd18",
+          "pixelSha256": "cd5587d59a98ab3fc84dbe7e3c9810d3c4758f3ebc616d334b1c57822d5b7903"
+        }
+      ]
+    },
+    {
+      "id": "apoquindo-los-militares",
+      "name": "Apoquindo Los Militares",
+      "selectionReason": "Escalera iluminada terminada, separador esmerilado de terraza y baranda de balcón. Se eliminan las vistas del edificio en construcción, las barreras, las herramientas y todos los ángulos repetidos de la escalera.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "19j0eoB9Sd9JldBHEAfPHM71Qdc8Z9fK7",
+          "path": "APOQUINDO LOS MILITARES CONSTRUCTORA ECHEVERRIA IZQUIERDO 2025 (EN INSTALACION)/fotos pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/apoquindo-los-militares/8c9ffd52fc6fa2717563.webp",
+          "sourcePath": "APOQUINDO LOS MILITARES CONSTRUCTORA ECHEVERRIA IZQUIERDO 2025 (EN INSTALACION)/fotos pagina/WhatsApp Image 2026-10-27 at 12.03.31.jpeg",
+          "driveFileId": "1VTIldz8ha0hjHjTmI2FkF9YtTNQDx9A1",
+          "driveFolderId": "19j0eoB9Sd9JldBHEAfPHM71Qdc8Z9fK7",
+          "sha256": "46434393302316be5bf33a91575721290d27300587cfc9bd5091843a2bc7e266",
+          "pixelSha256": "8c9ffd52fc6fa271756382f494f0b445c973baba572df1abb7d9881ba21b9595"
+        },
+        {
+          "asset": "imagenes-drive/apoquindo-los-militares/5861fd4c195426fb1fd3.webp",
+          "sourcePath": "APOQUINDO LOS MILITARES CONSTRUCTORA ECHEVERRIA IZQUIERDO 2025 (EN INSTALACION)/fotos pagina/20260814_155541(0).jpg",
+          "driveFileId": "1FY8UokQkbSv1Q90F9I3GgqILqhhIC-ID",
+          "driveFolderId": "19j0eoB9Sd9JldBHEAfPHM71Qdc8Z9fK7",
+          "sha256": "1caee2bde3df95925d2ac448f9247dd6976c821b163476c3304bfb845fe02ad2",
+          "pixelSha256": "5861fd4c195426fb1fd3f1bc9c3d000782659c27484b0f1a724197410ea7ff88"
+        },
+        {
+          "asset": "imagenes-drive/apoquindo-los-militares/50ed0257adcbe6b218af.webp",
+          "sourcePath": "APOQUINDO LOS MILITARES CONSTRUCTORA ECHEVERRIA IZQUIERDO 2025 (EN INSTALACION)/fotos pagina/WhatsApp Image 2026-10-27 at 12.03.34 (4).jpeg",
+          "driveFileId": "1ArSKxS7DwUpno5ZnBlWUotkpYcIxEcAQ",
+          "driveFolderId": "19j0eoB9Sd9JldBHEAfPHM71Qdc8Z9fK7",
+          "sha256": "8c1b8eaf53acf97ebeffdb70379e97718089b9a9c2993a50089bbe27663ee646",
+          "pixelSha256": "50ed0257adcbe6b218af3d71155057bada8b6e1d07616377449fdcc7548c4c64"
+        }
+      ]
+    },
+    {
+      "id": "el-sauce",
+      "name": "El Sauce 3",
+      "selectionReason": "Una baranda terminada vista desde la terraza y una vista exterior general con sus balcones. Se omiten las múltiples tomas de la misma baranda y la imagen con cierre de faena.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1O3XuVUyyg3H3wkCXITJs8Qy0KTayNQJA",
+          "path": "LOS SAUCES III CONSTRUCTORA POCURO 2026 (EN INSTALACION)/Fotos Pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/el-sauce/b0f66c85d77a92792171.webp",
+          "sourcePath": "LOS SAUCES III CONSTRUCTORA POCURO 2026 (EN INSTALACION)/Fotos Pagina/20260811_103054.jpg",
+          "driveFileId": "1OwcX7eL_SiAysApotqsFdCzt_gj-GXN-",
+          "driveFolderId": "1O3XuVUyyg3H3wkCXITJs8Qy0KTayNQJA",
+          "sha256": "701fe95786ed6749f821fa91a7067d7e2a85803abae10dd02aca869a9a7b2c29",
+          "pixelSha256": "b0f66c85d77a92792171072fae46822ec6c00b8a97de7823f59fe14c230d521d"
+        },
+        {
+          "asset": "imagenes-drive/el-sauce/13e6806aa0cf9560b7e9.webp",
+          "sourcePath": "LOS SAUCES III CONSTRUCTORA POCURO 2026 (EN INSTALACION)/Fotos Pagina/20260820_165933.jpg",
+          "driveFileId": "1HLqvqNCnBq8e7Xlm_Ccne43KaIe8q2_u",
+          "driveFolderId": "1O3XuVUyyg3H3wkCXITJs8Qy0KTayNQJA",
+          "sha256": "74106e62261030a5589e228d4569b9c584e4286075b4e94f7da1659b9efff07a",
+          "pixelSha256": "13e6806aa0cf9560b7e96fdd761748382e0ca64c7236e71b08e23cb6e55eed50"
+        }
+      ]
+    },
+    {
+      "id": "paso-el-roble",
+      "name": "Paso el Roble",
+      "selectionReason": "Revisadas visualmente las 55 candidatas de la carpeta de obra, incluidas las tres hojas. Mejor tramo con cristales y postes de acero ya instalados. El entorno sigue en construcción porque la obra está en instalación; no hay foto final confirmable de esta aplicación. Se excluyen obra gruesa, andamios, cargamentos, bodega, cajas, planos parciales, fases sin cristal y duplicados. La 32, aunque está en el folio, parece una referencia de otro balcón: perfiles rectangulares oscuros y localización distinta frente a los postes cilíndricos inox del resto; se evita atribución dudosa.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1d8fwREgLrfQR9h-4w9H-WHj-HB0R_mG5",
+          "path": "PASO EL ROBLE CONSTRUCTORA POCURO 2026 (EN INSTALACION)"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/paso-el-roble/197aa7b66ced9f51d51a.webp",
+          "sourcePath": "PASO EL ROBLE CONSTRUCTORA POCURO 2026 (EN INSTALACION)/WhatsApp Image 2026-08-19 at 16.40.15 (1).jpeg",
+          "driveFileId": "18M02mXZ2wRvpF3M4Cx1KCmZ6ug2rnCvY",
+          "driveFolderId": "1d8fwREgLrfQR9h-4w9H-WHj-HB0R_mG5",
+          "sha256": "2eafb19abe7e6d24916b8f8bcbc78afd176558df6af3b216635070a866204adf",
+          "pixelSha256": "197aa7b66ced9f51d51ad7a8c44800eda280c554a304b1439fde97607ac7772c"
+        }
+      ]
+    },
+    {
+      "id": "comisaria",
+      "name": "PRIMERA COMISARIA DE PUNTA ARENAS",
+      "selectionReason": "Obra ausente de la carpeta Drive actual; selección visual sobre fotografías conservadas del sitio anterior. Una vista clara de la escalera con baranda terminada, sin repetir la misma escalera en cuatro ángulos.",
+      "status": "legacy-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "legacy-site",
+          "path": "legacy-site"
+        }
+      ],
+      "rootSourceUnavailable": true,
+      "images": [
+        {
+          "asset": "imagenes-optimizadas/2026 - PRIMERA COMISARIA DE PUNTA ARENAS/COMISARIA 1.png",
+          "sourcePath": "legacy-site/imagenes-optimizadas/2026 - PRIMERA COMISARIA DE PUNTA ARENAS/COMISARIA 1.png",
+          "driveFileId": "legacy-2e4ea9103692174bb107",
+          "driveFolderId": "legacy-site",
+          "sha256": "3d84c81a481c8a4b66eccca4db836ecbe48df18dc512a2e1aca79d60bb5b8f94",
+          "pixelSha256": "2e4ea9103692174bb1073efa6d9333ac10bf8229eb55807fb879786e2d3c3592"
+        }
+      ]
+    },
+    {
+      "id": "indumotora",
+      "name": "Indumotora",
+      "selectionReason": "Revisadas visualmente las 4 candidatas de la carpeta de obra. Mejor vista de la serie de divisiones sanitarias instaladas. La 4 repite los mismos paneles con peor encuadre y más manchas; la 2 muestra el espejo durante montaje con soporte provisional y la 1 es una pieza de cristal almacenada en obra con anotaciones. Se utiliza una sola foto para evitar repetir o mostrar material sin instalar.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1R5IiDFuyAq14IEMPEwHxrZJ59Eo7mQF9",
+          "path": "INDUMOTORA CONSTRUCTORA ECHEVERRIA IZQUIERDO 2015"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/indumotora/73678ff29c8d52e9e931.webp",
+          "sourcePath": "INDUMOTORA CONSTRUCTORA ECHEVERRIA IZQUIERDO 2015/IMG_20160422_183004.jpg",
+          "driveFileId": "17Q6UNw2kH0DsFKW2JCjmrlNBocP0XfDn",
+          "driveFolderId": "1R5IiDFuyAq14IEMPEwHxrZJ59Eo7mQF9",
+          "sha256": "58f31eb26c77c9e9de3e5555ab85ff1d206f96a1e849195ba44a87f76e0ee493",
+          "pixelSha256": "73678ff29c8d52e9e931462423010b69231ffdc4024851b694d6beed626486f9"
+        }
+      ]
+    },
+    {
+      "id": "norambuena",
+      "name": "Norambuena",
+      "selectionReason": "Portada de fachada terminada y una sola vista amplia del ventanal instalado. Las restantes son variaciones del mismo ventanal o detalles con sellos, cintas y terminaciones deficientes; no aportan diversidad suficiente.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1aJSJBVia1BA6AQ27P-l2zOcLcEVwQZVf",
+          "path": "NORAMBUENA CONSORCIO BIMO 2018/fotos pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/norambuena/d75f2a0fc66a41d892ff.webp",
+          "sourcePath": "NORAMBUENA CONSORCIO BIMO 2018/fotos pagina/WhatsApp Image 2026-10-29 at 17.05.16.jpeg",
+          "driveFileId": "1KG1ZO1up9K5E4hs6NQZ3i0QvGPW3AhDV",
+          "driveFolderId": "1aJSJBVia1BA6AQ27P-l2zOcLcEVwQZVf",
+          "sha256": "87ebaed009404b0a0173bf7501affa042231b87feb95943cb33bf491e3b9558d",
+          "pixelSha256": "d75f2a0fc66a41d892ffb5eb81e57192b471596991d97cca680c5400f1947c30"
+        },
+        {
+          "asset": "imagenes-drive/norambuena/f24f0d668bcac47fa582.webp",
+          "sourcePath": "NORAMBUENA CONSORCIO BIMO 2018/fotos pagina/20180504_185419.jpg",
+          "driveFileId": "1ZIURzxczEb1laoRbHGrDeKbZeqeWf8iQ",
+          "driveFolderId": "1aJSJBVia1BA6AQ27P-l2zOcLcEVwQZVf",
+          "sha256": "c73f24fd349826759f7e6406df85b52955990524c331483b58d5cacce9069af7",
+          "pixelSha256": "f24f0d668bcac47fa582d59b1c2ef6814597444b7124d845808c90ff0be4b41f"
+        }
+      ]
+    },
+    {
+      "id": "manquehue-ffv",
+      "name": "Manquehue FFV",
+      "selectionReason": "Vista general terminada de escalera y barandas, detalle lateral del pasamanos y sus fijaciones, y remate inferior. Se descartan los encuadres casi iguales de subida y bajada y las múltiples tomas de los mismos anclajes.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1y_7x-makSvv5i_PVZBg0_BeoUYvPpJTv",
+          "path": "MANQUEHUE FFV INMOBILIARIA FFV 2017/fotos pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/manquehue-ffv/d23e482a48a21dfcb2e6.webp",
+          "sourcePath": "MANQUEHUE FFV INMOBILIARIA FFV 2017/fotos pagina/20180404_101457.jpg",
+          "driveFileId": "11_w70-crqs6I2jWFn-xrfbAcxhDJqxIf",
+          "driveFolderId": "1y_7x-makSvv5i_PVZBg0_BeoUYvPpJTv",
+          "sha256": "9b1b81f1d4ba4ee675529e9bf757c0386fb667708e8c0669c0928f803c856286",
+          "pixelSha256": "d23e482a48a21dfcb2e63b766bc51353f0bda78be62a439419393d221ae24b55"
+        },
+        {
+          "asset": "imagenes-drive/manquehue-ffv/038f410fc5be351b9f1c.webp",
+          "sourcePath": "MANQUEHUE FFV INMOBILIARIA FFV 2017/fotos pagina/20180404_101422.jpg",
+          "driveFileId": "1DdbuProqve9rtRQhdd7snKgvqC0gKdip",
+          "driveFolderId": "1y_7x-makSvv5i_PVZBg0_BeoUYvPpJTv",
+          "sha256": "0eee50e5efe31813e99c83f76e16caa2e8a3f33041313e96ac99383d611ad36e",
+          "pixelSha256": "038f410fc5be351b9f1c892756496e2af69e5e466740ec4150132f972e6ad15c"
+        },
+        {
+          "asset": "imagenes-drive/manquehue-ffv/27c1f2fc1d7a53a5efb7.webp",
+          "sourcePath": "MANQUEHUE FFV INMOBILIARIA FFV 2017/fotos pagina/20180404_101505.jpg",
+          "driveFileId": "1_289B0FQQj9OdmJhR-cCCuxVF0JNR5cq",
+          "driveFolderId": "1y_7x-makSvv5i_PVZBg0_BeoUYvPpJTv",
+          "sha256": "8c6dfabdb3910907334fa9956a1e8c6af0cc3c7929ff4755c816e6e3b21e8f36",
+          "pixelSha256": "27c1f2fc1d7a53a5efb75132e5850a8c1dc0c27d3707db4c97ec6934836864ed"
+        }
+      ]
+    },
+    {
+      "id": "alto-parque",
+      "name": "Alto Parque",
+      "selectionReason": "Baranda panorámica terminada y edificio completo. Se descartan las variaciones del mismo balcón.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1DCv61MwC9eYRjWdi83LfaHU1mTgcX-me",
+          "path": "ALTO PARQUE CONSTRUCTORA NAHMIAS 2019/fotos pagina AP"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/alto-parque/846f97ca63f8426c5653.webp",
+          "sourcePath": "ALTO PARQUE CONSTRUCTORA NAHMIAS 2019/fotos pagina AP/20190731_142233.jpg",
+          "driveFileId": "1LvJhYnXq_ceaGc6RsVSPPC2IWQQEEtTF",
+          "driveFolderId": "1DCv61MwC9eYRjWdi83LfaHU1mTgcX-me",
+          "sha256": "b70017fbc533821ccf5d78b8dc1abff10462f8b619da5a87014a7d851869bfde",
+          "pixelSha256": "846f97ca63f8426c5653b74a3bae2ee65f3084fdb0db70292300dc91978f9280"
+        },
+        {
+          "asset": "imagenes-drive/alto-parque/bd54d162622afefb98a6.webp",
+          "sourcePath": "ALTO PARQUE CONSTRUCTORA NAHMIAS 2019/fotos pagina AP/20190611_095559.jpg",
+          "driveFileId": "1TnqumV345N7Jgz9JkdV_evzoOMQlXTZI",
+          "driveFolderId": "1DCv61MwC9eYRjWdi83LfaHU1mTgcX-me",
+          "sha256": "b55a5e93d1ce6bbae8d55a16a0e3baaa9d408b604cf271d3943203dbdea1ede0",
+          "pixelSha256": "bd54d162622afefb98a68171234cdcfdf58f590602e2bd54595a55ea4817d70e"
+        }
+      ]
+    },
+    {
+      "id": "nativo-riesco",
+      "name": "Nativo Riesco",
+      "selectionReason": "Tres aplicaciones terminadas diferentes: baranda de terraza como portada, mampara de ducha y espejo de gimnasio. Se elimina LOTE-3.jpg por atribución ambigua con Lote19, las otras dos tomas de la misma ducha, la terraza inversa y las variantes del mismo espejo.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "11F2Xnj35dEtPubbS1PJX5bXBcvd_j6xg",
+          "path": "NATIVO RIESCO CONSTRUCTORA IGNACIO HURTADO 2022/fotos pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/nativo-riesco/35b8b8f7208dc80dca6d.webp",
+          "sourcePath": "NATIVO RIESCO CONSTRUCTORA IGNACIO HURTADO 2022/fotos pagina/20250417_111124.jpg",
+          "driveFileId": "1K7LmftIK4jiY-LdroYszMLA9R2jYoVms",
+          "driveFolderId": "11F2Xnj35dEtPubbS1PJX5bXBcvd_j6xg",
+          "sha256": "fc8b8de45f1e47a52883a474552acc384b7a40a0017b944c46a6f5ebc8f81329",
+          "pixelSha256": "35b8b8f7208dc80dca6dd5ac11b70d8221bb0bb94ed7473e2a64e90341f33046"
+        },
+        {
+          "asset": "imagenes-drive/nativo-riesco/54e5a4f653c0c1da8441.webp",
+          "sourcePath": "NATIVO RIESCO CONSTRUCTORA IGNACIO HURTADO 2022/fotos pagina/1126.jpeg",
+          "driveFileId": "1d2Y61prpc4AqVFBWBxTCUtPgf1iduP1x",
+          "driveFolderId": "11F2Xnj35dEtPubbS1PJX5bXBcvd_j6xg",
+          "sha256": "47eb41925bfc0c774c37b53621b086123e34564ae24247df712e8df64dcd99b7",
+          "pixelSha256": "54e5a4f653c0c1da84416112651e12a43f9cc59382da597a3611bac6abd96fbf"
+        },
+        {
+          "asset": "imagenes-drive/nativo-riesco/04051ba7903cf996d4d2.webp",
+          "sourcePath": "NATIVO RIESCO CONSTRUCTORA IGNACIO HURTADO 2022/fotos pagina/20250417_110844.jpg",
+          "driveFileId": "1y4i3wsITSwbyfaMyVauXqrSr-yanKC1N",
+          "driveFolderId": "11F2Xnj35dEtPubbS1PJX5bXBcvd_j6xg",
+          "sha256": "84cc2d5a1f37b60c797d75004e1a6af4dbc9372fb699903d99d6fd67ec0a1382",
+          "pixelSha256": "04051ba7903cf996d4d2a50fac52679021abed2f2039f98c162c8757b8b2ff84"
+        }
+      ]
+    },
+    {
+      "id": "parque-los-alerces",
+      "name": "Parque Los Alerces",
+      "selectionReason": "Cinco aplicaciones terminadas distintas: cerramiento vertical de fachada, acceso acristalado, baranda de escalera, mampara de ducha y gabinete de red húmeda. Se descartan los cuatro ángulos repetidos de la misma escalera, la segunda fachada y la imagen 11 de construcción.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1e4I7rMPjYWs3C1NGivbw2v1-OSMDCfn9",
+          "path": "PARQUE LOS ALERCES CONSTRUCTORA IGNACIO HURTADO 2018/fotos pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/parque-los-alerces/35f033423a3f4e22dd3f.webp",
+          "sourcePath": "PARQUE LOS ALERCES CONSTRUCTORA IGNACIO HURTADO 2018/fotos pagina/20180530_112638.jpg",
+          "driveFileId": "1zGZPX1K68t5AslczSyzXqEFmUayKrSz5",
+          "driveFolderId": "1e4I7rMPjYWs3C1NGivbw2v1-OSMDCfn9",
+          "sha256": "677c6bbd005f4d499cf858986656427f44e063dbcdfd8836394122be0f63a457",
+          "pixelSha256": "35f033423a3f4e22dd3f83822bb0ccc9845d6a05cf86e1d31e53babeb7993697"
+        },
+        {
+          "asset": "imagenes-drive/parque-los-alerces/c42505c47b644379e04a.webp",
+          "sourcePath": "PARQUE LOS ALERCES CONSTRUCTORA IGNACIO HURTADO 2018/fotos pagina/20180705_120110.jpg",
+          "driveFileId": "1pvIZmEPGUYGvjSnte1k5rWyUV-QXkVtV",
+          "driveFolderId": "1e4I7rMPjYWs3C1NGivbw2v1-OSMDCfn9",
+          "sha256": "57f11c3bbea9d55d544fb0d5263a8dabe8970c304e4b74e453f7c58178027a90",
+          "pixelSha256": "c42505c47b644379e04a172a94f94902ea1214d6075d969eb1ef83502b6756a2"
+        },
+        {
+          "asset": "imagenes-drive/parque-los-alerces/3de3c3e7a35efd532ca8.webp",
+          "sourcePath": "PARQUE LOS ALERCES CONSTRUCTORA IGNACIO HURTADO 2018/fotos pagina/20190711_170920.jpg",
+          "driveFileId": "18KCOLnd3DPj6W1Nb-9SxpiZO-DIs3GsA",
+          "driveFolderId": "1e4I7rMPjYWs3C1NGivbw2v1-OSMDCfn9",
+          "sha256": "4cff5ebc85844c84ce6301dcaf9d14ad29a8eae2e4202b2c529ffd4bf33a6c35",
+          "pixelSha256": "3de3c3e7a35efd532ca8efee93e33ccf44f2dd4de52545ecde7f7c1df4f1be0b"
+        },
+        {
+          "asset": "imagenes-drive/parque-los-alerces/6bc54f6db8e98f399ba0.webp",
+          "sourcePath": "PARQUE LOS ALERCES CONSTRUCTORA IGNACIO HURTADO 2018/fotos pagina/IMG-20181205-WA0028.jpg",
+          "driveFileId": "1lyEYzQgw8Qk2WO-p96nwf8RFjeNLG6Ir",
+          "driveFolderId": "1e4I7rMPjYWs3C1NGivbw2v1-OSMDCfn9",
+          "sha256": "01f3376143168fb2a30dc78e3a87fcedbcc8c2caffe826cf5c03a390f984cefe",
+          "pixelSha256": "6bc54f6db8e98f399ba0b05702bf894a5c60f11113ddf7222bebee6e21795706"
+        },
+        {
+          "asset": "imagenes-drive/parque-los-alerces/78d5cb56dbc182fc03eb.webp",
+          "sourcePath": "PARQUE LOS ALERCES CONSTRUCTORA IGNACIO HURTADO 2018/fotos pagina/20180525_131358.jpg",
+          "driveFileId": "16d8osiLNavoWdmlVEsxmk3edept4GVsB",
+          "driveFolderId": "1e4I7rMPjYWs3C1NGivbw2v1-OSMDCfn9",
+          "sha256": "58ed0dd91bd29a1ec26f97d15cd4b3575005ce4cf90560ddfceeccf192af1206",
+          "pixelSha256": "78d5cb56dbc182fc03eb228d4a1d14476549130975d536b60c3dabcad783c50d"
+        }
+      ]
+    },
+    {
+      "id": "la-camara",
+      "name": "La Cámara",
+      "selectionReason": "Solo el letrero de vidrio ya terminado; las otras cuatro tomas repiten el mismo letrero en una etapa anterior o con peor presentación.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1SC7YfiIyGgavjrhuMsY_hvjnKKqg0EyE",
+          "path": "LA CAMARA CONSTRUCTORA NAHMIAS 2019/FOTOS PAGINA"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/la-camara/f0412ffe8b49931e4659.webp",
+          "sourcePath": "LA CAMARA CONSTRUCTORA NAHMIAS 2019/FOTOS PAGINA/20170106_113323.jpg",
+          "driveFileId": "1VoGfhiYhz72rqwD3-mboFz4-fh116bNm",
+          "driveFolderId": "1SC7YfiIyGgavjrhuMsY_hvjnKKqg0EyE",
+          "sha256": "6aa018422dd390eaa10c2959721420abcc88f54b42eda012b9b8cc48019f0ea7",
+          "pixelSha256": "f0412ffe8b49931e46592ad6ba49f33ba7137e1a26f7490dd41760e3a6f4315c"
+        }
+      ]
+    },
+    {
+      "id": "ilanes",
+      "name": "Ilanes",
+      "selectionReason": "Atrio terminado con barandas de vidrio como portada, cubierta vidriada y terraza terminada con baranda perimetral. Se descartan los múltiples encuadres del atrio, los acercamientos a pasamanos aún envueltos y la imagen 15 con muros sin terminar. También se evita la pérgola con mobiliario aún protegido.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1d6PbdQcCyEHvHw-7gKyJkdNVxUO47-La",
+          "path": "ILANES CONSTRUCTORA NAHMIAS 2018/fotos pagina ila"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/ilanes/5e33f3dbbfc7397d417a.webp",
+          "sourcePath": "ILANES CONSTRUCTORA NAHMIAS 2018/fotos pagina ila/20180530_131822.jpg",
+          "driveFileId": "1uTJMgxQG-MxjS2liXHjMpp-af98ccUhj",
+          "driveFolderId": "1d6PbdQcCyEHvHw-7gKyJkdNVxUO47-La",
+          "sha256": "62bf9497c240774731cf62f89403e95673c3a5945479810d6ec7e0ec7f280596",
+          "pixelSha256": "5e33f3dbbfc7397d417a0c1bf7ad76005a33abc1e5add7f3ebb7284d27476708"
+        },
+        {
+          "asset": "imagenes-drive/ilanes/1a63a3c092e3e27544ba.webp",
+          "sourcePath": "ILANES CONSTRUCTORA NAHMIAS 2018/fotos pagina ila/20180622_113602.jpg",
+          "driveFileId": "19ya8BXLYJqAQm35fBP6AK1aPzYaOmsIL",
+          "driveFolderId": "1d6PbdQcCyEHvHw-7gKyJkdNVxUO47-La",
+          "sha256": "daea274977fb24ec26e6d1e971c788b8e9dc024b48ece0301ccf6f7e9a0797f0",
+          "pixelSha256": "1a63a3c092e3e27544ba16138011e748d8f4e9d6d31a1e502849382611b142a2"
+        },
+        {
+          "asset": "imagenes-drive/ilanes/81623eda4399fd104261.webp",
+          "sourcePath": "ILANES CONSTRUCTORA NAHMIAS 2018/fotos pagina ila/20180622_113947.jpg",
+          "driveFileId": "1E63iA37arpJLQThK1otvqga-ZE2nxKV3",
+          "driveFolderId": "1d6PbdQcCyEHvHw-7gKyJkdNVxUO47-La",
+          "sha256": "75d8ea403620b9bb5ea767e41e34667051e1dfe6092531581d5e55b88943d926",
+          "pixelSha256": "81623eda4399fd104261716cc379a1d133d4f3880b6c3093cb709d29d487c875"
+        }
+      ]
+    },
+    {
+      "id": "don-pedro",
+      "name": "Don Pedro",
+      "selectionReason": "Fachada terminada como portada, vista general de baranda vidriada y detalle complementario del pasamanos de muro. Se eliminan los otros dos encuadres de la misma fachada y las aproximaciones repetidas de la escalera.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1Hs9cvX4nKx3XPMfhy6Ej70qCjpA5oYNy",
+          "path": "DON PEDRO CONSTRUCTORA IGNACIO HURTADO 2018/fotos pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/don-pedro/c53c1cac25b894c25898.webp",
+          "sourcePath": "DON PEDRO CONSTRUCTORA IGNACIO HURTADO 2018/fotos pagina/20190318_173658.jpg",
+          "driveFileId": "1RgdbOdjnf9lsttBw_Wz8p8U0lInVVvpU",
+          "driveFolderId": "1Hs9cvX4nKx3XPMfhy6Ej70qCjpA5oYNy",
+          "sha256": "f7cd433ea57bbe39ac57899884f863122ccbc5e05bb68820a3a619b6465ecb95",
+          "pixelSha256": "c53c1cac25b894c258980997dbec8a0732757c9bc0186ee2dea1137aefea099f"
+        },
+        {
+          "asset": "imagenes-drive/don-pedro/0a07f709e6f990d3c120.webp",
+          "sourcePath": "DON PEDRO CONSTRUCTORA IGNACIO HURTADO 2018/fotos pagina/173660.jpeg",
+          "driveFileId": "1L_aAPGzMqYJcz4lxiqHj57wz1SSL1aK6",
+          "driveFolderId": "1Hs9cvX4nKx3XPMfhy6Ej70qCjpA5oYNy",
+          "sha256": "be4e5b6880e51f35cc06e7643c28af8da7705fe78a1eef0a7a6d39be5b2e04d3",
+          "pixelSha256": "0a07f709e6f990d3c120979ee108bd321b5e0572e1a9fbc557948852b355b99a"
+        },
+        {
+          "asset": "imagenes-drive/don-pedro/f45249baa78db7615452.webp",
+          "sourcePath": "DON PEDRO CONSTRUCTORA IGNACIO HURTADO 2018/fotos pagina/173662.jpeg",
+          "driveFileId": "14_jRACVTHfkLqXXjU8ldWlaJjr7MWbXK",
+          "driveFolderId": "1Hs9cvX4nKx3XPMfhy6Ej70qCjpA5oYNy",
+          "sha256": "18ebabba8cbf321b4ea9842623ae66f6bd0eddbef5e746fd0b1b86e192d48278",
+          "pixelSha256": "f45249baa78db761545217956a024bc40b26be850d4ca9ddf57930a00fac61af"
+        }
+      ]
+    },
+    {
+      "id": "centenario",
+      "name": "Centenario",
+      "selectionReason": "Revisadas visualmente las 12 candidatas de la carpeta de obra. Portada de la división de oficina completa y amueblada, más el corredor con paños de cristal sobre antepecho, aplicaciones y contextos distintos. Se omiten múltiples ángulos del mismo cubículo, la zona con madera provisional, cables visibles, escaleras de mano y mobiliario aún protegido.",
+      "status": "work-folder-selection",
+      "userApprovedFallback": true,
+      "sourceWorkFolders": [
+        {
+          "id": "1Byc57126T6N2mRO4zdUa6aImW-gwrIHt",
+          "path": "CENTENARIO CONSORCIO BIMO 2020"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/centenario/501420a253ba2b3969f8.webp",
+          "sourcePath": "CENTENARIO CONSORCIO BIMO 2020/IMG_20210105_101211.jpg",
+          "driveFileId": "1WxePQUb_eAUmCSFYsDVjbQaCzBss3t57",
+          "driveFolderId": "1Byc57126T6N2mRO4zdUa6aImW-gwrIHt",
+          "sha256": "0cdbdaaa363c73d1c43f72fc7f95d82b00ce07c483c85ba178554425335a8c75",
+          "pixelSha256": "501420a253ba2b3969f8c087ad4c5b4d1675fc3beb4c27b671ecde833de09491"
+        },
+        {
+          "asset": "imagenes-drive/centenario/fd85fbd0059aa5346f07.webp",
+          "sourcePath": "CENTENARIO CONSORCIO BIMO 2020/IMG_20210105_101538.jpg",
+          "driveFileId": "1I2A42xVnJ2i5iWevRUP-N0gSjMKsacIN",
+          "driveFolderId": "1Byc57126T6N2mRO4zdUa6aImW-gwrIHt",
+          "sha256": "82e3eef5ea2c82fb27b84efa791fdeffd543795931d56903d78aa7df5f44bcc7",
+          "pixelSha256": "fd85fbd0059aa5346f07ac1c2072b4c360fb3ea5e886268e8a638f15ecbf809b"
+        }
+      ]
+    },
+    {
+      "id": "casas-la-rabida",
+      "name": "Casas La Rábida",
+      "selectionReason": "Baranda de pasillo terminada como portada, otra escalera con vidrio de piso a techo y mampara de baño terminada. Se descartan los acercamientos repetidos del pasillo y la ventana. Se excluye expresamente 15026.jpeg, duplicada de Onofre-3.",
+      "status": "approved",
+      "approvedFolders": [
+        {
+          "id": "1QMr8VWhTZQX2yIyBGQCqCAElcRg37wwI",
+          "path": "CASAS LA RABIDA CONSTRUCTORA SUR G 2019/fotos pagina"
+        }
+      ],
+      "images": [
+        {
+          "asset": "imagenes-drive/casas-la-rabida/a286adfb7a602ab3f757.webp",
+          "sourcePath": "CASAS LA RABIDA CONSTRUCTORA SUR G 2019/fotos pagina/15031.jpeg",
+          "driveFileId": "1yFcAZi809jmHby5DGkhm8eg2iM6jerIr",
+          "driveFolderId": "1QMr8VWhTZQX2yIyBGQCqCAElcRg37wwI",
+          "sha256": "11523793dbed4cd627fff843bf027ae8c2c378115a0461bf0c05b69d26582a65",
+          "pixelSha256": "a286adfb7a602ab3f75796812c0caa9aa83a42124ffd3d814d1c8f6ede769fef"
+        },
+        {
+          "asset": "imagenes-drive/casas-la-rabida/9c68a97d7d2a5ff9c9ba.webp",
+          "sourcePath": "CASAS LA RABIDA CONSTRUCTORA SUR G 2019/fotos pagina/IMG-20190703-WA0005.jpeg",
+          "driveFileId": "1knaULW3oydYUPG_IzfH-75GST-zYi9oS",
+          "driveFolderId": "1QMr8VWhTZQX2yIyBGQCqCAElcRg37wwI",
+          "sha256": "35fa2475e4f39784e689bdd17cf45da4fe9136d355f7bc3df03c6dc6aa8e9c36",
+          "pixelSha256": "9c68a97d7d2a5ff9c9ba01fbd5c616a5130b291ba47ae7cff2d78ed17dfa1d2f"
+        },
+        {
+          "asset": "imagenes-drive/casas-la-rabida/c269dbcb502c8a46f9b8.webp",
+          "sourcePath": "CASAS LA RABIDA CONSTRUCTORA SUR G 2019/fotos pagina/IMG-20190703-WA0015.jpeg",
+          "driveFileId": "1pgi8HnsvgbfPH3sEiOUsnCYs6HsWZFJy",
+          "driveFolderId": "1QMr8VWhTZQX2yIyBGQCqCAElcRg37wwI",
+          "sha256": "faa851c4924ae55bf7040493052fe3cc5d75954293e4241256bed7e8fafdee6c",
+          "pixelSha256": "c269dbcb502c8a46f9b8367a3b865b10cc441de5e29b41333c6b1ce0a49ec814"
+        }
+      ]
+    }
+  ]
+}

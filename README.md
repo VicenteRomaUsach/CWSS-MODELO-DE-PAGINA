@@ -1,16 +1,26 @@
 # Sitio web CWSS — CWSS.CL3.1
 
-## Fotografías actualizadas — 2026-11-02
+## Fotografías actualizadas — 2026-11-03
 
-Se revisaron las 764 imágenes de la carpeta compartida `FOTOS PAGINA 2026 / FOTOS PARA PAGINA FINAL`. El sitio conserva las 34 obras anteriores y agrega 11 obras, para un total de 45. Las nueve obras que antes no tenían imágenes ahora incluyen sus fotografías.
+Se revisaron nuevamente las 45 obras. El catálogo muestra 113 fotografías seleccionadas visualmente, con un máximo autorizado de 10 por obra (la selección actual llega a 7). La primera fotografía es la portada. Se priorizaron instalaciones terminadas, nitidez y diversidad de productos; se descartaron fotos de construcción, atribución ambigua y ángulos que muestran esencialmente lo mismo. No se completan cupos con repeticiones.
 
-Se prepararon 725 fotografías de obras optimizadas desde 761 archivos fuente de Drive y se conservaron las ocho imágenes de las tres obras que no estaban en esa carpeta. Tras la selección visual, el catálogo muestra 199 fotografías: las cinco mejores por obra, o todas las disponibles cuando hay menos de cinco. Se priorizaron nitidez, terminaciones y variedad de vistas, descartando de la galería las tomas repetidas, dañadas o de montaje menos útiles. Los archivos y los originales completos se conservan en el respaldo local. Las copias web usan WebP de hasta 1920 px y las tres imágenes de lado de Hotel Plaza El Bosque fueron corregidas.
+La fuente principal es Drive `FOTOS PARA PAGINA FINAL / obra / Fotos Página`, confirmada en Chrome. Las 22 obras que tienen esa subcarpeta usan exclusivamente fotos de ella, incluidas las variantes de nombre `fotos pagina AP`, `fotos pagina ila` y `Fotos Finales/FOTOS PAGINA` de Guernica. Se respaldaron y verificaron sus 248 archivos originales (604.112.691 bytes).
 
-La fuente se confirmó en la carpeta de Drive abierta en Chrome: `FOTOS PARA PAGINA FINAL`. En las obras que tienen subcarpeta `Fotos Página`, las imágenes publicadas se eligen únicamente de esa subcarpeta (en Guernica, `Fotos Finales/FOTOS PAGINA`). Se revisaron las 20 obras que antes superaban 10 imágenes y se corrigieron las ocho selecciones que incluían fotos de fuera de esa subcarpeta. To-Be muestra las cuatro fotografías disponibles allí. Las cinco obras sin esa subcarpeta mantienen su selección anterior de cinco imágenes.
+Para las otras 23 obras, el usuario autorizó elegir igualmente las mejores fotos, hasta 10. Veinte usan sus carpetas de obra en Drive; Lote 19, Puerta del Sol y Primera Comisaría de Punta Arenas conservan una selección revisada de las fotografías anteriores porque no están en la carpeta actual de Drive. No se mezcla esta excepción con las obras que sí tienen `Fotos Página`.
 
-Las galerías muestran un máximo de cinco fotos en la selección actual y tienen un límite de seguridad de 10 imágenes por obra. Sus miniaturas tienen desplazamiento vertical en escritorio y horizontal en móvil. Los nombres, clientes y años existentes se conservan; los datos de las obras nuevas provienen del nombre de su carpeta. No se asignaron productos sin información confirmada.
+Apoquindo Los Militares muestra ahora instalaciones terminadas de escalera y terraza; se retiraron de su galería las vistas generales de construcción. Las galerías, tarjetas y obras del inicio usan el mismo catálogo y conservan el límite de seguridad de 10.
 
-Los originales y los respaldos completos se guardan fuera del repositorio, en `respaldos-locales` dentro del proyecto local. El inventario y la procedencia de cada imagen están en `_image-audit/2026-11-02`.
+La regla para futuras actualizaciones está en `AGENTS.md`. La procedencia de cada imagen visible y las excepciones autorizadas están en `content/photo-selection.json`. Antes de publicar, ejecutar:
+
+```sh
+node scripts/validate-photo-selection.cjs
+node --test scripts/validate-photo-selection.test.cjs
+node --check site.js
+```
+
+El validador revisa el catálogo original antes del recorte de seguridad, su coincidencia con el manifiesto, la fuente de cada foto, los archivos locales, los duplicados y el máximo de 10. La revisión visual sigue siendo necesaria para detectar fotos distintas del mismo motivo. Los assets descartados no se eliminan.
+
+Los originales y los ZIP completos del sitio están fuera del repositorio, en `respaldos-locales` dentro del proyecto local. La nueva revisión y las hojas de contacto están en `_image-audit/2026-11-03`; se conservan los inventarios y respaldos anteriores.
 
 La página tiene tres categorías principales:
 
